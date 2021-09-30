@@ -13,7 +13,7 @@ function App() {
       <div className="header">
         <div className="container">
           <div className="flex align-center pad3">
-            <Link to="/"><h1 className="logo">DummyPuggy</h1></Link> 
+            {/* <Link to="/"><h1 className="logo">DummyPuggy</h1></Link>  */}
             <div className="spec"></div>
             <ul className='navList'>
               <li className="item flex align-center">
@@ -33,11 +33,11 @@ function App() {
       <Switch>
         <Route exact path="/">
           <div className="main">
-            <img src={require('./images/coming.gif').default} alt="" width="100%"/>
+            <img src={require('./images/PUGGY.jpg').default} alt="" width="100%"/>
           </div>
         </Route>
       </Switch>
-      <Footer/>
+      {/* <Footer/> */}
       
     </div>
   );

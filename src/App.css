@@ -1,15 +1,11 @@
 .header{
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
     width: 100%;
     z-index: 10;
   }
-  
-  /* .header .flex{
-    padding: 3vw 0;
-  }
-   */
+
 .spec{
     flex: 1;
   }
@@ -47,4 +43,8 @@
 
   .navList .item{
       padding: 0 1vw;
+  }
+
+  .main img{
+    display:block;
   }

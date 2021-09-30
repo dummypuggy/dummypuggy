@@ -8,7 +8,7 @@ const Footer : React.FC = (props)=> {
     <footer>
       <div className="container">
           <div className="flex align-center">
-            <Link to="/"><h1 className="logo">DummyPuggy</h1></Link> 
+            {/* <Link to="/"><h1 className="logo">DummyPuggy</h1></Link>  */}
             <div className="spec"></div>
             <ul className='navList'>
               <li className="item flex align-center">
