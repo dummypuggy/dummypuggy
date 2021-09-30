@@ -2,9 +2,9 @@ import React from 'react';
 import { 
   Switch,
   Route,
-  Link,
+  // Link,
 } from 'react-router-dom';
-import Footer from './components/footer/footer';
+// import Footer from './components/footer/footer';
 import './App.css';
 
 function App() {
