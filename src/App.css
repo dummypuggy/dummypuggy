@@ -1,0 +1,50 @@
+.header{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+  }
+  
+  /* .header .flex{
+    padding: 3vw 0;
+  }
+   */
+.spec{
+    flex: 1;
+  }
+  .logo{
+    background: url(./images/logo.png) center no-repeat;
+    width: 20vw;
+    height: 5vw;
+    padding: 0;
+    margin: 0;
+    text-indent: -1000px;
+    background-size: contain;
+    
+  }
+
+  .flex{
+      display: flex;
+  }
+
+  .block{
+      display: block;
+  }
+    .align-center{
+        justify-content: center;
+        align-items: center;
+    }
+
+
+  .navList{
+      display: flex;
+      margin: 0 -1vw;
+  }
+  .pad3{
+    padding: 3vw 0;
+  }
+
+  .navList .item{
+      padding: 0 1vw;
+  }
