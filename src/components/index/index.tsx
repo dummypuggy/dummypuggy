@@ -1,7 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable jsx-a11y/anchor-has-content */
 import React from "react";
-import Faq from "../Faq";
 import { Container, Col, Row} from 'react-bootstrap'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css'
@@ -157,7 +156,7 @@ function IndexComp(){
 			<div className="team" id="team">
 				<Container>
 					<h1 className="title">team</h1>
-					<h3 className="sub m_t3">The Dummy Puggy team consists of 5 puggies. They live in a big kennel together in LA. Each contributes to their areas and hypes about the Dummy Puggy project.</h3>
+					<h3 className="sub m_t3 m_d8">The Dummy Puggy team consists of 5 puggies. They live in a big kennel together in LA. Each contributes to their areas and hypes about the Dummy Puggy project.</h3>
 					<ul className="lead teamUl">
 						<li>
 							<div className="img_box">
@@ -184,33 +183,60 @@ function IndexComp(){
 							</div>
 						</li>
 					</ul>
-					<ul className="core teamUl"></ul>
+					<ul className="core teamUl m_t4">
+						<li>
+							<div className="img_box">
+								<img src={require('../../images/Picasso.png').default} alt="" width="100%"/>
+							</div>
+							<div className="text_box">
+								<h1 className="name">
+								Picasso puggy
+								</h1>
+								<h6 className="post">Artist</h6>
+								<p className="introduce">Genius. Hoodies all the time. Anime girl. She makes her own furnitures.</p>
+							</div>
+						</li>
+						<li>
+							<div className="img_box">
+								<img src={require('../../images/Chubby.png').default} alt="" width="100%"/>
+							</div>
+							<div className="text_box">
+								<h1 className="name">
+								Chubby puggy
+								</h1>
+								<h6 className="post">Marketing</h6>
+								<p className="introduce">Social queen. Hates Hawaiian pizza. Love daddy jokes.</p>
+							</div>
+						</li>
+						<li>
+							<div className="img_box">
+								<img src={require('../../images/Strong.png').default} alt="" width="100%"/>
+							</div>
+							<div className="text_box">
+								<h1 className="name">
+								Strong puggy
+								</h1>
+								<h6 className="post">Community</h6>
+								<p className="introduce">Gym rat. Loves Sushi. Headphone all day. Ladies love this guy (he wishes).</p>
+							</div>
+						</li>
+					</ul>
 				</Container>
 			</div>
 			<div className="wait">
-				<div id="newsletter" className="news-section wf-section">
-					<div className="w-container">
-						<div className="white-div">
-							<div className="div-news-text">
-								<p>Want to learn how we plan to introduce the first billion people to the blockchain?<br/></p>
-							</div>
-							<div className="news-form w-form">
-								<form id="wf-form-News-Form" name="wf-form-News-Form" data-name="News Form" className="form">
-									<input type="email" className="text-field no-bottom-margin w-input" maxLength={256} name="email" data-name="Email" placeholder="Your email address" id="email"/>
-									<input type="submit" value="Heck yeah!" data-wait="Please wait..." className="button full w-button"/>
-								</form>
-								<div className="success-message w-form-done">
-									<div>Thanks for signing up. We'll keep you in the loop.</div>
-								</div>
-								<div className="error-message w-form-fail">
-									<div>Oops! Something went wrong while submitting the form.</div>
-								</div>
-							</div>
+				<Container>
+					<div className="wait_con">
+						<h1 className="title">Waitlist</h1>
+						<h3 className="sub m_t3 m_d3">Get notified for presale, giveaways & updates. Follow our latest announcements！</h3>
+						<div className="form">
+							<input type="email"  placeholder="Your email address"/>
+							<button className="submit_btn">
+								<img src={require('../../images/submit.png').default} alt="" />
+							</button>
 						</div>
 					</div>
-				</div>
+				</Container>
 			</div>
-			<Faq/>
 			<div className="join">
 
 			</div>
