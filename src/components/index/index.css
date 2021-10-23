@@ -274,9 +274,9 @@
 }
 
 .wait_con{
-  padding: 90px 30px;
+  padding: 55px 30px;
   background-image: url(../../images/email_bg.png);
-  background-size: 100%;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: 0 0;
   max-width: 960px;
@@ -310,6 +310,6 @@
   border: none;
   max-width: 240px;
   margin-top: 4vw;
-  margin: 4vw auto;
+  margin: 4vw auto 0;
   display: block;
 }

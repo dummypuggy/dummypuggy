@@ -231,7 +231,7 @@ function IndexComp(){
 						<div className="form">
 							<input type="email"  placeholder="Your email address"/>
 							<button className="submit_btn">
-								<img src={require('../../images/submit.png').default} alt="" />
+								<img src={require('../../images/submit.png').default} alt="" width="100%"/>
 							</button>
 						</div>
 					</div>
