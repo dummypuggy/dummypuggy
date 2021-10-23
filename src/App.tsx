@@ -1,14 +1,29 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { 
   Switch,
   Route,
   Link,
+  useLocation,
+  NavLink 
 } from 'react-router-dom';
-// import Footer from './components/footer/footer';
+import Footer from './components/footer/footer';
 import './App.css';
 import IndexComp from './components/index';
+import Faq from './components/Faq';
 
 function App() {
+  const location = useLocation();
+  const [creatorClassNames, setCreatorClassNames] = useState('creators');
+  React.useEffect(() => {
+    document.documentElement.scrollTop = document.body.scrollTop =0;
+    if(location.pathname === '/faq'){
+      setCreatorClassNames('creators active');
+    }else if(location.pathname === '/ecosystem'){
+      setCreatorClassNames('creators');
+    }else{
+      setCreatorClassNames('creators');
+    }
+  }, [location, creatorClassNames]);
   return (
     <div className="App">
       <div className="header">
@@ -38,24 +53,22 @@ function App() {
                 </a>
               </li>
               <li className="item flex align-center">
-                <a href="/#faq">
-                faq
-                </a>
+                <NavLink  to="/faq" activeClassName="active">Faq</NavLink >
               </li>
               
               <li className="item flex align-center">
                 <a href="https://discord.com/invite/2VvACvMZ8F" target="_blank" rel="noreferrer">
-                  <img src={require('./images/discord.png').default} alt="" width="32"/>
+                  <img src={require('./images/d.png').default} alt="" height="26"/>
                 </a>
               </li>
               <li className="item flex align-center">
                 <a href="https://twitter.com/DummyPuggy" target="_blank" rel="noreferrer">
-                  <img src={require('./images/twitter.png').default} alt="" width="32"/>
+                  <img src={require('./images/t.png').default} alt="" height="26"/>
                 </a>
               </li>
               <li className="item flex align-center">
                 <a href="https://www.instagram.com/dummypuggy_official" target="_blank" rel="noreferrer">
-                  <img src={require('./images/ins.png').default} alt="" width="32"/>
+                  <img src={require('./images/i.png').default} alt="" height="28"/>
                 </a>
               </li>
             </ul>
@@ -66,8 +79,11 @@ function App() {
         <Route exact path="/">
           <IndexComp/>
         </Route>
+        <Route path="/faq">
+          <Faq/>
+        </Route>
       </Switch>
-      {/* <Footer/> */}
+      <Footer/>
       
     </div>
   );

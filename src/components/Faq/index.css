@@ -1,57 +1,19 @@
 .Faq{
-    background-color: #4bb1fe;
-    padding: 5vw 0;
+    /* background-color: #4bb1fe; */
+    padding: 8vw 0 3vw;
 }
 
-.AccBlock .card-header, .AccBlock .card{
-    background-color: transparent;
-    border: none;
+.Faq .title{
+    font-size: 1.4vw;
+    text-align: left;
+    margin-bottom: 1vw;
 }
 
-.AccBlock .card-header{
-    font-size: 24px;
-    line-height: 32px;
-    font-family: 'Axolittle font', sans-serif;
-    position: relative;
-}
-.AccBlock .card-header::before{
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 50%;
-    width: 4px;
-    height: 16px;
-    background-color: #000;
-    transform: translateY(-50%);
-    border-radius: 8px;;
+.Faq .sub{
+    text-align: left;
+    font-size: 1vw;
 }
 
-.AccBlock .card-header::after{
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 50%;
-    width: 4px;
-    height: 16px;
-    background-color: #000;
-    transform: rotate(90);
-    border-radius: 8px;;
-}
-
-
-.timeline{
-
-}
-
-.timeline_item{
-    width: 50%;
-    padding-bottom: 2vw;
-}
-
-/* .timeline_item:nth-child(even){
-    flex: left;
-} */
-
-.timeline_item:nth-child(odd){
-    float: right;
+.fqaList li{
+    margin-bottom: 3vw;
 }

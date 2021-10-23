@@ -238,7 +238,22 @@ function IndexComp(){
 				</Container>
 			</div>
 			<div className="join">
-
+				<Container>
+					<div className="join_box">
+						<div className="join_img">
+							<img src={require('../../images/Chubby.png').default} alt="" width="100%"/>
+						</div>
+						<div className="join_text">
+								<h1 className="title">
+								Join our community
+								</h1>
+								<p className="sub">Our community is at the heart of everything we do at Dummy Puggy and our Discord growing rapidly! Join now to get updates and follow our latest announcements. Come with us and see for yourself how we puggies vibing all day!</p>
+								<button className="submit_btn">
+									<img src={require('../../images/join_now.png').default} alt="" width="100%"/>
+								</button>
+						</div>
+					</div>
+				</Container>
 			</div>
 		</div>
 	)

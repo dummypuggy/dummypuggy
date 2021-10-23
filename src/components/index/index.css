@@ -49,7 +49,8 @@
   text-align: center;
   font-family: MERegular, Helvetica, sans-serif;
   color: #ffffffb3;
-  font-size: 1vw;
+  font-size: .8vw;
+  line-height: 2;
 }
 
 .text_model{
@@ -312,4 +313,38 @@
   margin-top: 4vw;
   margin: 4vw auto 0;
   display: block;
+}
+
+.join{
+  padding-bottom: 6vw;
+}
+
+.join_box{
+  display: flex;
+  align-items: center;
+  /* max-width: 960px; */
+  margin: auto;
+  grid-gap: 2vw;
+  gap: 2vw;
+}
+
+.join_box .join_img{
+  width: 400px;
+}
+
+.join_box .join_text{
+  flex: 1;
+  
+}
+
+.join_box .join_text *{
+  text-align: left;
+}
+
+.join_box .join_text{
+  margin-top: 1vw;
+}
+
+.join_box .submit_btn{
+  margin: 1vw 0 0;
 }

@@ -1,23 +1,23 @@
 import React from "react";
-import {Accordion, Container } from 'react-bootstrap'
+import { Container } from 'react-bootstrap'
 import questionsList from '../../data/faqData'
 import './index.css'
 
-const Faq =  () => {
+function Faq() {
     let dataList = questionsList.map((item, index) => {
         return (
-            <Accordion.Item eventKey={index.toString()} key={index}>
-                <Accordion.Header>{item.q}</Accordion.Header>
-                <Accordion.Body>{item.w}</Accordion.Body>
-            </Accordion.Item>
+            <li>
+                <h1 className="title">Q: {item.q}</h1>
+                <p className="sub">A: {item.w}</p>
+            </li>
         )
     })
     return (
         <div className='Faq' id="fqa">
             <Container>
-                <Accordion defaultActiveKey="0" className="AccBlock">
-                    {dataList}
-                </Accordion>
+                <ul className="fqaList">
+                {dataList}
+                </ul>
             </Container>
         </div>
     );

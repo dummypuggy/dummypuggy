@@ -1,23 +1,35 @@
 const data = [
     {
-        q: 'Will there be a presale?',
-        w: "There won't be any whitelist/presale. We reserved 200 Axolittles for giveaway winners and marketing purposes.",
+        q: 'How many Dummy Puggy will there be available to purchase?',
+        w: "9999!",
     },
     {
-        q: "Are all 10,000 Axolittles really animated?",
-        w: "Yes! Every single Axolittle is fully animated. We used After Effects and custom code to achieve that result.",
+        q: "Will there be a presale?",
+        w: "Yes! You can find more information within our Discord community on how you can earn a whitelist position.",
     },
     {
-        q: "Will the reveal be delayed?",
-        w: "No, the reveal will be instant. You won't have to wait to meet your newest friend!",
+        q: "When does presale and official sale start?",
+        w: "The project is still on early stage, we will update once we decides. Please join our Discord to catch all important updates!",
     },
     {
-        q: "What blockchain will this be on?",
-        w: 'Ethereum.',
+        q: " How much will it be to mint one Puggy and where?",
+        w: 'Each puggy will cost 0.06 ETH. These will be minted directly from our website on Pre-sale & Launch day.',
     },
     {
-        q: "What is the smart contract address?",
-        w: "0xf36446105fF682999a442b003f2224BcB3D82067",
+        q: "When will the art-work be revealed?",
+        w: "The full collection will be revealed on OpenSea 48 hours after the public sale.",
+    },
+    {
+        q: "How to get whitelisted?",
+        w: "There are many ways from where you can get your whitelist spot. Join our Discord and know more. ",
+    },
+    {
+        q: "How much can I mint?",
+        w: " ",
+    },
+    {
+        q: "Will there be a bonding curve?",
+        w: "Of course not.",
     },
 ]
 

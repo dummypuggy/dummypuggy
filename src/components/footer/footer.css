@@ -1,0 +1,25 @@
+footer{
+  padding: 8vw 0 5vw;
+  background: #272d4d;
+}
+
+.footer_logo{
+  text-align: center;
+}
+
+.footer_logo img{
+  width: 18vw;
+}
+
+footer .navList{
+  align-items: center;
+  justify-content: center;
+  padding: 5vw 0 2vw;
+}
+
+.copyright{
+  font-family: MERegular, Helvetica, sans-serif;
+  font-size: 12px;
+  color: #fff;
+  text-align: center;
+}

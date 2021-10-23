@@ -45,10 +45,17 @@
 .navList a{
   color: #fff;
   text-transform: uppercase;
-  font-size: 1vw;
+  font-size: .8vw;
   font-weight: 500;
+  font-family: MEUltrabold, Helvetica, sans-serif;
+  letter-spacing: 3px;
+}
+
+.navList .active a,.navList .active, .navList a:hover{
+  color: #2bff98;
+  text-decoration: none;
 }
 
 .navList .item{
-    padding: 0 .8vw;
+    padding: 0 .6vw;
 }
