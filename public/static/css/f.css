@@ -1,61 +1,12 @@
 
 @font-face {
-    font-family:Shapiro;src:url(/static/fonts/font-Shapiro-35.woff2) format("woff2"),url(/static/fonts/font-Shapiro-35.woff) format("woff");font-style:normal;font-weight:400
-  }
-  
-  @font-face {
-    font-family:Shapiro;src:url(/static/fonts/font-Shapiro-65.woff2) format("woff2"),url(/static/fonts/font-Shapiro-65.woff) format("woff");font-style:normal;font-weight:700
-  }
-  
-  @font-face {
-    font-family:Shapiro;src:url(/static/fonts/font-Shapiro-75.woff2) format("woff2"),url(/static/fonts/font-Shapiro-75.woff) format("woff");font-style:normal;font-weight:900
-  }
-  
-  @font-face {
-    font-family:Shapiro;src:url(/static/fonts/font-Shapiro-95.woff2) format("woff2"),url(/static/fonts/font-Shapiro-95.woff) format("woff");font-style:normal;font-weight:1000
-  }
-  
-  @font-face {
-    font-family:Shapiro;src:url(/static/fonts/font-Shapiro-97.woff2) format("woff2"),url(/static/fonts/font-Shapiro-97.woff) format("woff");font-style:normal
-  }
-  
-  
-  @font-face {
-    font-family:"Monument Extended";src:url(/static/fonts/MonumentExtended.a4e8e9a8.woff2) format("woff2"),url(/static/fonts/MonumentExtended.fd05300a.woff) format("woff");font-weight:400;font-style:normal
-  }
-  
-  @font-face {
-    font-family:"Monument Extended";src:url(/static/fonts/MonumentExtended-Black.f10154b6.woff2) format("woff2"),url(/static/fonts/MonumentExtended-Black.644a89ec.woff) format("woff");font-weight:900;font-style:normal
-  }
-  
-  @font-face {
-    font-family:"Monument Extended";src:url(/static/fonts/MonumentExtended-Bold.d6d7a396.woff2) format("woff2"),url(/static/fonts/MonumentExtended-Bold.fe1d8446.woff) format("woff");font-weight:700;font-style:normal
-  }
-  
-  @font-face {
-    font-family:"Monument Extended Book";src:url(/static/fonts/MonumentExtended-Book.391f0c8d.woff2) format("woff2"),url(/static/fonts/MonumentExtended-Book.6651e48a.woff) format("woff");font-weight:400;font-style:normal
-  }
-  
-  @font-face {
-    font-family:"Monument Extended";src:url(/static/fonts/MonumentExtended-Heavy.3cb05cd2.woff2) format("woff2"),url(/static/fonts/MonumentExtended-Heavy.459111af.woff) format("woff");font-weight:900;font-style:normal
-  }
-  
-  @font-face {
-    font-family:"Monument Extended";src:url(/static/fonts/MonumentExtended-Medium.872fa327.woff2) format("woff2"),url(/static/fonts/MonumentExtended-Medium.34824a07.woff) format("woff");font-weight:500;font-style:normal
-  }
-  
-  @font-face {
-    font-family:"Monument Extended";src:url(/static/fonts/MonumentExtended-Light.6914c864.woff2) format("woff2"),url(/static/fonts/MonumentExtended-Light.f3bcd2aa.woff) format("woff");font-weight:300;font-style:normal
-  }
-  
-  @font-face {
-    font-family:"Monument Extended";src:url(/static/fonts/MonumentExtended-Regular.df73885c.woff2) format("woff2"),url(/static/fonts/MonumentExtended-Regular.f3e2659d.woff) format("woff");font-weight:400;font-style:normal
-  }
-  
-  @font-face {
-    font-family:"Monument Extended";src:url(/static/fonts/MonumentExtended-Thin.dff698ad.woff2) format("woff2"),url(/static/fonts/MonumentExtended-Thin.5611679f.woff) format("woff");font-weight:100;font-style:normal
-  }
+  font-family: MELight;
+  src: url(public/static/fonts.MonumentExtended-Light.ttf);
+}
+@font-face {
+  font-family:MERegular;src:url(/static/fonts/MonumentExtended-Regular.ttf);
+}
 
-  @font-face {
-    font-family:"Neutro";src:url(/static/fonts/Neutro-Bold.otf) format("opentype")
-  }
+@font-face {
+  font-family:MEUltrabold;src:url(/static/fonts/MonumentExtended-Ultrabold.otf) format("opentype")
+}

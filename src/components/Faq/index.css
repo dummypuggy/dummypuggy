@@ -1,0 +1,57 @@
+.Faq{
+    background-color: #4bb1fe;
+    padding: 5vw 0;
+}
+
+.AccBlock .card-header, .AccBlock .card{
+    background-color: transparent;
+    border: none;
+}
+
+.AccBlock .card-header{
+    font-size: 24px;
+    line-height: 32px;
+    font-family: 'Axolittle font', sans-serif;
+    position: relative;
+}
+.AccBlock .card-header::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 4px;
+    height: 16px;
+    background-color: #000;
+    transform: translateY(-50%);
+    border-radius: 8px;;
+}
+
+.AccBlock .card-header::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 4px;
+    height: 16px;
+    background-color: #000;
+    transform: rotate(90);
+    border-radius: 8px;;
+}
+
+
+.timeline{
+
+}
+
+.timeline_item{
+    width: 50%;
+    padding-bottom: 2vw;
+}
+
+/* .timeline_item:nth-child(even){
+    flex: left;
+} */
+
+.timeline_item:nth-child(odd){
+    float: right;
+}

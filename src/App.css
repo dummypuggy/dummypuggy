@@ -1,50 +1,54 @@
 .header{
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    z-index: 10;
-  }
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  background-color: rgba(0,0,0,.5);
+}
 
 .spec{
-    flex: 1;
-  }
-  .logo{
-    background: url(./images/logo.png) center no-repeat;
-    width: 20vw;
-    height: 5vw;
-    padding: 0;
-    margin: 0;
-    text-indent: -1000px;
-    background-size: contain;
-    
-  }
+  flex: 1;
+}
+.logo{
+  background: url(./images/logo.png) center no-repeat;
+  width: 8vw;
+  height: 5vw;
+  padding: 0;
+  margin: 0;
+  text-indent: -1000px;
+  background-size: contain;
+  
+}
 
-  .flex{
-      display: flex;
-  }
+.flex{
+  display: flex;
+}
 
-  .block{
-      display: block;
-  }
-    .align-center{
-        justify-content: center;
-        align-items: center;
-    }
+.block{
+  display: block;
+}
+.align-center{
+  justify-content: center;
+  align-items: center;
+}
 
 
-  .navList{
-      display: flex;
-      margin: 0 -1vw;
-  }
-  .pad3{
-    padding: 3vw 0;
-  }
+.navList{
+  display: flex;
+  margin: 0 -1vw;
+}
+.pad3{
+  padding: 3vw 0;
+}
 
-  .navList .item{
-      padding: 0 1vw;
-  }
+.navList a{
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1vw;
+  font-weight: 500;
+}
 
-  .main img{
-    display:block;
-  }
+.navList .item{
+    padding: 0 .8vw;
+}
