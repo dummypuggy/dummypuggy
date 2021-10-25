@@ -499,10 +499,16 @@
     padding: 5vw 0 13vw;
   }
 
-  .timeline-item:nth-child(1){
-    margin-top: 0;
+  /* .timeline-item:nth-child(1){
+    transform: translateY(0);
   }
-  .timeline-item{
-    margin-top: -50%;
+  .timeline-item:nth-child(2){
+    transform: translateY(-50%);
   }
+  .timeline-item:nth-child(3){
+    transform: translateY(-85%);
+  }
+  .timeline-item:nth-child(4){
+    transform: translateY(-174%);
+  } */
 }
