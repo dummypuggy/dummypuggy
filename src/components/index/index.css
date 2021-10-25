@@ -354,3 +354,20 @@
 .join_box .submit_btn{
   margin: 1vw 0 0;
 }
+
+
+@media screen and (max-width: 420px){
+  .title{
+    font-size: 20px;
+  }
+  .text_model{
+    font-size: 15px;
+  }
+  .welcome{
+    padding: 15vw 0;
+  }
+  .swiper{
+    width: 80%;
+    margin: 18vw auto;
+  }
+}
