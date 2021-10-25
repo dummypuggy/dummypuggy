@@ -8,8 +8,8 @@
 }
 
 .swiper{
-  width: 43vw;
-  padding: 3vw 0;
+  width: 30vw;
+  padding: 3vw 2vw;
   margin: 3vw auto;
 }
 
@@ -17,10 +17,27 @@
 .swiper-slide {
   transform: scale(1);
   transition: all .3s linear;
+  width: 100%;
+  height: 15vw;
 }
 .swiper-slide.swiper-slide-active{
   transform: scale(1.3);
   z-index: 2;
+}
+
+.swiper-slide.swiper-slide-prev{
+  transform: translateX(35%);
+}
+
+.swiper-slide.swiper-slide-next{
+  transform: translateX(-35%);
+}
+
+.swiper-slide .swiper_img{
+  background-size: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .swiper-container.swiper-container-initialized.swiper-container-horizontal.swiper-container-pointer-events.swiper::after {
@@ -81,7 +98,7 @@
 
 
 .bottom_model img{
-  height: 3vw;
+  height: 5vw;
 }
 
 .game{
@@ -361,13 +378,54 @@
     font-size: 20px;
   }
   .text_model{
-    font-size: 15px;
+    font-size: 12px;
+    width: 100%;
+    padding: 0 10px;
+  }
+  .bottom_model img{
+    height: 20vw;
+    margin-top: 8vw;
+  }
+  .swiper-slide{
+    height: 40vw;
   }
   .welcome{
     padding: 15vw 0;
+    margin-top: -5vw;
+    border-radius: 19px;
+  }
+  body .title{
+    margin-bottom: 10vw;
   }
   .swiper{
-    width: 80%;
-    margin: 18vw auto;
+    width: 100%;
+    margin: 10vw auto 18vw;
+    padding: 5vw 10vw;
+  }
+
+  .gameStp{
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+  .stpItem{
+    flex: inherit;
+    margin-bottom: 20px;
+  }
+
+  .text_box .text_title{
+    font-size: 22px;
+    margin-top: 20px;
+  }
+  .text_box .text_des{
+    font-size: 12px;
+  }
+  .timeline-content{
+    padding: 10px;
+  }
+  .timeline-item h2{
+    font-size: 3.4vw;
+  }
+  .timeline-item p{
+    font-size: 1.6vw;
   }
 }
