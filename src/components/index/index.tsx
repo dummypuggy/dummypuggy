@@ -1,7 +1,5 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
-/* eslint-disable jsx-a11y/anchor-has-content */
 import React from "react";
-import { Container, Col, Row} from 'react-bootstrap'
+import { Container} from 'react-bootstrap'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css'
 import './index.css'
@@ -11,7 +9,7 @@ import SwiperCore, {
   Autoplay
 } from 'swiper';
 
-// install Swiper modules
+
 SwiperCore.use([Autoplay]);
 
 
@@ -23,37 +21,33 @@ function IndexComp(){
 					<source src={require('../../images/banner.mp4').default} type="video/mp4" />
 				</video>
 			</div>
-			<div className="welcome">
+			<div className="welcome" id="about">
 				<Container>
 					<h1 className="title m_d3">WELCOME TO THE DUMMY PUGGY</h1>
-					<Row className="align-items-center">
-						<Col md={6}>
-							<p className="text_model">
-								Dummy Puggy is a collection of 9999 thoughtfully designed and impeccably shaped unique puggies generated from over XXX traits. They are born with a love of gold and glitter, every puggy is loyal and love to share their treasure with their owner. Get ready to adopt one of them and earn money with your puggy together! 
-							</p>
-							<div className="button_group m_t2">
-								<a className='bottom_model' href="https://discord.com/invite/2VvACvMZ8F" target="_black">
-									<img src={require('../../images/join_us.png').default} alt="" />
-								</a>
-							</div>
-						</Col>
-						<Col md={6}>
-							<Swiper className="swiper" loop={true} effect="fade" slidesPerView={3} centeredSlides={true} autoplay={{"delay": 2500,"disableOnInteraction": true}}>
-								{['dog1.png','dog2.png','dog3.png','dog4.png','dog5.png','dog6.png','dog7.png','dog8.png','dog9.png'].map((el, i) => {
-									return <SwiperSlide key={i}>
-											<img
-												className="d-block w-100"
-												src={require(`../../images/${el}`).default}
-												alt={el}
-											/>
-										</SwiperSlide>;
-								})}
-							</Swiper>
-						</Col>
-					</Row>
+					<div className="swiper_box">
+						<Swiper className="swiper" loop={true} effect="fade" slidesPerView={3} centeredSlides={true} autoplay={{"delay": 2500,"disableOnInteraction": true}}>
+							{['dog1.png','dog2.png','dog3.png','dog4.png','dog5.png','dog6.png','dog7.png','dog8.png','dog9.png'].map((el, i) => {
+								return <SwiperSlide key={i}>
+										<img
+											className="d-block w-100"
+											src={require(`../../images/${el}`).default}
+											alt={el}
+										/>
+									</SwiperSlide>;
+							})}
+						</Swiper>
+					</div>
+					<p className="text_model">
+						Dummy Puggy is a collection of 9999 thoughtfully designed and impeccably shaped unique puggies generated from over XXX traits. They are born with a love of gold and glitter, every puggy is loyal and love to share their treasure with their owner. Get ready to adopt one of them and earn money with your puggy together! 
+					</p>
+					<div className="button_group m_t2">
+						<a className='bottom_model' href="https://discord.com/invite/2VvACvMZ8F" target="_black">
+							<img src={require('../../images/join_us.png').default} alt="" />
+						</a>
+					</div>
 				</Container>
 			</div>
-			<div className="game">
+			<div className="game" id="gameplay">
 				<Container>
 					<h1 className="title m_d5">MERGE TO EARN</h1>
 					<ul className="gameStp">

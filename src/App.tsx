@@ -49,7 +49,7 @@ function App() {
               </li>
               <li className="item flex align-center">
                 <a href="/#team">
-                Tean
+                Team
                 </a>
               </li>
               <li className="item flex align-center">

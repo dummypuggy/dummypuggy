@@ -1,5 +1,5 @@
 .welcome{
-  padding: 5vw 0;
+  padding: 7vw 0 10vw;
   background: #141B3B;
   margin-top: -4vw;
   border-radius: 30px;
@@ -8,8 +8,9 @@
 }
 
 .swiper{
-  /* width: 30vw; */
+  width: 43vw;
   padding: 3vw 0;
+  margin: 3vw auto;
 }
 
 
@@ -29,6 +30,10 @@
   display: block;
   background: red;
   height: 100%;
+}
+
+.welcome .text_model,.welcome .button_group{
+  text-align: center;
 }
 
 .roadmap{
@@ -57,7 +62,8 @@
   line-height: 2;
   font-size: .75vw;
   font-family: MERegular, Helvetica, sans-serif;
-  padding-right: 2vw;
+  width: 80%;
+  margin: auto;
 }
 
 .button_group .link{
