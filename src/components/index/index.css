@@ -375,7 +375,7 @@
 
 @media screen and (max-width: 420px){
   .title{
-    font-size: 20px;
+    font-size: 30px;
   }
   .text_model{
     font-size: 12px;
@@ -426,6 +426,52 @@
     font-size: 3.4vw;
   }
   .timeline-item p{
-    font-size: 1.6vw;
+    font-size: 2vw;
+  }
+  .timeline::before{
+    height: 85.5%;
+  }
+  .timeline-item p::before{
+    height: 1px;
+    width: 10px;
+    top: 2.6vw;
+  }
+  .teamUl{
+    flex-wrap: wrap;
+  }
+  .teamUl li{
+    flex: inherit;
+  }
+
+  .core li {
+    display: flex;
+    grid-gap: 0.5vw;
+    grid-gap: 0.5vw;
+    gap: 0.5vw;
+    align-items: center;
+    justify-content: center;
+  }
+  .core li div{
+    flex: 1 1;
+  }
+  .teamUl .name{
+    font-size: 3vw;
+  }
+  .teamUl .post{
+    font-size: 2.7vw;
+  }
+  .teamUl .introduce{
+    font-size: 2.5vw;
+  }
+  .wait_con .form input{
+    min-width: inherit;
+    font-size: 2.8vw;
+  }
+  .join_box{
+    flex-wrap: wrap;
+  }
+
+  .join_box .submit_btn{
+    margin: 6vw auto;
   }
 }
