@@ -375,7 +375,8 @@
 
 @media screen and (max-width: 420px){
   .title{
-    font-size: 30px;
+    font-size: 7vw;
+    padding-top: 15vw;
   }
   .text_model{
     font-size: 12px;
@@ -390,7 +391,7 @@
     height: 40vw;
   }
   .welcome{
-    padding: 15vw 0;
+    padding: 8vw 0 15vw;
     margin-top: -5vw;
     border-radius: 19px;
   }
@@ -496,5 +497,12 @@
   }
   footer {
     padding: 5vw 0 13vw;
+  }
+
+  .timeline-item:nth-child(1){
+    margin-top: 0;
+  }
+  .timeline-item{
+    margin-top: -50%;
   }
 }
