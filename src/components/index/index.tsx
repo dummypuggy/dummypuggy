@@ -32,7 +32,7 @@ function IndexComp(){
 								Dummy Puggy is a collection of 9999 thoughtfully designed and impeccably shaped unique puggies generated from over XXX traits. They are born with a love of gold and glitter, every puggy is loyal and love to share their treasure with their owner. Get ready to adopt one of them and earn money with your puggy together! 
 							</p>
 							<div className="button_group m_t2">
-								<a className='bottom_model' href="#">
+								<a className='bottom_model' href="https://discord.com/invite/2VvACvMZ8F" target="_black">
 									<img src={require('../../images/join_us.png').default} alt="" />
 								</a>
 							</div>
@@ -248,9 +248,9 @@ function IndexComp(){
 								Join our community
 								</h1>
 								<p className="sub">Our community is at the heart of everything we do at Dummy Puggy and our Discord growing rapidly! Join now to get updates and follow our latest announcements. Come with us and see for yourself how we puggies vibing all day!</p>
-								<button className="submit_btn">
+								<a className="submit_btn" href="https://discord.com/invite/2VvACvMZ8F" target="_black">
 									<img src={require('../../images/join_now.png').default} alt="" width="100%"/>
-								</button>
+								</a>
 						</div>
 					</div>
 				</Container>

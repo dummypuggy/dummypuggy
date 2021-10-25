@@ -9,7 +9,10 @@ const Footer : React.FC = (props)=> {
     <footer>
       <Container>
         <div className="footer_logo">
-          <img src={require('../../images/footer_logo.png').default} alt=""/>
+          <img src={require('../../images/footer_logo.gif').default} alt=""/>
+          {/* <video width="100%" height="100%" preload="auto" autoPlay loop muted playsInline>
+            <source src={require('../../images/footer_logo.mp4').default} type="video/mp4" />
+          </video> */}
         </div>
         <ul className='navList'>
           <li className="item flex align-center">
