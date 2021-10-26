@@ -26,7 +26,7 @@ function IndexComp(){
 					<h1 className="title m_d3">WELCOME TO THE DUMMY PUGGY</h1>
 					<div className="swiper_box">
 						<Swiper className="swiper" loop={true} effect="fade" slidesPerView={2} centeredSlides={true} autoplay={{"delay": 2500,"disableOnInteraction": true}}>
-							{['dog1.png','dog2.png','dog3.png','dog4.png','dog5.png','dog6.png','dog7.png','dog8.png','dog9.png'].map((el, i) => {
+							{['dog1.png','dog2.png','dog3.png','dog4.png','dog5.png','dog6.png','dog7.png','dog8.png'].map((el, i) => {
 								return <SwiperSlide key={i}>
 										<div className="swiper_img" style={{backgroundImage: 'url('+require(`../../images/${el}`).default+')'}}></div>
 									</SwiperSlide>;
