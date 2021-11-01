@@ -22,4 +22,11 @@
     .Faq{
         padding: 18vw 0 10vw;
     }
+    .Faq .title{
+        font-size: 7vw;
+        padding-top: 5vw;
+    }
+    .Faq .sub{
+        font-size: 15px;
+    }
 }
