@@ -66,7 +66,7 @@ function IndexComp(){
 							</Swiper>
 						</div>
 						<p className="text_model">
-							Dummy Puggy is a collection of 9999 thoughtfully designed and impeccably shaped unique puggies generated from over XXX traits. They are born with a love of gold and glitter, every puggy is loyal and love to share their treasure with their owner. Get ready to adopt one of them and earn money with your puggy together! 
+							Dummy Puggy is the easiest P2E game for dummies on Blockchain. Players can collect puggies, merge poopoos and earn PPC(Poo Poo Coin) in your pocket. Puggies here are dummy but will make you rich.
 						</p>
 						<div className="button_group m_t2">
 							<a className='bottom_model' href="https://discord.com/invite/2VvACvMZ8F" target="_black">
