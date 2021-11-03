@@ -58,11 +58,13 @@ function IndexComp(){
 						<h1 className="title m_d3">WELCOME TO THE DUMMY PUGGY</h1>
 						<div className="swiper_box">
 							<Swiper className="swiper" loop={true} effect="fade" slidesPerView={2} centeredSlides={true} autoplay={{"delay": 2000,"disableOnInteraction": true}}>
-								{['dog1.png','dog2.png','dog3.png','dog4.png','dog5.png','dog6.png','dog7.png','dog8.png'].map((el, i) => {
-									return <SwiperSlide key={i}>
-											<div className="swiper_img" style={{backgroundImage: 'url('+require(`../../images/${el}`).default+')'}}></div>
-										</SwiperSlide>;
-								})}
+								{
+									new Array(19).fill('0').map((el, i) => {
+										return <SwiperSlide key={i}>
+												<div className="swiper_img" style={{backgroundImage: 'url('+require(`../../images/${i+1}.png`).default+')'}}></div>
+											</SwiperSlide>;
+									})
+								}
 							</Swiper>
 						</div>
 						<p className="text_model">
