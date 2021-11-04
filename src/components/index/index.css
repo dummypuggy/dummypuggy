@@ -18,7 +18,7 @@
   transform: scale(1);
   transition: all .3s linear;
   width: 100%;
-  height: 15vw;
+  height: 13vw;
 }
 .swiper-slide.swiper-slide-active{
   transform: scale(1.3);
@@ -38,6 +38,10 @@
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.swiper-slide .swiper_img img{
+  border-radius: .6vw;
 }
 
 .swiper-container.swiper-container-initialized.swiper-container-horizontal.swiper-container-pointer-events.swiper::after {

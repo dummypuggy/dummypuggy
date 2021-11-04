@@ -61,7 +61,9 @@ function IndexComp(){
 								{
 									new Array(19).fill('0').map((el, i) => {
 										return <SwiperSlide key={i}>
-												<div className="swiper_img" style={{backgroundImage: 'url('+require(`../../images/${i+1}.png`).default+')'}}></div>
+												<div className="swiper_img">
+													<img src={require(`../../images/${i+1}.png`).default} alt={i.toString()} width="100%" height="100%"/>
+												</div>
 											</SwiperSlide>;
 									})
 								}
