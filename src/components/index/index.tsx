@@ -55,9 +55,10 @@ function IndexComp(){
 				</div>
 				<div className="welcome" id="about">
 					<Container>
-						<h1 className="title m_d3">WELCOME TO THE DUMMY PUGGY</h1>
+						<h1 className="title m_d5">WELCOME TO THE DUMMY PUGGY</h1>
 						<div className="swiper_box">
-							<Swiper className="swiper" loop={true} effect="fade" slidesPerView={2} centeredSlides={true} autoplay={{"delay": 2000,"disableOnInteraction": true}}>
+						{/* autoplay={{"delay": 2000,"disableOnInteraction": true}} */}
+							<Swiper className="swiper" loop={true} effect="fade" slidesPerView={2} centeredSlides={true} >
 								{
 									new Array(19).fill('0').map((el, i) => {
 										return <SwiperSlide key={i}>
@@ -86,7 +87,7 @@ function IndexComp(){
 							<li className="stpItem">
 								<div className="list_content">
 									<div className="img_box">
-										<img src={require('../../images/game1.png').default} alt="" />
+										<img src={require('../../images/game1.jpg').default} alt="" />
 									</div>
 									<div className="text_box  text_center ">
 										<h1 className="text_title">
@@ -101,7 +102,7 @@ function IndexComp(){
 							<li className="stpItem">
 								<div className="list_content">
 									<div className="img_box">
-										<img src={require('../../images/game_default.png').default} alt="" />
+										<img src={require('../../images/game2.jpg').default} alt="" />
 									</div>
 									<div className="text_box  text_center ">
 										<h1 className="text_title">
@@ -116,7 +117,7 @@ function IndexComp(){
 							<li className="stpItem">
 								<div className="list_content">
 									<div className="img_box">
-										<img src={require('../../images/game_default.png').default} alt="" />
+										<img src={require('../../images/game3.jpg').default} alt="" />
 									</div>
 									<div className="text_box  text_center ">
 										<h1 className="text_title">
@@ -138,11 +139,11 @@ function IndexComp(){
 								<div className="timeline-item">
 									<div className="timeline-content">
 										<h2 className="timeline-title_blue">Phase 1 2021 Q3</h2>
-										<p>Official website design and launch</p>
-										<p>Dummy Puggy NFT design and artwork creation</p>
-										<p>Connect with advisors and prepare for official plans</p>
-										<p>Start community & social media operation</p>
-										<p>Verify ideals, start designing the Dummy Puggy games</p>
+										<p className="roadmap_though">Official website design and launch</p>
+										<p className="roadmap_though">Dummy Puggy NFT design and artwork creation</p>
+										<p className="roadmap_though">Connect with advisors and prepare for official plans</p>
+										<p className="roadmap_though">Start community & social media operation</p>
+										<p className="roadmap_though">Verify ideals, start designing the Dummy Puggy games</p>
 									</div>
 								</div> 
 
