@@ -74,6 +74,7 @@
 .roadmap_though{
   text-decoration-line: line-through;
   text-decoration-color: #A3FE00;
+  color: rgb(255 255 255 / 50%);
 }
 
 .sub{

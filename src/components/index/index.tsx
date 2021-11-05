@@ -59,7 +59,7 @@ function IndexComp(){
 						<div className="swiper_box">
 							<Swiper className="swiper" loop={true} effect="fade" slidesPerView={2} centeredSlides={true}  autoplay={{"delay": 2000,"disableOnInteraction": true}}>
 								{
-									new Array(19).fill('0').map((el, i) => {
+									new Array(20).fill('0').map((el, i) => {
 										return <SwiperSlide key={i}>
 												<div className="swiper_img">
 													<img src={require(`../../images/${i+1}.png`).default} alt={i.toString()} width="100%" height="100%"/>
@@ -123,7 +123,7 @@ function IndexComp(){
 											STEP 3
 										</h1>
 										<div className="text_des">
-											Turn your bounties into ETH. Get ready to fill real money in your pocket!
+										Get yourself into leaderboard and win more treasure!
 										</div>
 									</div>
 								</div>
@@ -267,7 +267,7 @@ function IndexComp(){
 					<Container>
 						<div className="join_box">
 							<div className="join_img">
-								<img src={require('../../images/Chubby.png').default} alt="" width="100%"/>
+								<img src={require('../../images/discord_dog.png').default} alt="" width="100%"/>
 							</div>
 							<div className="join_text">
 									<h1 className="title">
