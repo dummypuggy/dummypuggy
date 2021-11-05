@@ -146,6 +146,7 @@
 
 .gameStp .stpItem .img_box img{
   width: 100%;
+  border-radius: 12px;
 }
 
 .text_box .text_title{
@@ -167,10 +168,11 @@
 
 .timeline {
   position: relative;
+  margin-top: 8vw;
 }
 .timeline::before {
   content: '';
-  background: #c5cae921;
+  /* background: #c5cae921; */
   width: 5px;
   height: 82%;
   position: absolute;
@@ -179,6 +181,7 @@
 }
 .timeline-item {
   width: 100%;
+  position: relative;
 }
 .timeline-item:nth-child(even) .timeline-content {
   float: right;
@@ -251,6 +254,54 @@
 
 .timeline-title_purple{
   color: #A372D8;
+}
+
+.mapdog{
+  position: absolute;
+  right: 0vw;
+  top: -8vw;
+  /* width: 30vw; */
+  height: 22vw;
+}
+
+.cang{
+  position: absolute;
+  left: 34%;
+  top: -3vw;
+  width: 4vw;
+  height: 4vw;
+}
+
+.cang2{
+  position: absolute;
+  left: 25%;
+  top: 60%;
+  width: 3vw;
+  height: 3vw;
+}
+
+.cang3{
+  position: absolute;
+  right: 25%;
+  top: 60%;
+  width: 3vw;
+  height: 3vw;
+  transform: rotate(270deg);
+}
+
+.mapdog2{
+  width: 10vw;
+  position: absolute;
+  left: 22%;
+}
+
+.deng{
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 2vw;
+  height: 85%;
+  transform: translateX(-50%);
 }
 
 .team{

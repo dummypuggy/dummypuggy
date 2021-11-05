@@ -68,7 +68,7 @@ function App() {
                 </a>
               </li>
               <li className="item flex align-center">
-                <a href="https://twitter.com/DummyPuggy" target="_blank" rel="noreferrer">
+                <a href="https://twitter.com/DummyPuggyNFT" target="_blank" rel="noreferrer">
                   <img src={require('./images/t.png').default} alt="" height="26"/>
                 </a>
               </li>
@@ -134,7 +134,7 @@ function App() {
                 </a>
               </li>
               <li className="item flex align-center">
-                <a href="https://twitter.com/DummyPuggy" target="_blank" rel="noreferrer">
+                <a href="https://twitter.com/DummyPuggyNFT" target="_blank" rel="noreferrer">
                   <img src={require('./images/t.png').default} alt="" height="26"/>
                 </a>
               </li>

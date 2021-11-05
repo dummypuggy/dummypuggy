@@ -66,17 +66,10 @@ function IndexComp(){
 			inset: "3rem",
 			transform: 'translate3d( '+((x - window.innerWidth /2) / 30)+'px , '+((y - window.innerHeight) /30)+'px, 0 )',
 	}
-
-	const handleMouseLeave = ()=>{
-		// picStyle = {
-		// 	inset: "-4rem",
-		// 	transform: 'translate3d( 0 , 0, 0 )',
-		// }
-	}
 	return(
 		<>
 			<div className="main">
-				<div className="banner" id="banner" onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave}>
+				<div className="banner" id="banner" onMouseMove={handleMouseMove}>
 					<div className="banner_text"  style={picStyle}>
 						<img src={require('../../images/banner_text.png').default} alt="" width="100%" height="100%"/>
 					</div>
@@ -175,6 +168,12 @@ function IndexComp(){
 										<p className="roadmap_though">Start community & social media operation</p>
 										<p className="roadmap_though">Verify ideals, start designing the Dummy Puggy games</p>
 									</div>
+									<div className="cang phone_hide">
+										<img src={require('../../images/c.png').default} alt="" width="100%"/>
+									</div>
+									<div className="mapdog phone_hide">
+										<img src={require('../../images/rg1.png').default} alt="" height="100%"/>
+									</div>
 								</div> 
 
 								<div className="timeline-item">
@@ -187,6 +186,9 @@ function IndexComp(){
 										<p>Release demo video</p>
 										<p>Dummy Puggy NFT public sale</p>
 									</div>
+									<div className="cang2 phone_hide">
+										<img src={require('../../images/c.png').default} alt="" width="100%"/>
+									</div>
 								</div>   
 								<div className="timeline-item">
 									<div className="timeline-content">
@@ -197,6 +199,9 @@ function IndexComp(){
 										<p>Keep growing the Puggy community</p>
 										<p>Start designing the tokenomics system</p>
 									</div>
+									<div className="cang3 phone_hide">
+										<img src={require('../../images/c.png').default} alt="" width="100%"/>
+									</div>
 								</div>   
 								<div className="timeline-item">
 									<div className="timeline-content">
@@ -206,7 +211,13 @@ function IndexComp(){
 										<p>Business expansion</p>
 										<p>Operating and exploiting</p>
 									</div>
-								</div>   
+									<div className="mapdog2 phone_hide">
+										<img src={require('../../images/rg2.png').default} alt="" width="100%"/>
+									</div>
+								</div>  
+								<div className="deng">
+									<img src={require('../../images/dg.png').default} alt="" width="100%" height="100%"/>
+								</div> 
 							</div>
 					</Container>
 				</div>
