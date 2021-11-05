@@ -3,6 +3,17 @@
   z-index: 3;
   /* pointer-events: none; */
 }
+.banner{
+  position: relative;
+}
+
+.banner_text{
+  position: absolute;
+  left: 0;
+  top: -15vh;
+  right: 0;
+  bottom: 0;
+}
 
 .welcome{
   padding: 7vw 0 10vw;

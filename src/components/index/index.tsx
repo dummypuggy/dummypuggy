@@ -11,6 +11,20 @@ import SwiperCore, {
 
 SwiperCore.use([Autoplay]);
 
+const useMove = () => {
+	const [state, setState] = useState({x: 0, y: 0});
+
+	const handleMouseMove = (e: any) => {
+		e.persist();
+		setState(state => ({...state, x: e.clientX, y: e.clientY}));
+	};
+	return {
+		x: state.x,
+		y: state.y,
+		handleMouseMove,
+	}
+}
+
 function IndexComp(){
 	const [emailAddress, setEmail] = useState('');
 	const [show, setShow] = useState(false);
@@ -45,10 +59,27 @@ function IndexComp(){
 	const handlEmail = (e:any)=>{
 		setEmail(e.target.value)
 	}
+
+
+	const { x, y, handleMouseMove } = useMove();
+	let picStyle = {
+			inset: "3rem",
+			transform: 'translate3d( '+((x - window.innerWidth /2) / 30)+'px , '+((y - window.innerHeight) /30)+'px, 0 )',
+	}
+
+	const handleMouseLeave = ()=>{
+		// picStyle = {
+		// 	inset: "-4rem",
+		// 	transform: 'translate3d( 0 , 0, 0 )',
+		// }
+	}
 	return(
 		<>
 			<div className="main">
-				<div className="banner" id="banner">
+				<div className="banner" id="banner" onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave}>
+					<div className="banner_text"  style={picStyle}>
+						<img src={require('../../images/banner_text.png').default} alt="" width="100%" height="100%"/>
+					</div>
 					<video width="100%" height="100%" preload="auto" autoPlay loop muted playsInline>
 						<source src={require('../../images/banner.mp4').default} type="video/mp4" />
 					</video>
