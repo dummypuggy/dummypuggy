@@ -81,7 +81,7 @@ function IndexComp(){
 					<Container>
 						<h1 className="title m_d5">WELCOME TO THE DUMMY PUGGY</h1>
 						<div className="swiper_box">
-							<Swiper className="swiper" loop={true} effect="fade" slidesPerView={2} centeredSlides={true}  autoplay={{"delay": 2000,"disableOnInteraction": true}}>
+							<Swiper className="swiper" loop={true} effect="fade" slidesPerView={2} centeredSlides={true}  autoplay={{"delay": 2000,"disableOnInteraction": false}}>
 								{
 									new Array(20).fill('0').map((el, i) => {
 										return <SwiperSlide key={i}>
