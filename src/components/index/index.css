@@ -5,7 +5,8 @@
 }
 .banner{
   position: relative;
-  background: url(../../images/banner_bg.png) no-repeat center 100%;
+  background: url(../../images/banner_bg.png) no-repeat center;
+  background-size: 100% 100%;
 }
 
 .banner_text{
@@ -703,8 +704,17 @@
   }
 
   .banner_text{
-    inset: 0rem!important;
-    transform: translate3d(0,-9px,0)!important;
+    inset: -3rem!important;
+    transform: translate3d(0,-9vw,0)!important;
+  }
+
+  .welcome .text_model{
+    font-size: 13px;
+  }
+
+  .banner video{
+    width: 130%;
+    margin-left: -15%;
   }
   
   /* .timeline-item:nth-child(1){

@@ -329,7 +329,7 @@ function IndexComp(){
 				? 
 				<Fade in={show}>
 					<div className="Alert_block">
-					提交成功
+					Submit succeed
 					</div>
 				</Fade>
 					
