@@ -293,6 +293,16 @@ function IndexComp(){
 					
 				: ''
 			}
+			<div className="coin_model coin1">
+				<img src={require('../../images/coin4.webp').default} alt="" className="shi1"/>
+				<img src={require('../../images/coin3.webp').default} alt="" className="shi2"/>
+				<img src={require('../../images/coin2.webp').default} alt="" className="shi4"/>
+				<img src={require('../../images/coin4.webp').default} alt="" className="shi3"/>
+			</div>
+			<div className="coin_model coin2">
+				<img src={require('../../images/coin3.webp').default} alt="" className="bg_coin1"/>
+				<img src={require('../../images/coin3.webp').default} alt="" className="bg_coin2"/>
+			</div>
 		</>
 	)
 }

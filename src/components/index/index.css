@@ -1,3 +1,9 @@
+.main{
+  position: relative;
+  z-index: 3;
+  /* pointer-events: none; */
+}
+
 .welcome{
   padding: 7vw 0 10vw;
   background: #141B3B;
@@ -557,4 +563,63 @@
   padding: 20px 10px;
   text-align: center;
   transition: all .2s linear;
+}
+
+.coin_model{
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  
+  pointer-events: none;
+}
+
+.coin1{
+  z-index: 9999;
+}
+
+.coin2{
+  z-index: 1;
+}
+
+.shi1{
+  position: absolute;
+  bottom: 0;
+  width: 6vw;
+  min-width: 50px;
+}
+
+.shi2{
+  position: absolute;
+  top: 0;
+  left: 3vw;
+  width: 16vw;
+}
+
+.shi3{
+  position: absolute;
+  top: 40%;
+  right: 6%;
+  width: 5vw;
+}
+
+.shi4{
+  position: absolute;
+  top: 5%;
+  right: 3.5%;
+  width: 10vw;
+}
+
+
+.bg_coin1{
+  width: 50%;
+}
+
+
+.bg_coin2{
+  position: absolute;
+  width: 65%;
+  left: 40%;
+  top: 20%;
 }
