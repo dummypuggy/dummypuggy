@@ -5,6 +5,7 @@
 }
 .banner{
   position: relative;
+  background: url(../../images/banner_bg.png) no-repeat center 100%;
 }
 
 .banner_text{
@@ -108,6 +109,10 @@
   font-family: MERegular, Helvetica, sans-serif;
   width: 80%;
   margin: auto;
+}
+
+.welcome .text_model{
+  font-size: 1.2vw;
 }
 
 .button_group .link{
