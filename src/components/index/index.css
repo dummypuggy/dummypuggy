@@ -450,169 +450,6 @@
   margin: 1vw 0 0;
 }
 
-
-@media screen and (max-width: 420px){
-  .title{
-    font-size: 7vw;
-    padding-top: 15vw;
-  }
-  .text_model{
-    font-size: 12px;
-    width: 100%;
-    padding: 0 10px;
-  }
-  .bottom_model img{
-    height: 20vw;
-    margin-top: 8vw;
-  }
-  .swiper-slide{
-    height: 40vw;
-  }
-  .welcome{
-    padding: 8vw 0 15vw;
-    margin-top: -5vw;
-    border-radius: 19px;
-  }
-  body .title{
-    margin-bottom: 10vw;
-  }
-  .swiper{
-    width: 100%;
-    margin: 10vw auto 18vw;
-    padding: 5vw 10vw;
-  }
-
-  .gameStp{
-    flex-wrap: wrap;
-    padding: 20px;
-  }
-  .stpItem{
-    flex: inherit;
-    margin-bottom: 20px;
-  }
-
-  .text_box .text_title{
-    font-size: 22px;
-    margin-top: 20px;
-  }
-  .text_box .text_des{
-    font-size: 12px;
-  }
-  .timeline-content{
-    padding: 10px;
-  }
-  .timeline-item h2{
-    font-size: 3.4vw;
-  }
-  .timeline-item p{
-    font-size: 2vw;
-  }
-  .timeline::before{
-    height: 85.5%;
-  }
-  .timeline-item p::before{
-    height: 1px;
-    width: 10px;
-    top: 2.6vw;
-  }
-  .teamUl{
-    flex-wrap: wrap;
-  }
-  .teamUl li{
-    flex: inherit;
-    border-bottom: 1px solid #ffffff52;
-  }
-
-  .core li {
-    display: flex;
-    grid-gap: 0.5vw;
-    grid-gap: 0.5vw;
-    gap: 0.5vw;
-    align-items: center;
-    justify-content: center;
-  }
-  .core li div{
-    flex: 1 1;
-  }
-  .teamUl.core *{
-    text-align: left;
-  }
-  .teamUl .name{
-    font-size: 3vw;
-  }
-  .teamUl .post{
-    font-size: 2.7vw;
-  }
-  .teamUl .introduce{
-    font-size: 2.5vw;
-  }
-  .teamUl li:nth-child(even) .text_box{
-    order: 1;
-  }
-  .teamUl li:nth-child(even) .text_box *{
-    text-align: right;
-  }
-  .teamUl li:nth-child(even) .img_box{
-    order: 2;
-  }
-  .teamUl.core{
-    grid-gap: 4vw;
-    gap:4vw;
-    margin-top: 0!important;
-  }
-  .teamUl.core li:last-child{
-    border: none;
-  }
-  .wait_con .form input{
-    min-width: inherit;
-    font-size: 2.8vw;
-  }
-  .wait_con{
-    background-size: cover;
-    background-position: center;
-  }
-  .join_box{
-    flex-wrap: wrap;
-  }
-  .join_box .join_img{
-    width: 65%;
-    margin: auto;
-  }
-
-  .join_box .submit_btn{
-    margin: 6vw auto;
-  }
-  .join_box .join_text *{
-    text-align: center;
-  }
-  .footer_logo img{
-    width: 90vw;
-  }
-  footer .navList{
-    margin-top: -10vw;
-  }
-  footer .navList .item{
-    padding: 0 3.6vw;
-  }
-  footer {
-    padding: 5vw 0 13vw;
-  }
-  
-  /* .timeline-item:nth-child(1){
-    transform: translateY(0);
-  }
-  .timeline-item:nth-child(2){
-    transform: translateY(-50%);
-  }
-  .timeline-item:nth-child(3){
-    transform: translateY(-85%);
-  }
-  .timeline-item:nth-child(4){
-    transform: translateY(-174%);
-  } */
-}
-
-
 .Alert_block{
   max-width: 300px;
   width: 90%;
@@ -684,4 +521,197 @@
   width: 65%;
   left: 40%;
   top: 20%;
+}
+
+
+
+@media screen and (max-width: 420px){
+  .title{
+    font-size: 7vw;
+    padding-top: 15vw;
+  }
+  .text_model{
+    font-size: 12px;
+    width: 100%;
+    padding: 0 10px;
+  }
+  .bottom_model img{
+    height: 20vw;
+    margin-top: 8vw;
+  }
+  .swiper-slide{
+    height: 38vw;
+  }
+  .swiper-slide .swiper_img img{
+    border-radius: 3.6vw;
+  }
+  .welcome{
+    padding: 8vw 0 15vw;
+    margin-top: -5vw;
+    border-radius: 19px;
+  }
+  body .title{
+    margin-bottom: 10vw;
+  }
+  .swiper{
+    width: 100%;
+    margin: 10vw auto 8vw;
+    padding: 5vw 10vw;
+  }
+
+  .gameStp{
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+  .stpItem{
+    flex: inherit;
+    margin-bottom: 20px;
+  }
+
+  .text_box .text_title{
+    font-size: 22px;
+    margin-top: 20px;
+  }
+  .text_box .text_des{
+    font-size: 12px;
+  }
+  .timeline-content{
+    padding: 10px;
+    width: 100%;
+  }
+  .timeline{
+    padding-left: 10px;
+  }
+  .deng{
+    left: 0;
+    width: 5vw;
+    height: 88%;
+  }
+  .timeline-item h2{
+    font-size: 3.4vw;
+  }
+  .timeline-item p{
+    font-size: 2vw;
+  }
+  .timeline::before{
+    height: 85.5%;
+  }
+  .timeline-item p::before{
+    height: 1px;
+    width: 10px;
+    top: 2.6vw;
+  }
+  .teamUl{
+    flex-wrap: wrap;
+  }
+  .teamUl li{
+    flex: inherit;
+    border-bottom: 1px solid #ffffff52;
+  }
+
+  .core li {
+    display: flex;
+    grid-gap: 0.5vw;
+    grid-gap: 0.5vw;
+    gap: 0.5vw;
+    align-items: center;
+    justify-content: center;
+  }
+  .core li div{
+    flex: 1 1;
+  }
+  .teamUl.core *{
+    text-align: left;
+  }
+  .teamUl .name{
+    font-size: 3vw;
+  }
+  .teamUl .post{
+    font-size: 2.7vw;
+  }
+  .teamUl .introduce{
+    font-size: 2.5vw;
+  }
+  .teamUl li:nth-child(even) .text_box{
+    order: 1;
+  }
+  .teamUl li:nth-child(even) .text_box *{
+    text-align: right;
+  }
+  .teamUl li:nth-child(even) .img_box{
+    order: 2;
+  }
+  .teamUl.core{
+    grid-gap: 4vw;
+    gap:4vw;
+    margin-top: 0!important;
+  }
+  .teamUl.core li:last-child{
+    border: none;
+  }
+  .wait_con .form input{
+    min-width: inherit;
+    font-size: 2.8vw;
+  }
+  .wait_con{
+    background-size: cover;
+    background-position: center;
+    padding: 20px 10px;
+  }
+  .wait_con .title{
+    padding-top: 5vw;
+  }
+  .join{
+    padding-top: 3vw;
+  }
+  .join_box{
+    flex-wrap: wrap;
+    grid-gap: 1vw;
+    gap: 1vw;
+  }
+  .join_text .title{
+    padding: 0vw;
+    margin-bottom: 3vw;
+  }
+  .join_box .join_img{
+    width: 65%;
+    margin: auto;
+  }
+
+  .join_box .submit_btn{
+    margin: 6vw auto;
+  }
+  .join_box .join_text *{
+    text-align: center;
+  }
+  .footer_logo img{
+    width: 90vw;
+  }
+  footer .navList{
+    margin-top: -10vw;
+  }
+  footer .navList .item{
+    padding: 0 3.6vw;
+  }
+  footer {
+    padding: 5vw 0 13vw;
+  }
+
+  .banner_text{
+    inset: 0rem!important;
+    transform: translate3d(0,-9px,0)!important;
+  }
+  
+  /* .timeline-item:nth-child(1){
+    transform: translateY(0);
+  }
+  .timeline-item:nth-child(2){
+    transform: translateY(-50%);
+  }
+  .timeline-item:nth-child(3){
+    transform: translateY(-85%);
+  }
+  .timeline-item:nth-child(4){
+    transform: translateY(-174%);
+  } */
 }
