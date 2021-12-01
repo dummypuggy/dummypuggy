@@ -1,0 +1,130 @@
+.email_body{
+  padding: 5vw 0;
+  height: 100vh;
+  max-width: 1400px;
+  margin: auto;
+}
+
+.verify_box{
+  display: flex;
+  align-items: center;
+  /* flex-direction: column; */
+  justify-content: center;
+}
+
+.verify_from{
+  flex-direction: column;
+  display: flex;
+}
+
+.verify_from input{
+  margin-bottom: 20px;
+  line-height: 1.5;
+  padding: 8px;
+  background: #00000054;
+  border: 1px solid #000;
+  color: #fff;
+}
+
+.email_tab{
+  height: calc(100vh - 10vw);
+  overflow: auto;
+  box-shadow: 0 1px 4px rgb(0 0 0 / 10%);
+  border: 1px solid #59546d;
+}
+
+.email_title{
+  padding: 1vw 0;
+}
+
+.email_body button{
+  /* width: 6vw; */
+  border: none;
+  line-height: 1;
+  border-radius: 20px;
+  background: #1e784d;
+  color: #fff;
+  font-size: .8vw;
+  font-weight: 500;
+  font-family: MEUltrabold, Helvetica, sans-serif;
+  letter-spacing: 3px;
+  padding: .5vw  1vw;
+}
+
+.email_body .table-module_container {
+  border-collapse: separate;
+  border-spacing: 0;
+  /* background-color: #2a273f; */
+  color: #deddf4;
+  margin-bottom: 0;
+}
+
+.email_body .table-module_container tbody tr:hover{
+  background: #b3b3b333;
+}
+
+.email_body .table{
+  min-width: 100%;
+}
+
+/* 首列固定 */
+.email_body thead tr > th:first-child,
+.email_body tbody tr > td:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+}
+
+
+
+/* 表头固定 */
+.email_body thead tr > th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: #0a0d1d;
+}
+
+/* 表头首列强制最顶层 */
+.email_body thead tr > th:first-child {
+  z-index: 3;
+}
+
+.email_body .table thead{
+  background: #0a0d1d;
+}
+
+
+.email_body th:first-child,.email_body td:first-child{
+  border-right-width: 1px;
+  border-right-style: solid;
+}
+
+
+
+.email_body td, .email_body th {
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  padding: 8px 8px 8px 16px;
+  border-color: #59546d!important;
+  vertical-align: middle;
+}
+
+
+::-webkit-scrollbar {
+  width: 16px;
+  height: 16px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #0a0d1d;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #474e5c;
+}
+
+
+::-webkit-scrollbar-corner, ::-webkit-scrollbar-track {
+  background-color: #0a0d1d;
+}

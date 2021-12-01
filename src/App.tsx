@@ -10,13 +10,16 @@ import Footer from './components/footer/footer';
 import './App.css';
 import IndexComp from './components/index';
 import Faq from './components/Faq';
+import EmailForm from './components/email';
 
 function App() {
   const location = useLocation();
   const [navBtn, setNavBtnClassNames] = useState('iconUl');
   const [navMolde, setNavModelClassNames] = useState('nav-model');
   React.useEffect(() => {
-    document.documentElement.scrollTop = document.body.scrollTop =0;
+    setTimeout(()=>{
+      document.documentElement.scrollTop = document.body.scrollTop =0;
+    },0)
     setNavModelClassNames('nav-model')
     setNavBtnClassNames('iconUl')
   }, [location]);
@@ -92,12 +95,17 @@ function App() {
       <Switch>
         <Route exact path="/">
           <IndexComp/>
+          <Footer/>
         </Route>
         <Route path="/faq">
           <Faq/>
+          <Footer/>
+        </Route>
+        <Route path='/emailfrom'>
+          <EmailForm/>
         </Route>
       </Switch>
-      <Footer/>
+     
       {/* 手机导航 */}
       <div className={navMolde}>
         <div className="model-content">
