@@ -193,11 +193,11 @@ function NewView(){
 	}
   return(
     <div>
-      <div ref={scrollContainer} className="index_scrollContainer">
+      <div id="banner" ref={scrollContainer} className="index_scrollContainer">
         <div className="index_content">
           <div className="index_sky">
             <div ref={skyBox} className="style_skyBg">
-              <div className="banner" id="banner" onMouseMove={handleMouseMove}>
+              <div className="banner"  onMouseMove={handleMouseMove}>
                 <div className="banner_text"  style={picStyle}>
                   <div className="banner_text_box">
                     <img src={require('../../images/newBanner_text.webp').default} alt=""/> 
@@ -259,7 +259,7 @@ function NewView(){
           </div>
         </div>
       </div>
-      <div className="gamePlay block">
+      <div id="gameplay" className="gamePlay block">
         <div className="newtitle">
           <img src={require('../../images/gameplay_title.png').default} alt="" />
         </div>
@@ -340,7 +340,7 @@ function NewView(){
         <img src={require('../../images/earn.png').default} alt="" width="100%"/>
         </div>
       </div>
-      <div className="roadmap" >
+      <div id='roadmap' className="roadmap" >
         <Container>
             <div className="newtitle m_d5">
               <img src={require('../../images/roadmap_title.png').default} alt="" />

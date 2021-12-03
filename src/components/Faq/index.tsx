@@ -2,8 +2,18 @@ import React from "react";
 import { Container } from 'react-bootstrap'
 import questionsList from '../../data/faqData'
 import './index.css'
+import { 
+    useLocation,
+  } from 'react-router-dom';
 
 function Faq() {
+    const location = useLocation();
+    React.useEffect(() => {
+        setTimeout(()=>{
+        document.documentElement.scrollTop = document.body.scrollTop =0;
+        },0)
+    
+    }, [location]);
     let dataList = questionsList.map((item, index) => {
         return (
             <li>

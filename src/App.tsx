@@ -1,4 +1,5 @@
-import React, {useState} from 'react';
+/* eslint-disable @typescript-eslint/no-unused-vars */
+import React, {useState, useRef} from 'react';
 import { 
   Switch,
   Route,
@@ -17,12 +18,15 @@ function App() {
   const location = useLocation();
   const [navBtn, setNavBtnClassNames] = useState('iconUl');
   const [navMolde, setNavModelClassNames] = useState('nav-model');
+  const Time = useRef<any>()
+  const pos = useRef<any>(0);
   React.useEffect(() => {
-    setTimeout(()=>{
-      document.documentElement.scrollTop = document.body.scrollTop =0;
-    },0)
+    // setTimeout(()=>{
+    //   document.documentElement.scrollTop = document.body.scrollTop =0;
+    // },0)
     setNavModelClassNames('nav-model')
     setNavBtnClassNames('iconUl')
+  
   }, [location]);
   function changeNavStatu() {
     let isActive = navBtn.indexOf("active");
@@ -34,6 +38,32 @@ function App() {
       setNavModelClassNames('nav-model')
     }
   }
+
+  const ScrollBlock = (name:any)=>{
+    let anchorElement = document.getElementById(name);
+    if (anchorElement) {
+      pos.current = anchorElement.offsetTop
+      // Time.current = setInterval(frame, 10);
+      document.body.scrollTo(0, anchorElement.offsetTop - window.innerHeight);
+    }
+  }
+
+  // const frame = ()=>{
+  //   let scrollTop = document.body.scrollTop
+  //   let delat = scrollTop - pos.current
+  //   if (document.body.scrollTop >= pos.current) {
+  //     clearInterval(Time.current);
+  //   } else {
+  //     if(delat < 0){
+  //       scrollTop +=1; 
+  //     } else {
+  //       scrollTop -=1; 
+  //     }
+  //     document.body.scrollTo(0, scrollTop);
+  //   }
+  // }
+
+
   return (
     <div className="App">
       <div className="header">
@@ -43,7 +73,7 @@ function App() {
             <div className="spec"></div>
             <ul className='navList pc'>
               <li className="item flex align-center">
-                <a href="/#banner">
+                <a href="/#banner" onClick={()=>{ScrollBlock('banner')}}>
                   Home
                 </a>
               </li>
@@ -53,12 +83,12 @@ function App() {
                 </a>
               </li>
               <li className="item flex align-center">
-                <a href="/#gameplay">
+                <a href="/#gameplay" onClick={()=>{ScrollBlock('gameplay')}}>
                 gameplay
                 </a>
               </li>
               <li className="item flex align-center">
-                <a href="/#team">
+                <a href="/#team" onClick={()=>{ScrollBlock('team')}}>
                 Team
                 </a>
               </li>
