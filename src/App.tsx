@@ -96,7 +96,7 @@ function App() {
       </div>
       <Switch>
         <Route exact path="/">
-          <NewView/>
+          {/* <NewView/> */}
           {/* <NewIndexComp/> */}
           <IndexComp/>
 

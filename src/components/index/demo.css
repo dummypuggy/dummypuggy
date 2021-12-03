@@ -74,9 +74,9 @@
   top: 22%;
   left: 5%;
 }
-.talk_video_box .right_box{
+/* .talk_video_box .right_box{ */
   /* flex: 1; */
-}
+/* } */
 
 .talk_video_box .video_box{
   position: absolute;

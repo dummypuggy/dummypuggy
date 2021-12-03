@@ -20,9 +20,6 @@ const useMove = () => {
 }
 
 function NewIndexComp(){
-
-
-
 	const { x, y, handleMouseMove } = useMove();
 	let picStyle = {
 			inset: "3rem",
