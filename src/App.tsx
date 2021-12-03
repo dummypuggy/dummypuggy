@@ -11,8 +11,7 @@ import './App.css';
 import IndexComp from './components/index';
 import Faq from './components/Faq';
 import EmailForm from './components/email';
-// import NewIndexComp from './components/index/newIndex';
-import NewView from './components/index/demo';
+import NewView from './components/index/newIndex';
 
 function App() {
   const location = useLocation();

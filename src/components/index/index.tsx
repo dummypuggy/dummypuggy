@@ -71,16 +71,11 @@ function IndexComp(){
 			<div className="main">
 				<div className="banner" id="banner" onMouseMove={handleMouseMove}>
 					<div className="banner_text"  style={picStyle}>
-						{/* <img src={require('../../images/banner_text.png').default} alt="" width="100%" height="100%"/> */}
-						<div className="banner_text_box">
-							<img src={require('../../images/newBanner_text.webp').default} alt=""/> 
-							{/* <picture>
-								<source type="image/webp" srcset={require('../../images/newBanner_text.webp').default}>
-							</picture> */}
-						</div>
+						<img src={require('../../images/banner_text.png').default} alt="" width="100%" height="100%"/>
+					
 					</div>
 					<video width="100%" height="100%" preload="auto" autoPlay loop muted playsInline>
-						<source src={require('../../images/newBanner.mp4').default} type="video/mp4" />
+						<source src={require('../../images/banner.mp4').default} type="video/mp4" />
 					</video>
 				</div>
 				<div className="welcome" id="about">
