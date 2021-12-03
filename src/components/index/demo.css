@@ -1,0 +1,315 @@
+.index_scrollContainer {
+  position: relative;
+  max-width: 100vw;
+  height: 4300px;
+}
+
+.index_scrollContainer .index_content {
+  position: sticky;
+  top: 0;
+}
+
+.index_scrollContainer .index_sky{
+  position: absolute;
+  top: 0;
+}
+
+.index_scrollContainer .index_house {
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.style_skyBg {
+  margin: 0 auto;
+  width: 100vw;
+  height: 60vw;
+}
+
+
+.banner{
+  position: relative;
+  background: url(../../images/newBanner_bg.png) no-repeat center;
+  background-size: 100% 100%;
+}
+
+.banner_text{
+  position: absolute;
+  left: 0;
+  top: -15vh;
+  right: 0;
+  bottom: 0;
+}
+.banner_text_box{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.banner_text_box img{
+  height: 20vh;
+  position: absolute;
+  bottom: -3%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+.talk_video{
+  /* padding: 0 0 0 4vw; */
+  height: 100vh;
+}
+
+.talk_video_box{
+  /* display: flex;
+  align-items: center;*/
+  height: 100%; 
+  position: relative;
+}
+
+.talk_video_box .left_box{
+  /* width: 30%; */
+  position: absolute;
+  width: 26vw;
+  height: 40vh;
+  top: 22%;
+  left: 5%;
+}
+.talk_video_box .right_box{
+  /* flex: 1; */
+}
+
+.talk_video_box .video_box{
+  position: absolute;
+  width: 90%;
+  right: 0;
+  top: 5%;
+}
+
+.talk_video_box .video_box img{
+  z-index: 2;
+  position: relative;
+}
+
+.talk_video_box .video_box .video{
+  position: absolute;
+  right: 18%;
+  top: 38%;
+  padding-left: 27vw;
+}
+
+.style_roomContainer {
+  position: relative;
+  max-width: 100vw;
+  max-height: 100vh;
+  width: 100vw;
+  height: 100vh;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.style_roomBg{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  
+}
+
+.style_houseBg {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.style_houseBg .wall{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-position: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  background-image: url(../../images/wall.png);
+}
+
+.style_houseBg .doorBg{
+  position: absolute;
+  left: 38%;
+  top: 40%;
+  width: 20vw;
+  height: 30vh;
+  background-position: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  background-image: url(../../images/doorBg.webp);
+}
+
+.style_houseBg .door{
+  position: absolute;
+  top: 4.8%;
+  /* left: .8%; */
+  left: -10.2%;
+  width: 100%;
+  height: 100%;
+  background-position: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  background-image: url(../../images/door.png);
+}
+
+.style_tableGroup {
+  pointer-events: none;
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.style_tableGroup .style_table {
+  width: 1920px;
+  height: 1080px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: contain;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  max-width: 100%;
+  transform: translateX(-50%);
+  background-position: bottom;
+  background-image: url(../../images/table.png);
+}
+
+.style_tableGroup .style_monitor {
+  width: 1920px;
+  height: 1080px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: contain;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  max-width: 100%;
+  transform: translateX(-50%);
+  background-position: bottom;
+  background-image: url(../../images/monitor.png);
+}
+
+.style_tableGroup .style_monitor .text{
+  font-family: CBBI,sans-serif;
+  color: #00F3F6;
+  position: absolute;
+  left: 52%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 1.2vw;
+  line-height: 1.4;
+  width: 45%;
+}
+
+.style_tableGroup .style_monitor .text p:first-child{
+  width: 80%;
+}
+
+.style_tableGroup .style_monitor .text p{
+  margin-bottom: 2vh;
+}
+
+
+.style_tableGroup .style_computer{
+  width: 1920px;
+  height: 1080px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: contain;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  max-width: 100%;
+  transform: translateX(-50%);
+  background-position: bottom;
+  background-image: url(../../images/computer.png);
+}
+
+
+.style_tableGroup .style_dog{
+  width: 23vw;
+  height: 49vh;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+  position: absolute;
+  bottom: 15%;
+  left: 13%;
+  max-width: 100%;
+  transform: translateX(-50%) rotateY(180deg);
+  background-position: bottom;
+  background-image: url(../../images/bulingDog.webp);
+}
+
+.style_tableGroup .style_table_bottom,.style_tableGroup .style_table_top{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.block{
+  padding: 4vw 0;
+}
+
+.block .content{
+  max-width: 1680px;
+  margin: auto;
+}
+.newtitle{
+  text-align: center;
+}
+.newtitle img{
+  height: 10vh;
+}
+
+
+.gamePlay_list{
+  display: flex;
+  grid-gap: 1.5vw;
+  gap: 1.5vw;
+  width: 100%;
+  margin: auto;
+  margin-top: 6vw;
+  max-width: 1680px;
+}
+
+.gamePlay_list .stpItem{
+  flex: 1 1;
+}
+
+
+.gamePlay_list .stpItem .video_box video{
+  width: 100%;
+  border-radius: 12px;
+}
+
+.gamePlay_list .text_box .text_title {
+  padding: 1vw;
+  font-size: 1.6vw;
+  font-family: MEUltrabold,Helvetica,sans-serif;
+  margin-top: 1.5vw;
+  letter-spacing: 3px;
+}
+
+.earn_box{
+  margin-top: 6vw;
+}
+
+.timeline .timeline-item:nth-child(2){
+  margin-top: 6vw;
+}
+
+.timeline .timeline-item:nth-child(3){
+  margin-top: -6vw;
+}

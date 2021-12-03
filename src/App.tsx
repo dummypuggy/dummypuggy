@@ -11,6 +11,8 @@ import './App.css';
 import IndexComp from './components/index';
 import Faq from './components/Faq';
 import EmailForm from './components/email';
+// import NewIndexComp from './components/index/newIndex';
+import NewView from './components/index/demo';
 
 function App() {
   const location = useLocation();
@@ -94,7 +96,10 @@ function App() {
       </div>
       <Switch>
         <Route exact path="/">
+          <NewView/>
+          {/* <NewIndexComp/> */}
           <IndexComp/>
+
           <Footer/>
         </Route>
         <Route path="/faq">
@@ -103,6 +108,10 @@ function App() {
         </Route>
         <Route path='/emailfrom'>
           <EmailForm/>
+        </Route>
+        <Route path='/newindex'>
+          <NewView/>
+          <Footer/>
         </Route>
       </Switch>
      

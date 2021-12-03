@@ -11,4 +11,8 @@
   font-family:MEUltrabold;src:url(/static/fonts/MonumentExtended-Ultrabold.otf) format("opentype")
 }
 
+@font-face {
+  font-family:CBBI;src:url(/static/fonts/Comic-Book-Bold-Italic.otf) format("opentype")
+}
+
 
