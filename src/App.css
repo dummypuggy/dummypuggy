@@ -186,6 +186,15 @@
   height: auto;
 }
 
+.loading .load_box .svg_box{
+  animation: breathe 3s linear;
+  animation-iteration-count: infinite;
+}
+
+.loading .load_box svg{
+  width: 100%;
+}
+
 .load_progress{
   display: flex;
   overflow: hidden;
@@ -218,5 +227,35 @@
 @keyframes identifier {
   0% {
       background-position-x: 1rem;
+  }
+}
+
+
+.cls-1 {
+  mix-blend-mode: multiply;
+}
+
+.cls-2 {
+  fill: none;
+  stroke: #000;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2px;
+  fill-rule: evenodd;
+}
+
+
+
+
+
+@keyframes breathe {
+  0% {
+    transform: scale(.9);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(.9);
   }
 }
