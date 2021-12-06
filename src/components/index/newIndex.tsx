@@ -302,7 +302,7 @@ function NewView(){
             <div className="list_content">
               <div className="video_box">
                 <video width="100%"  preload="auto" autoPlay loop muted playsInline>
-                  <source src={require('../../images/playGame.mp4').default} type="video/mp4" />
+                  <source src={require('../../images/Kennel.mp4').default} type="video/mp4" />
                 </video>
               </div>
               <div className="text_box  text_center ">
@@ -316,7 +316,7 @@ function NewView(){
             <div className="list_content">
               <div className="video_box">
                 <video width="100%"  preload="auto" autoPlay loop muted playsInline>
-                  <source src={require('../../images/playGame.mp4').default} type="video/mp4" />
+                  <source src={require('../../images/Feed.mp4').default} type="video/mp4" />
                 </video>
               </div>
               <div className="text_box  text_center ">
@@ -330,7 +330,7 @@ function NewView(){
             <div className="list_content">
               <div className="video_box">
                 <video width="100%"  preload="auto" autoPlay loop muted playsInline>
-                  <source src={require('../../images/playGame.mp4').default} type="video/mp4" />
+                  <source src={require('../../images/Teleport.mp4').default} type="video/mp4" />
                 </video>
               </div>
               <div className="text_box  text_center ">
@@ -344,7 +344,7 @@ function NewView(){
             <div className="list_content">
               <div className="video_box">
                 <video width="100%"  preload="auto" autoPlay loop muted playsInline>
-                  <source src={require('../../images/playGame.mp4').default} type="video/mp4" />
+                  <source src={require('../../images/Shop.mp4').default} type="video/mp4" />
                 </video>
               </div>
               <div className="text_box  text_center ">
