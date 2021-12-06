@@ -57,16 +57,18 @@ function NewView(){
     
 
     countSkyBoxTop(); // 设置skyBg
-    if(afterScrollTop+100 > skyBox.current.getBoundingClientRect().height){
+    if(afterScrollTop-150 > skyBox.current.getBoundingClientRect().height){
       gsap.to([styleRoomBg.current], {
         opacity: 1,
         duration: 1,
+        delay: 0.01,
       });
       countDoorLeft()
     } else {
       gsap.to([styleRoomBg.current], {
         opacity: 0,
         duration: 1,
+        delay: 0.01,
       });
     }
 
@@ -84,6 +86,8 @@ function NewView(){
     skyBoxTop.current -=delta;
     gsap.to([skyBox.current], {
       transform: `translate3d(0, ${skyBoxTop.current}px,0)`,
+      duration: 2,
+      delay: 0.01,
     });
   }
 
@@ -101,9 +105,13 @@ function NewView(){
     if(styleRoomScale.current<=1) styleRoomScale.current = 1
     gsap.to([Door.current], {
       left: `${doorLeft.current}%`,
+      duration: 1,
+      delay: 0.01,
     });
     gsap.to([styleRoomBg.current], {
-      transform: `scale(${styleRoomScale.current}, ${styleRoomScale.current})`
+      transform: `scale(${styleRoomScale.current}, ${styleRoomScale.current})`,
+      duration: 1,
+      delay: 0.01,
     });
   }
 
@@ -117,7 +125,9 @@ function NewView(){
       if(HouseBgFilter.current>=5) HouseBgFilter.current = 5
       if(HouseBgFilter.current<=0) HouseBgFilter.current=0
       gsap.to([HouseBg.current], {
-        filter: `blur(${ HouseBgFilter.current}px)`
+        filter: `blur(${ HouseBgFilter.current}px)`,
+        duration: 1,
+        delay: 0.01,
       });
     } else {
       HouseBgFilter.current=0
@@ -145,16 +155,24 @@ function NewView(){
     if(styleTableScale.current<=1) styleTableScale.current = 1;
     if(styleTableScale.current >=2) styleTableScale.current = 2;
     gsap.to([TableBottomRef1.current], {
-      transform: `translate3d(0px,${TableBottom.current}px,0px)`
+      transform: `translate3d(0px,${TableBottom.current}px,0px)`,
+      duration: 1,
+      delay: 0.01,
     });
     gsap.to([TableBottomRef2.current], {
-      transform: `translate3d(0px,${TableBottom.current}px,0px)`
+      transform: `translate3d(0px,${TableBottom.current}px,0px)`,
+      duration: 1,
+      delay: 0.01,
     });
     gsap.to([TableTopRef.current], {
-      transform: `translate3d(0px,${TableTop.current}px,0px)`
+      transform: `translate3d(0px,${TableTop.current}px,0px)`,
+      duration: 1,
+      delay: 0.01,
     });
     gsap.to([styleTable.current], {
-      transform: `scale(${styleTableScale.current}, ${styleTableScale.current})`
+      transform: `scale(${styleTableScale.current}, ${styleTableScale.current})`,
+      duration: 1,
+      delay: 0.01,
     });
   }
 
