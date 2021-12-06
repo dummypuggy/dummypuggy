@@ -57,7 +57,7 @@ function NewView(){
     
 
     countSkyBoxTop(); // 设置skyBg
-    if(afterScrollTop-100 > skyBox.current.getBoundingClientRect().height){
+    if(afterScrollTop+100 > skyBox.current.getBoundingClientRect().height){
       gsap.to([styleRoomBg.current], {
         opacity: 1,
         duration: 1,
@@ -217,7 +217,7 @@ function NewView(){
                         <img src={require('../../images/right_video.png').default} alt="" width='100%'/>
                         <div className="video">
                         <video width="100%"  preload="auto" autoPlay loop muted playsInline>
-                          <source src={require('../../images/newBanner.mp4').default} type="video/mp4" />
+                          <source src={require('../../images/right_video.mp4').default} type="video/mp4" />
                         </video>
                         </div>
                       </div>
