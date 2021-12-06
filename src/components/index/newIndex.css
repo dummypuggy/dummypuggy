@@ -57,13 +57,17 @@
 .talk_video{
   /* padding: 0 0 0 4vw; */
   height: 100vh;
+  position: relative;
 }
 
 .talk_video_box{
   /* display: flex;
   align-items: center;*/
-  height: 100%; 
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .talk_video_box .left_box{
@@ -71,8 +75,8 @@
   position: absolute;
   width: 26vw;
   height: 40vh;
-  top: 22%;
-  left: 5%;
+  top: 12%;
+  left: 10%;
 }
 /* .talk_video_box .right_box{ */
   /* flex: 1; */
@@ -80,9 +84,9 @@
 
 .talk_video_box .video_box{
   position: absolute;
-  width: 90%;
+  width: 70%;
   right: 0;
-  top: 5%;
+  top: 20%;
 }
 
 .talk_video_box .video_box img{
@@ -92,9 +96,14 @@
 
 .talk_video_box .video_box .video{
   position: absolute;
-  right: 18%;
-  top: 38%;
-  padding-left: 27vw;
+  right: 31%;
+  top: 34.5%;
+  padding-left: 6vw;
+}
+
+.talk_video_box .video_box .videoCon{
+  border-radius: 60px;
+  overflow: hidden;
 }
 
 .style_roomContainer {

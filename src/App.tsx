@@ -28,10 +28,9 @@ function App() {
     setNavModelClassNames('nav-model')
     setNavBtnClassNames('iconUl')
     
-    const ImgArr:any = document.getElementById('NewIndex')?.getElementsByTagName('img');
+    const ImgArr:any = document.getElementById('contentBox')?.getElementsByTagName('img');
     const VideoArr:any = document.getElementsByTagName('video')
     const arr = [...ImgArr, ...VideoArr]
-    console.log(arr)
     const Total = arr.length -1;
     let promiseAll:any = [];
     let recave:any = 0;
@@ -39,14 +38,10 @@ function App() {
       promiseAll[i] = new Promise((resolve)=>{ 
         console.log(arr[i].tagName==='IMG')
         recave++;
-
         if(arr[i].tagName==='IMG'){
           arr[i].onload = () => {
-  
           setLoadCount(recave/Total*100)
-            
           resolve(arr[i])
-  
           }
         } else {
           arr[i].oncanplay = ()=>{
@@ -54,7 +49,6 @@ function App() {
             setLoadCount(recave/Total*100)
           }
         }
-        
       })
     }
     Promise.all(promiseAll).then((img)=>{
@@ -253,29 +247,28 @@ function App() {
           </div>
         </div>
       
-      <Switch>
-        <Route exact path="/">
-          {/* <NewView/> */}
-          {/* <NewIndexComp/> */}
-          <IndexComp/>
+      <div className="contentBox" id='contentBox'>
+        <Switch>
+          <Route exact path="/">
+            {/* <NewView/> */}
+            {/* <NewIndexComp/> */}
+            <IndexComp/>
 
-          <Footer/>
-        </Route>
-        <Route path="/faq">
-          <Faq/>
-          <Footer/>
-        </Route>
-        <Route path='/emailfrom'>
-          <EmailForm/>
-        </Route>
-        <Route path='/newindex'>
-          <div id="NewIndex">
-          <NewView />
-
-          </div>
-          <Footer/>
-        </Route>
-      </Switch>
+            <Footer/>
+          </Route>
+          <Route path="/faq">
+            <Faq/>
+            <Footer/>
+          </Route>
+          <Route path='/emailfrom'>
+            <EmailForm/>
+          </Route>
+          <Route path='/newindex'>
+            <NewView />
+            <Footer/>
+          </Route>
+        </Switch>
+      </div>
      
       {/* 手机导航 */}
       <div className={navMolde}>

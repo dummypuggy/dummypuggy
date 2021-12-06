@@ -3,7 +3,8 @@ import './index.css'
 import './newIndex.css'
 import { gsap } from "gsap";
 import { Container } from 'react-bootstrap';
-import { isMobile } from '../../libs/userAgent';
+// import { isMobile } from '../../libs/userAgent';
+import PlayGame from '../playGame';
 
 
 const useMove = () => {
@@ -53,32 +54,26 @@ function NewView(){
   });
   const handleScroll = (e:any)=>{
     var afterScrollTop = document.body.scrollTop;
-    // var delta = afterScrollTop - beforeScrollTop.current;
     if( afterScrollTop+window.innerHeight >= scrollContainer.current.getBoundingClientRect().height) return
     
-
     countSkyBoxTop(); // 设置skyBg
-    if(afterScrollTop-150 > skyBox.current.getBoundingClientRect().height){
+    if(afterScrollTop-100 > skyBox.current.getBoundingClientRect().height){
       gsap.to([styleRoomBg.current], {
         opacity: 1,
         duration: 1,
-        // delay: 0.01,
+        delay: 0.01,
       });
       countDoorLeft()
     } else {
       gsap.to([styleRoomBg.current], {
         opacity: 0,
         duration: 1,
-        // delay: 0.01,
+        delay: 0.01,
       });
     }
-
-
     countHouseBgFilter()
     conntStyleTableLocation()
-    
     beforeScrollTop.current = afterScrollTop;
-    
   }
 
   const countSkyBoxTop = ()=>{
@@ -88,7 +83,7 @@ function NewView(){
     gsap.to([skyBox.current], {
       transform: `translate3d(0, ${skyBoxTop.current}px,0)`,
       duration: 2,
-      // delay: 0.01,
+      delay: 0.01,
     });
   }
 
@@ -107,12 +102,12 @@ function NewView(){
     gsap.to([Door.current], {
       left: `${doorLeft.current}%`,
       duration: 1,
-      // delay: 0.01,
+      delay: 0.01,
     });
     gsap.to([styleRoomBg.current], {
       transform: `scale(${styleRoomScale.current}, ${styleRoomScale.current})`,
       duration: 1,
-      // delay: 0.01,
+      delay: 0.01,
     });
   }
 
@@ -128,7 +123,7 @@ function NewView(){
       gsap.to([HouseBg.current], {
         filter: `blur(${ HouseBgFilter.current}px)`,
         duration: 1,
-        // delay: 0.01,
+        delay: 0.01,
       });
     } else {
       HouseBgFilter.current=0
@@ -158,22 +153,22 @@ function NewView(){
     gsap.to([TableBottomRef1.current], {
       transform: `translate3d(0px,${TableBottom.current}px,0px)`,
       duration: 1,
-      // delay: 0.01,
+      delay: 0.01,
     });
     gsap.to([TableBottomRef2.current], {
       transform: `translate3d(0px,${TableBottom.current}px,0px)`,
       duration: 1,
-      // delay: 0.01,
+      delay: 0.01,
     });
     gsap.to([TableTopRef.current], {
       transform: `translate3d(0px,${TableTop.current}px,0px)`,
       duration: 1,
-      // delay: 0.01,
+      delay: 0.005,
     });
     gsap.to([styleTable.current], {
       transform: `scale(${styleTableScale.current}, ${styleTableScale.current})`,
       duration: 1,
-      // delay: 0.01,
+      delay: 0.005,
     });
   }
 
@@ -235,9 +230,11 @@ function NewView(){
                       <div className="video_box">
                         <img src={require('../../images/right_video.png').default} alt="" width='100%'/>
                         <div className="video">
-                        <video width="100%"  preload="auto" autoPlay loop muted playsInline>
-                          <source src={require('../../images/right_video.mp4').default} type="video/mp4" />
-                        </video>
+                          <div className="videoCon">
+                            <video width="100%"  preload="auto" autoPlay loop muted playsInline>
+                              <source src={require('../../images/right_video.mp4').default} type="video/mp4" />
+                            </video>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -282,82 +279,7 @@ function NewView(){
         <div className="newtitle">
           <img src={require('../../images/gameplay_title.png').default} alt="" />
         </div>
-        
-        <ul className="gamePlay_list">
-          <li className="stpItem">
-            <div className="list_content">
-              <div className="video_box">
-                <video width="100%"  preload="auto" autoPlay loop muted playsInline>
-                  <source src={require('../../images/playGame.mp4').default} type="video/mp4" />
-                </video>
-              </div>
-              <div className="text_box  text_center ">
-                <h1 className="text_title">
-                  Merge
-                </h1>
-              </div>
-            </div>
-          </li>
-          <li className="stpItem">
-            <div className="list_content">
-              <div className="video_box">
-                <video width="100%"  preload="auto" autoPlay loop muted playsInline>
-                  <source src={require('../../images/Kennel.mp4').default} type="video/mp4" />
-                </video>
-              </div>
-              <div className="text_box  text_center ">
-                <h1 className="text_title">
-                  Kennel
-                </h1>
-              </div>
-            </div>
-          </li>
-          <li className="stpItem">
-            <div className="list_content">
-              <div className="video_box">
-                <video width="100%"  preload="auto" autoPlay loop muted playsInline>
-                  <source src={require('../../images/Feed.mp4').default} type="video/mp4" />
-                </video>
-              </div>
-              <div className="text_box  text_center ">
-                <h1 className="text_title">
-                  Feed
-                </h1>
-              </div>
-            </div>
-          </li>
-          <li className="stpItem">
-            <div className="list_content">
-              <div className="video_box">
-                <video width="100%"  preload="auto" autoPlay loop muted playsInline>
-                  <source src={require('../../images/Teleport.mp4').default} type="video/mp4" />
-                </video>
-              </div>
-              <div className="text_box  text_center ">
-                <h1 className="text_title">
-                  Teleport
-                </h1>
-              </div>
-            </div>
-          </li>
-          <li className="stpItem">
-            <div className="list_content">
-              <div className="video_box">
-                <video width="100%"  preload="auto" autoPlay loop muted playsInline>
-                  <source src={require('../../images/Shop.mp4').default} type="video/mp4" />
-                </video>
-              </div>
-              <div className="text_box  text_center ">
-                <h1 className="text_title">
-                  Shop
-                </h1>
-              </div>
-            </div>
-          </li>
-        </ul>
-        <div className="earn_box">
-        <img src={require('../../images/earn.png').default} alt="" width="100%"/>
-        </div>
+        <PlayGame/>
       </div>
       <div id='roadmap' className="roadmap" >
         <Container>
