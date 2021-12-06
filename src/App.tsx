@@ -1,3 +1,4 @@
+/* eslint-disable no-loop-func */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React, {useState, useRef} from 'react';
 import { 
@@ -13,6 +14,9 @@ import IndexComp from './components/index';
 import Faq from './components/Faq';
 import EmailForm from './components/email';
 import NewView from './components/index/newIndex';
+import LoadingImg from './images/loading.png'
+import { loadavg } from 'os';
+import gsap from 'gsap';
 
 function App() {
   const location = useLocation();
@@ -20,13 +24,50 @@ function App() {
   const [navMolde, setNavModelClassNames] = useState('nav-model');
   const Time = useRef<any>()
   const pos = useRef<any>(0);
+  const loadaing = useRef<any>()
+  const [isLoading, setisLoading] = useState(true)
+  const [LoadCount, setLoadCount] = useState(0)
   React.useEffect(() => {
-    // setTimeout(()=>{
-    //   document.documentElement.scrollTop = document.body.scrollTop =0;
-    // },0)
     setNavModelClassNames('nav-model')
     setNavBtnClassNames('iconUl')
+    
+    const ImgArr:any = document.getElementById('NewIndex')?.getElementsByTagName('img');
+    const VideoArr:any = document.getElementsByTagName('video')
+    const arr = [...ImgArr, ...VideoArr]
+    console.log(arr)
+    const Total = arr.length -1;
+    let promiseAll:any = [];
+    let recave:any = 0;
+    for (let i:any = 0; i <= Total; i++) {
+      promiseAll[i] = new Promise((resolve)=>{ 
+        console.log(arr[i].tagName==='IMG')
+        recave++;
+
+        if(arr[i].tagName==='IMG'){
+          arr[i].onload = () => {
   
+          setLoadCount(recave/Total*100)
+            
+          resolve(arr[i])
+  
+          }
+        } else {
+          arr[i].oncanplay = ()=>{
+            resolve(arr[i])
+            setLoadCount(recave/Total*100)
+          }
+        }
+        
+      })
+    }
+    Promise.all(promiseAll).then((img)=>{
+      // setisLoading(false)
+      gsap.to([loadaing.current],{
+        opacity: 0,
+        duration: 1,
+      })
+      document.body.classList.remove('modal-open');
+    })
   }, [location]);
   function changeNavStatu() {
     let isActive = navBtn.indexOf("active");
@@ -43,25 +84,11 @@ function App() {
     let anchorElement = document.getElementById(name);
     if (anchorElement) {
       pos.current = anchorElement.offsetTop
-      // Time.current = setInterval(frame, 10);
       document.body.scrollTo(0, anchorElement.offsetTop - window.innerHeight);
     }
   }
 
-  // const frame = ()=>{
-  //   let scrollTop = document.body.scrollTop
-  //   let delat = scrollTop - pos.current
-  //   if (document.body.scrollTop >= pos.current) {
-  //     clearInterval(Time.current);
-  //   } else {
-  //     if(delat < 0){
-  //       scrollTop +=1; 
-  //     } else {
-  //       scrollTop -=1; 
-  //     }
-  //     document.body.scrollTo(0, scrollTop);
-  //   }
-  // }
+  
 
 
   return (
@@ -123,6 +150,19 @@ function App() {
           </div>
         </div>
       </div>
+       <div ref={loadaing} className="loading">
+          <div className="load_box">
+            <div className="load">
+              <img src={LoadingImg} alt="" width="100%"/>
+              <div className="load_count">
+                <div className="load_progress">
+                <div className="load_progress-bar" style={{width: `${LoadCount}%`}}></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
       <Switch>
         <Route exact path="/">
           {/* <NewView/> */}
@@ -139,7 +179,10 @@ function App() {
           <EmailForm/>
         </Route>
         <Route path='/newindex'>
-          <NewView/>
+          <div id="NewIndex">
+          <NewView />
+
+          </div>
           <Footer/>
         </Route>
       </Switch>

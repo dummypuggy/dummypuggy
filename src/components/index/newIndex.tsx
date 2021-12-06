@@ -62,14 +62,14 @@ function NewView(){
       gsap.to([styleRoomBg.current], {
         opacity: 1,
         duration: 1,
-        delay: 0.01,
+        // delay: 0.01,
       });
       countDoorLeft()
     } else {
       gsap.to([styleRoomBg.current], {
         opacity: 0,
         duration: 1,
-        delay: 0.01,
+        // delay: 0.01,
       });
     }
 
@@ -88,7 +88,7 @@ function NewView(){
     gsap.to([skyBox.current], {
       transform: `translate3d(0, ${skyBoxTop.current}px,0)`,
       duration: 2,
-      delay: 0.01,
+      // delay: 0.01,
     });
   }
 
@@ -107,12 +107,12 @@ function NewView(){
     gsap.to([Door.current], {
       left: `${doorLeft.current}%`,
       duration: 1,
-      delay: 0.01,
+      // delay: 0.01,
     });
     gsap.to([styleRoomBg.current], {
       transform: `scale(${styleRoomScale.current}, ${styleRoomScale.current})`,
       duration: 1,
-      delay: 0.01,
+      // delay: 0.01,
     });
   }
 
@@ -128,7 +128,7 @@ function NewView(){
       gsap.to([HouseBg.current], {
         filter: `blur(${ HouseBgFilter.current}px)`,
         duration: 1,
-        delay: 0.01,
+        // delay: 0.01,
       });
     } else {
       HouseBgFilter.current=0
@@ -158,22 +158,22 @@ function NewView(){
     gsap.to([TableBottomRef1.current], {
       transform: `translate3d(0px,${TableBottom.current}px,0px)`,
       duration: 1,
-      delay: 0.01,
+      // delay: 0.01,
     });
     gsap.to([TableBottomRef2.current], {
       transform: `translate3d(0px,${TableBottom.current}px,0px)`,
       duration: 1,
-      delay: 0.01,
+      // delay: 0.01,
     });
     gsap.to([TableTopRef.current], {
       transform: `translate3d(0px,${TableTop.current}px,0px)`,
       duration: 1,
-      delay: 0.01,
+      // delay: 0.01,
     });
     gsap.to([styleTable.current], {
       transform: `scale(${styleTableScale.current}, ${styleTableScale.current})`,
       duration: 1,
-      delay: 0.01,
+      // delay: 0.01,
     });
   }
 
