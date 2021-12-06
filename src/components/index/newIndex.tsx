@@ -3,6 +3,7 @@ import './index.css'
 import './newIndex.css'
 import { gsap } from "gsap";
 import { Container } from 'react-bootstrap';
+import { isMobile } from '../../libs/userAgent';
 
 
 const useMove = () => {

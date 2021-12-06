@@ -313,3 +313,50 @@
 .timeline .timeline-item:nth-child(3){
   margin-top: -6vw;
 }
+
+
+
+@media screen and (max-width: 420px){
+  .banner video{
+    width: 100%;
+    margin: 0;
+  }
+  .banner_text_box img{
+    max-width: 60%;
+    height: auto;
+    bottom: 7%;
+  }
+  .talk_video{
+    height: auto;
+    padding: 50px 0;
+  }
+  .talk_video_box{
+    display: flex;
+    flex-direction: column;
+  }
+  .talk_video_box .left_box{
+    position: static;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  .talk_video_box .left_box img{
+    width: 60%;
+  }
+  .talk_video_box .right_box{
+    position: relative;
+    padding-top: 270px;
+  }
+  .talk_video_box .video_box{
+    width: 450px;
+  }
+  .talk_video_box .video_box .video{
+    padding-left: 37vw;
+  }
+  .style_tableGroup .style_dog{
+    width: 95px;
+    height: 100px;
+    bottom: 5%;
+  }
+}

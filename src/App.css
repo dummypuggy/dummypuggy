@@ -2,7 +2,7 @@
   position: fixed;
   left: 0;
   top: 0;
-  width: 100%;
+  width: calc(100% - 16px);
   z-index: 10;
   background-color: rgba(0,0,0,.5);
 }
@@ -130,6 +130,9 @@
 }
 
 @media screen and (max-width: 420px){
+  .header{
+    width: 100%;
+  }
   .App{
     padding-top: 12vw;
   }
