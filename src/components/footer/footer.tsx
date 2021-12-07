@@ -26,7 +26,7 @@ const Footer : React.FC = (props)=> {
             </a>
           </li>
           <li className="item flex align-center">
-            <a href="https://www.instagram.com/dummypuggy_official" target="_blank" rel="noreferrer">
+            <a href="https://www.instagram.com/dummypuggy/" target="_blank" rel="noreferrer">
               <img src={require('../../images/i.png').default} alt="" height="28"/>
             </a>
           </li>

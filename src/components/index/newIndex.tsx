@@ -53,8 +53,11 @@ function NewView(){
     document.body.addEventListener('scroll', handleScroll)
   });
   const handleScroll = (e:any)=>{
+    console.log(1231312)
     var afterScrollTop = document.body.scrollTop;
-    if( afterScrollTop+window.innerHeight >= scrollContainer.current.getBoundingClientRect().height) return
+    var delta = afterScrollTop - beforeScrollTop.current;
+    if( afterScrollTop+window.innerHeight >= scrollContainer.current.getBoundingClientRect().height && delta<0) return
+
     
     countSkyBoxTop(); // 设置skyBg
     if(afterScrollTop-100 > skyBox.current.getBoundingClientRect().height){

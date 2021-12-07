@@ -133,7 +133,7 @@ function App() {
                 </a>
               </li>
               <li className="item flex align-center">
-                <a href="https://www.instagram.com/dummypuggy_official" target="_blank" rel="noreferrer">
+                <a href="https://www.instagram.com/dummypuggy/" target="_blank" rel="noreferrer">
                   <img src={require('./images/i.png').default} alt="" height="28"/>
                 </a>
               </li>
@@ -259,10 +259,9 @@ function App() {
       <div className="contentBox" id='contentBox'>
         <Switch>
           <Route exact path="/">
-            {/* <NewView/> */}
             {/* <NewIndexComp/> */}
-            <IndexComp/>
-
+            {/* <IndexComp/> */}
+            <NewView />
             <Footer/>
           </Route>
           <Route path="/faq">
@@ -271,10 +270,6 @@ function App() {
           </Route>
           <Route path='/emailfrom'>
             <EmailForm/>
-          </Route>
-          <Route path='/newindex'>
-            <NewView />
-            <Footer/>
           </Route>
         </Switch>
       </div>
