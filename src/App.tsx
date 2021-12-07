@@ -24,6 +24,7 @@ function App() {
   const pos = useRef<any>(0);
   const loadaing = useRef<any>()
   const [LoadCount, setLoadCount] = useState(0)
+  const Timer = useRef<any>();
   React.useEffect(() => {
     setNavModelClassNames('nav-model')
     setNavBtnClassNames('iconUl')
@@ -58,6 +59,14 @@ function App() {
       })
       document.body.classList.remove('modal-open');
     })
+    // 保证页面加载
+    setTimeout(()=>{
+      gsap.to([loadaing.current],{
+        opacity: 0,
+        duration: 1,
+      })
+      document.body.classList.remove('modal-open');
+    }, 4500)
   }, [location]);
   function changeNavStatu() {
     let isActive = navBtn.indexOf("active");
