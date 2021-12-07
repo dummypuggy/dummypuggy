@@ -22,26 +22,7 @@ function PlayGame(){
                 Merge
                 </h1>
                 <div className="text_des">
-                  Merge the puggy poopoo! Collect all the bounties and win the chance to get rare Dummy Puggy NFT with unique power! 
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="play_game_item">
-            <div className="left_box">
-              <div className="video_box">
-                <video width="100%"  preload="auto" autoPlay loop muted playsInline>
-                  <source src={require('../../images/Kennel.mp4').default} type="video/mp4" />
-                </video>
-              </div>
-            </div>
-            <div className="right_box">
-              <div className="text_box  text_center ">
-                <h1 className="text_title">
-                Kennel
-                </h1>
-                <div className="text_des">
-                  Merge the puggy poopoo! Collect all the bounties and win the chance to get rare Dummy Puggy NFT with unique power! 
+                Merge to get a higher level of PooPoos. The higher level PooPoos can bring you more PooPoo Coins (PPCs). 
                 </div>
               </div>
             </div>
@@ -60,7 +41,7 @@ function PlayGame(){
                 Feed
                 </h1>
                 <div className="text_des">
-                  Merge the puggy poopoo! Collect all the bounties and win the chance to get rare Dummy Puggy NFT with unique power! 
+                You can accelerate puggys pooping speed by feeding him food & water and cleaning his house.
                 </div>
               </div>
             </div>
@@ -76,10 +57,10 @@ function PlayGame(){
             <div className="right_box">
               <div className="text_box  text_center ">
                 <h1 className="text_title">
-                Teleport
+                Breed
                 </h1>
                 <div className="text_des">
-                  Merge the puggy poopoo! Collect all the bounties and win the chance to get rare Dummy Puggy NFT with unique power! 
+                Dummy Puggy has superpowers. He can unexpectedly bring back a puggy from the planet. They might be the same species. 
                 </div>
               </div>
             </div>
@@ -95,10 +76,10 @@ function PlayGame(){
             <div className="right_box">
               <div className="text_box  text_center ">
                 <h1 className="text_title">
-                Shop
+                Wormhole
                 </h1>
                 <div className="text_des">
-                  Merge the puggy poopoo! Collect all the bounties and win the chance to get rare Dummy Puggy NFT with unique power! 
+                PooPoos above LV 5 can unlock the Wormhole. You can put PooPoos into the Wormhole and win a chance to get all PooPoos back within a fixed time. 
                 </div>
               </div>
             </div>
