@@ -171,14 +171,14 @@
 
 .text_box .text_title{
   padding:1vw;
-  font-size: 1.6vw;
+  font-size: 3.2vw;
   font-family: MEUltrabold, Helvetica, sans-serif;
   margin-top: 1.5vw;
   letter-spacing: 3px;
 }
 
 .text_box .text_des{
-  font-size: .8vw;
+  font-size: 1.2vw;
   line-height: 1.6;
   color: #ffffffb3;
   font-family: MERegular, Helvetica, sans-serif;

@@ -25,6 +25,9 @@ function App() {
   const loadaing = useRef<any>()
   const [LoadCount, setLoadCount] = useState(0)
   const Timer = useRef<any>();
+  const loadProgressBar = useRef<any>();
+  const [loadText,setLoadText] = useState<any>(0);
+  
   React.useEffect(() => {
     setNavModelClassNames('nav-model')
     setNavBtnClassNames('iconUl')
@@ -32,21 +35,36 @@ function App() {
     const ImgArr:any = document.getElementById('contentBox')?.getElementsByTagName('img');
     const VideoArr:any = document.getElementsByTagName('video')
     const arr = [...ImgArr, ...VideoArr]
-    const Total = arr.length -1;
+    const Total = arr.length;
     let promiseAll:any = [];
     let recave:any = 0;
-    for (let i:any = 0; i <= Total; i++) {
+    for (let i:any = 0; i < Total; i++) {
       promiseAll[i] = new Promise((resolve)=>{ 
-        recave++;
+        
+        // loadText.current.innerHTML = `${width}%`;
         if(arr[i].tagName==='IMG'){
           arr[i].onload = () => {
-          setLoadCount(recave/Total*100)
+          recave++;
+          console.log(recave, arr.length)
+          const width = Number(recave/Total*100).toFixed(0)
+          gsap.to([loadProgressBar.current],{
+            width: `${width}%`,
+            ease:"none",
+          })
+          setLoadText(width)
           resolve(arr[i])
           }
         } else {
           arr[i].oncanplay = ()=>{
+            recave++;
+            console.log(recave, arr.length)
+            const width = Number(recave/Total*100).toFixed(0)
+            gsap.to([loadProgressBar.current],{
+              width: `${width}%`,
+              ease:"none",
+            })
+            setLoadText(width)
             resolve(arr[i])
-            setLoadCount(recave/Total*100)
           }
         }
       })
@@ -55,17 +73,20 @@ function App() {
       gsap.to([loadaing.current],{
         opacity: 0,
         duration: 1,
+        delay: .5,
+        ease:"none",
       })
       document.body.classList.remove('modal-open');
     })
     // 保证页面加载
-    setTimeout(()=>{
-      gsap.to([loadaing.current],{
-        opacity: 0,
-        duration: 1,
-      })
-      document.body.classList.remove('modal-open');
-    }, 4500)
+    // setTimeout(()=>{
+    //   gsap.to([loadaing.current],{
+    //     opacity: 0,
+    //     duration: 1,
+    //     ease:"none",
+    //   })
+    //   document.body.classList.remove('modal-open');
+    // }, 1000*60*2)
   }, [location]);
   function changeNavStatu() {
     let isActive = navBtn.indexOf("active");
@@ -248,7 +269,10 @@ function App() {
               </div>
               <div className="load_count">
                 <div className="load_progress">
-                <div className="load_progress-bar" style={{width: `${LoadCount}%`}}></div>
+                  <div ref={loadProgressBar} className="load_progress-bar"></div>
+                </div>
+                <div className="loadText" >
+                  {loadText}%
                 </div>
               </div>
             </div>

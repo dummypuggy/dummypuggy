@@ -14,5 +14,7 @@
 @font-face {
   font-family:CBBI;src:url(/static/fonts/Comic-Book-Bold-Italic.otf) format("opentype")
 }
-
+@font-face {
+  font-family:AOMFont;src:url(/static/fonts/Attack-Of-Monster.ttf);
+}
 
