@@ -37,7 +37,6 @@ function App() {
     let recave:any = 0;
     for (let i:any = 0; i <= Total; i++) {
       promiseAll[i] = new Promise((resolve)=>{ 
-        console.log(arr[i].tagName==='IMG')
         recave++;
         if(arr[i].tagName==='IMG'){
           arr[i].onload = () => {
