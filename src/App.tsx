@@ -87,7 +87,7 @@ function App() {
     //   })
     //   document.body.classList.remove('modal-open');
     // }, 1000*60*2)
-  }, [location]);
+  }, []);
   function changeNavStatu() {
     let isActive = navBtn.indexOf("active");
     if(isActive === -1){
