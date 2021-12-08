@@ -82,11 +82,11 @@ function NewView(){
     var afterScrollTop = document.body.scrollTop;
     var delta = afterScrollTop - beforeScrollTop.current;
     skyBoxTop.current -=delta;
-    gsap.to([skyBox.current], {
-      transform: `translate3d(0, ${skyBoxTop.current}px,0)`,
-      duration: 2,
-      delay: 0.01,
-    });
+    // gsap.to([skyBox.current], {
+    //   transform: `translate3d(0, ${skyBoxTop.current}px,0)`,
+    //   duration: 2,
+    //   delay: 0.01,
+    // });
   }
 
   const countDoorLeft = ()=>{
@@ -214,17 +214,23 @@ function NewView(){
           <div className="index_sky">
             <div ref={skyBox} className="style_skyBg">
               <div className="banner"  onMouseMove={handleMouseMove}>
-                <div className="banner_text"  style={picStyle}>
+                {/* <div className="banner_text"  style={picStyle}>
                   <div className="banner_text_box">
                     <img src={require('../../images/newBanner_text.webp').default} alt=""/> 
                   </div>
-                </div>
-                <video width="100%"  preload="auto" autoPlay loop muted playsInline>
+                </div> */}
+               <div style={{
+                 width: '100%',
+                 height: '98vh',
+                 overflow: 'hidden'
+               }}>
+               <video width="100%"  preload="auto" autoPlay loop muted playsInline>
                   <source src="https://cdn.dummypuggy.io/dummypuggy%20video.mp4" type="video/mp4" />
                 </video>
+               </div>
               </div>
               <div className="talk_video">
-                  <div className="talk_video_box">
+                  {/* <div className="talk_video_box">
                     <div className="left_box">
                       <img src={require('../../images/left_text.png').default} alt="" width='100%'/> 
                     </div>
@@ -240,7 +246,7 @@ function NewView(){
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
               </div>
             </div>
           </div>
