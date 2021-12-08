@@ -220,7 +220,7 @@ function NewView(){
                   </div>
                 </div>
                 <video width="100%"  preload="auto" autoPlay loop muted playsInline>
-                  <source src={require('../../images/newBanner.mp4').default} type="video/mp4" />
+                  <source src="https://cdn.dummypuggy.io/dummypuggy%20video.mp4" type="video/mp4" />
                 </video>
               </div>
               <div className="talk_video">
@@ -234,7 +234,7 @@ function NewView(){
                         <div className="video">
                           <div className="videoCon">
                             <video width="100%"  preload="auto" autoPlay loop muted playsInline>
-                              <source src={require('../../images/right_video.mp4').default} type="video/mp4" />
+                              <source src="https://cdn.dummypuggy.io/dummypuggy%20video.mp4" type="video/mp4" />
                             </video>
                           </div>
                         </div>

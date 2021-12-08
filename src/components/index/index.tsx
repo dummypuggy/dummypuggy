@@ -75,7 +75,7 @@ function IndexComp(){
 					
 					</div>
 					<video width="100%" height="100%" preload="auto" autoPlay loop muted playsInline>
-						<source src={require('../../images/banner.mp4').default} type="video/mp4" />
+						<source src="https://cdn.dummypuggy.io/dummypuggy%20video.mp4" type="video/mp4" />
 					</video>
 				</div>
 				<div className="welcome" id="about">
