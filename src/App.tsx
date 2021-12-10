@@ -133,6 +133,26 @@ function App() {
                 gameplay
                 </a>
               </li>
+
+              <li className="item flex align-center">
+                <a href="/#dummyplanet" onClick={()=>{ScrollBlock('gameplay')}}>
+                Dummy Planet
+                </a>
+              </li>
+
+              <li className="item flex align-center">
+                <a href="/#nft-part" onClick={()=>{ScrollBlock('gameplay')}}>
+                NFT
+                </a>
+              </li>
+
+              <li className="item flex align-center">
+                <a href="/#roadmap" onClick={()=>{ScrollBlock('gameplay')}}>
+                Roadmap
+                </a>
+              </li>
+
+
               <li className="item flex align-center">
                 <a href="/#team" onClick={()=>{ScrollBlock('team')}}>
                 Team
@@ -141,22 +161,7 @@ function App() {
               <li className="item flex align-center">
                 <NavLink  to="/faq" activeClassName="active">Faq</NavLink >
               </li>
-              
-              <li className="item flex align-center">
-                <a href="https://discord.com/invite/2VvACvMZ8F" target="_blank" rel="noreferrer">
-                  <img src={require('./images/d.png').default} alt="" height="26"/>
-                </a>
-              </li>
-              <li className="item flex align-center">
-                <a href="https://twitter.com/DummyPuggyNFT" target="_blank" rel="noreferrer">
-                  <img src={require('./images/t.png').default} alt="" height="26"/>
-                </a>
-              </li>
-              <li className="item flex align-center">
-                <a href="https://www.instagram.com/dummypuggy/" target="_blank" rel="noreferrer">
-                  <img src={require('./images/i.png').default} alt="" height="28"/>
-                </a>
-              </li>
+
             </ul>
             <div className="navBtn icon">
               <ul className={navBtn} onClick={changeNavStatu}>
