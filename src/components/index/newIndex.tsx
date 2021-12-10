@@ -323,10 +323,10 @@ function NewView(){
             <div className="right_box">
               <div className="text_box  text_center ">
                 <h1 className="text_title">
-                Feed
+                Puggy
                 </h1>
                 <div className="text_des">
-                You can accelerate puggys pooping speed by feeding him food & water and cleaning his house.
+                Dummy Puggy is our core NFT and the prerequisite for playing the game. Each race has different stamina, poop production cycle, and poop level.
                 </div>
               </div>
             </div>
@@ -342,10 +342,10 @@ function NewView(){
             <div className="right_box">
               <div className="text_box  text_center ">
                 <h1 className="text_title">
-                Merge
+                Dummy
                 </h1>
                 <div className="text_des">
-                Merge to get a higher level of PooPoos. The higher level PooPoos can bring you more PooPoo Coins (PPCs). 
+                Dummy Puggy is your identity on the planet. You can only explore the world with your puggy.
                 </div>
               </div>
             </div>
@@ -361,10 +361,10 @@ function NewView(){
             <div className="right_box">
               <div className="text_box  text_center ">
                 <h1 className="text_title">
-                Feed
+                Land
                 </h1>
                 <div className="text_des">
-                You can accelerate puggys pooping speed by feeding him food & water and cleaning his house.
+                The land is your home on the planet. You can do anything you want with your puggy here, like decorating your home and visiting others.
                 </div>
               </div>
             </div>
