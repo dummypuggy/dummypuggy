@@ -23,6 +23,7 @@ const useMove = () => {
 
 
 function NewView(){
+  const mainVideo = useRef<any>()
   const skyBox = useRef<any>()
   const styleRoomBg = useRef<any>()
   const Door = useRef<any>()
@@ -33,7 +34,7 @@ function NewView(){
   const TableBottomRef2 = useRef<any>()
   const TableTopRef = useRef<any>()
   const skyBoxTop = useRef<any>(0)
-  const { x, y, handleMouseMove } = useMove();
+  const { handleMouseMove } = useMove();
   const beforeScrollTop = useRef<any>(document.body.scrollTop)
 
   const doorLeft = useRef<any>(-10.2)
@@ -43,10 +44,10 @@ function NewView(){
   const TableTop = useRef<any>(-800)
   const TableBottom = useRef<any>(600)
 
-	let picStyle = {
-			inset: "3rem",
-			transform: 'translate3d( '+((x - window.innerWidth /2) / 30)+'px , '+((y - window.innerHeight) /30)+'px, 0 )',
-	}
+	// let picStyle = {
+	// 		inset: "3rem",
+	// 		transform: 'translate3d( '+((x - window.innerWidth /2) / 30)+'px , '+((y - window.innerHeight) /30)+'px, 0 )',
+	// }
 
 
   useEffect(() => {
@@ -223,9 +224,11 @@ function NewView(){
                  width: '100%',
                  height: '98vh',
                  overflow: 'hidden'
+               }} onClick={()=>{
+                mainVideo.current.play();
                }}>
-               <video width="100%"  preload="auto" autoPlay loop muted playsInline>
-                  <source src="https://cdn.dummypuggy.io/dummypuggy%20video.mp4" type="video/mp4" />
+               <video ref={mainVideo} width="100%"  preload="auto" loop muted playsInline>
+                  <source src={require('../../images/newBanner.mp4').default} type="video/mp4" />
                 </video>
                </div>
               </div>
@@ -288,6 +291,85 @@ function NewView(){
           <img src={require('../../images/gameplay_title.png').default} alt="" />
         </div>
         <PlayGame/>
+      </div>
+      {/* dummyplanet start */}
+      <div id="dummyplanet" >
+        <div className="newtitle m_d5">
+          <img src={require('../../images/planet_title.png').default} alt="" />
+        </div>
+        <h3 className="planet-titletext">
+        Meet New Dummies(Puggy Owners), Chat & Date
+        </h3>
+        <div className="planet-content">
+          <img src={require('../../images/dummyplanet.png').default} alt="" />
+        </div>
+      </div>
+      {/* dummyplanet end */}
+      {/* nft start */}
+      <div id="nft-part">
+      <div className="newtitle">
+          <img src={require('../../images/nft_title.png').default} alt="" />
+        </div>
+
+      <div className="nft_list">
+      <div className="nft_item">
+            <div className="left_box">
+              <div className="img_box">
+              <img src={require('../../images/puggys.png').default} alt="" style={{
+                  width: '100%'
+                }}/>
+              </div>
+            </div>
+            <div className="right_box">
+              <div className="text_box  text_center ">
+                <h1 className="text_title">
+                Feed
+                </h1>
+                <div className="text_des">
+                You can accelerate puggys pooping speed by feeding him food & water and cleaning his house.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="nft_item">
+            <div className="left_box">
+              <div className="img_box">
+                <img src={require('../../images/dummys.png').default} alt="" style={{
+                  width: '100%'
+                }}/>
+              </div>
+            </div>
+            <div className="right_box">
+              <div className="text_box  text_center ">
+                <h1 className="text_title">
+                Merge
+                </h1>
+                <div className="text_des">
+                Merge to get a higher level of PooPoos. The higher level PooPoos can bring you more PooPoo Coins (PPCs). 
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="nft_item">
+            <div className="left_box">
+              <div className="img_box">
+              <img src={require('../../images/land.png').default} alt="" style={{
+                  width: '100%'
+                }}/>
+              </div>
+            </div>
+            <div className="right_box">
+              <div className="text_box  text_center ">
+                <h1 className="text_title">
+                Feed
+                </h1>
+                <div className="text_des">
+                You can accelerate puggys pooping speed by feeding him food & water and cleaning his house.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div id='roadmap' className="roadmap" >
         <Container>
