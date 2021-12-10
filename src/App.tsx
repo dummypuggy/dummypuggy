@@ -343,7 +343,7 @@ function App() {
             </ul>
             <ul className='navList picList'>
               <li className="item flex align-center">
-                <a href="https://discord.com/invite/2VvACvMZ8F" target="_blank" rel="noreferrer">
+                <a href="https://discord.gg/89USG2sytF" target="_blank" rel="noreferrer">
                   <img src={require('./images/d.png').default} alt="" height="26"/>
                 </a>
               </li>
