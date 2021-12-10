@@ -286,7 +286,7 @@ function NewView(){
           </div>
         </div>
       </div>
-      <div id="gameplay" className="gamePlay block">
+      <div id="gameplay" className="gamePlay block max-1400">
         <div className="newtitle">
           <img src={require('../../images/gameplay_title.png').default} alt="" />
         </div>
@@ -311,7 +311,7 @@ function NewView(){
           <img src={require('../../images/nft_title.png').default} alt="" />
         </div>
 
-      <div className="nft_list">
+      <div className="nft_list max-1400">
       <div className="nft_item">
             <div className="left_box">
               <div className="img_box">
@@ -520,7 +520,7 @@ function NewView(){
           </div>
         </Container>
       </div>
-      <div className="join">
+      {/* <div className="join">
         <Container>
           <div className="join_box">
             <div className="join_img">
@@ -537,7 +537,7 @@ function NewView(){
             </div>
           </div>
         </Container>
-      </div>
+      </div> */}
     </div>
   )
 }

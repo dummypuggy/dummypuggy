@@ -174,6 +174,16 @@ function App() {
           </div>
         </div>
       </div>
+      <div className='topsocial'>
+        <a href="https://discord.com/invite/2VvACvMZ8F" target="_blank" rel="noreferrer" className='y-s-b'>discord</a>
+        <a href="https://twitter.com/DummyPuggyNFT" target="_blank" rel="noreferrer" className='y-s-b'>twitter</a>
+        <a href="https://www.instagram.com/dummypuggy/" target="_blank" rel="noreferrer" className='y-s-b'>instagram</a>
+      </div>
+
+      <div className='bottomsocial'>
+        <a href="https://discord.com/invite/2VvACvMZ8F" target="_blank" rel="noreferrer">discord</a>
+      </div>
+
        <div ref={loadaing} className="loading">
           <div className="load_box">
             <div className="load">
@@ -343,7 +353,7 @@ function App() {
                 </a>
               </li>
               <li className="item flex align-center">
-                <a href="https://www.instagram.com/dummypuggy_official" target="_blank" rel="noreferrer">
+                <a href="https://www.instagram.com/dummypuggy/" target="_blank" rel="noreferrer">
                   <img src={require('./images/i.png').default} alt="" height="28"/>
                 </a>
               </li>

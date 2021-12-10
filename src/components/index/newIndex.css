@@ -25,6 +25,10 @@
   height: 10vw;
 }
 
+.max-1400{
+  max-width: 1400px;
+  margin: 0 auto;
+}
 
 .banner{
   position: relative;
