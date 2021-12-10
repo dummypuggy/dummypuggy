@@ -175,13 +175,13 @@ function App() {
         </div>
       </div>
       <div className='topsocial'>
-        <a href="https://discord.com/invite/2VvACvMZ8F" target="_blank" rel="noreferrer" className='y-s-b'>discord</a>
+        <a href="https://discord.gg/89USG2sytF" target="_blank" rel="noreferrer" className='y-s-b'>discord</a>
         <a href="https://twitter.com/DummyPuggyNFT" target="_blank" rel="noreferrer" className='y-s-b'>twitter</a>
         <a href="https://www.instagram.com/dummypuggy/" target="_blank" rel="noreferrer" className='y-s-b'>instagram</a>
       </div>
 
       <div className='bottomsocial'>
-        <a href="https://discord.com/invite/2VvACvMZ8F" target="_blank" rel="noreferrer">discord</a>
+        <a href="https://discord.gg/89USG2sytF" target="_blank" rel="noreferrer">discord</a>
       </div>
 
        <div ref={loadaing} className="loading">
