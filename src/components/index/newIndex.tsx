@@ -1,48 +1,48 @@
 import React, { useState,useEffect, useRef } from 'react'
 import './index.css'
 import './newIndex.css'
-import { gsap } from "gsap";
+// import { gsap } from "gsap";
 import { Container } from 'react-bootstrap';
 // import { isMobile } from '../../libs/userAgent';
 import PlayGame from '../playGame';
 
 
-const useMove = () => {
-	const [state, setState] = useState({x: 0, y: 0});
+// const useMove = () => {
+// 	const [state, setState] = useState({x: 0, y: 0});
 
-	const handleMouseMove = (e: any) => {
-		e.persist();
-		setState(state => ({...state, x: e.clientX, y: e.clientY}));
-	};
-	return {
-		x: state.x,
-		y: state.y,
-		handleMouseMove,
-	}
-}
+// 	const handleMouseMove = (e: any) => {
+// 		e.persist();
+// 		setState(state => ({...state, x: e.clientX, y: e.clientY}));
+// 	};
+// 	return {
+// 		x: state.x,
+// 		y: state.y,
+// 		handleMouseMove,
+// 	}
+// }
 
 
 function NewView(){
   const mainVideo = useRef<any>()
-  const skyBox = useRef<any>()
-  const styleRoomBg = useRef<any>()
-  const Door = useRef<any>()
-  const HouseBg = useRef<any>()
-  const styleTable = useRef<any>()
-  const scrollContainer = useRef<any>()
-  const TableBottomRef1 = useRef<any>()
-  const TableBottomRef2 = useRef<any>()
-  const TableTopRef = useRef<any>()
-  const skyBoxTop = useRef<any>(0)
-  const { handleMouseMove } = useMove();
-  const beforeScrollTop = useRef<any>(document.body.scrollTop)
+  // const skyBox = useRef<any>()
+  // const styleRoomBg = useRef<any>()
+  // const Door = useRef<any>()
+  // const HouseBg = useRef<any>()
+  // const styleTable = useRef<any>()
+  // const scrollContainer = useRef<any>()
+  // const TableBottomRef1 = useRef<any>()
+  // const TableBottomRef2 = useRef<any>()
+  // const TableTopRef = useRef<any>()
+  // const skyBoxTop = useRef<any>(0)
+  // // const { handleMouseMove } = useMove();
+  // const beforeScrollTop = useRef<any>(document.body.scrollTop)
 
-  const doorLeft = useRef<any>(-10.2)
-  const styleRoomScale = useRef<any>(1.8)
-  const HouseBgFilter = useRef<any>(0)
-  const styleTableScale = useRef<any>(2)
-  const TableTop = useRef<any>(-800)
-  const TableBottom = useRef<any>(600)
+  // const doorLeft = useRef<any>(-10.2)
+  // const styleRoomScale = useRef<any>(1.8)
+  // const HouseBgFilter = useRef<any>(0)
+  // const styleTableScale = useRef<any>(2)
+  // const TableTop = useRef<any>(-800)
+  // const TableBottom = useRef<any>(600)
 
 	// let picStyle = {
 	// 		inset: "3rem",
@@ -51,129 +51,129 @@ function NewView(){
 
 
   useEffect(() => {
-    document.body.addEventListener('scroll', handleScroll)
+    // document.body.addEventListener('scroll', handleScroll)
   });
-  const handleScroll = (e:any)=>{
-    var afterScrollTop = document.body.scrollTop;
-    var delta = afterScrollTop - beforeScrollTop.current;
-    if( afterScrollTop+window.innerHeight >= scrollContainer.current.getBoundingClientRect().height && delta<0) return
+  // const handleScroll = (e:any)=>{
+  //   var afterScrollTop = document.body.scrollTop;
+  //   var delta = afterScrollTop - beforeScrollTop.current;
+  //   if( afterScrollTop+window.innerHeight >= scrollContainer.current.getBoundingClientRect().height && delta<0) return
 
     
-    countSkyBoxTop(); // 设置skyBg
-    if(afterScrollTop-100 > skyBox.current.getBoundingClientRect().height){
-      gsap.to([styleRoomBg.current], {
-        opacity: 1,
-        duration: 1,
-        delay: 0.01,
-      });
-      countDoorLeft()
-    } else {
-      gsap.to([styleRoomBg.current], {
-        opacity: 0,
-        duration: 1,
-        delay: 0.01,
-      });
-    }
-    countHouseBgFilter()
-    conntStyleTableLocation()
-    beforeScrollTop.current = afterScrollTop;
-  }
+  //   countSkyBoxTop(); // 设置skyBg
+  //   if(afterScrollTop-100 > skyBox.current.getBoundingClientRect().height){
+  //     gsap.to([styleRoomBg.current], {
+  //       opacity: 1,
+  //       duration: 1,
+  //       delay: 0.01,
+  //     });
+  //     countDoorLeft()
+  //   } else {
+  //     gsap.to([styleRoomBg.current], {
+  //       opacity: 0,
+  //       duration: 1,
+  //       delay: 0.01,
+  //     });
+  //   }
+  //   countHouseBgFilter()
+  //   conntStyleTableLocation()
+  //   beforeScrollTop.current = afterScrollTop;
+  // }
 
-  const countSkyBoxTop = ()=>{
-    var afterScrollTop = document.body.scrollTop;
-    var delta = afterScrollTop - beforeScrollTop.current;
-    skyBoxTop.current -=delta;
-    // gsap.to([skyBox.current], {
-    //   transform: `translate3d(0, ${skyBoxTop.current}px,0)`,
-    //   duration: 2,
-    //   delay: 0.01,
-    // });
-  }
+  // const countSkyBoxTop = ()=>{
+  //   var afterScrollTop = document.body.scrollTop;
+  //   var delta = afterScrollTop - beforeScrollTop.current;
+  //   skyBoxTop.current -=delta;
+  //   // gsap.to([skyBox.current], {
+  //   //   transform: `translate3d(0, ${skyBoxTop.current}px,0)`,
+  //   //   duration: 2,
+  //   //   delay: 0.01,
+  //   // });
+  // }
 
-  const countDoorLeft = ()=>{
-    if(HouseBgFilter.current >0) return
-    var afterScrollTop = document.body.scrollTop;
-    var delta = afterScrollTop - beforeScrollTop.current;
+  // const countDoorLeft = ()=>{
+  //   if(HouseBgFilter.current >0) return
+  //   var afterScrollTop = document.body.scrollTop;
+  //   var delta = afterScrollTop - beforeScrollTop.current;
   
-    doorLeft.current +=delta*0.1/7
-    styleRoomScale.current -=delta*.001
+  //   doorLeft.current +=delta*0.1/7
+  //   styleRoomScale.current -=delta*.001
 
-    if(doorLeft.current>=.8) doorLeft.current = 0.8;
-    if(doorLeft.current <= -10.2) doorLeft.current = -10.2;
-    if(styleRoomScale.current>=1.8) styleRoomScale.current = 1.8
-    if(styleRoomScale.current<=1) styleRoomScale.current = 1
-    gsap.to([Door.current], {
-      left: `${doorLeft.current}%`,
-      duration: 1,
-      delay: 0.01,
-    });
-    gsap.to([styleRoomBg.current], {
-      transform: `scale(${styleRoomScale.current}, ${styleRoomScale.current})`,
-      duration: 1,
-      delay: 0.01,
-    });
-  }
+  //   if(doorLeft.current>=.8) doorLeft.current = 0.8;
+  //   if(doorLeft.current <= -10.2) doorLeft.current = -10.2;
+  //   if(styleRoomScale.current>=1.8) styleRoomScale.current = 1.8
+  //   if(styleRoomScale.current<=1) styleRoomScale.current = 1
+  //   gsap.to([Door.current], {
+  //     left: `${doorLeft.current}%`,
+  //     duration: 1,
+  //     delay: 0.01,
+  //   });
+  //   gsap.to([styleRoomBg.current], {
+  //     transform: `scale(${styleRoomScale.current}, ${styleRoomScale.current})`,
+  //     duration: 1,
+  //     delay: 0.01,
+  //   });
+  // }
 
-  const countHouseBgFilter=()=>{
-    var afterScrollTop = document.body.scrollTop;
-    var delta = afterScrollTop - beforeScrollTop.current;
+  // const countHouseBgFilter=()=>{
+  //   var afterScrollTop = document.body.scrollTop;
+  //   var delta = afterScrollTop - beforeScrollTop.current;
 
-    if(styleRoomScale.current === 1){
-      HouseBgFilter.current +=delta*0.1/7
+  //   if(styleRoomScale.current === 1){
+  //     HouseBgFilter.current +=delta*0.1/7
 
-      if(HouseBgFilter.current>=5) HouseBgFilter.current = 5
-      if(HouseBgFilter.current<=0) HouseBgFilter.current=0
-      gsap.to([HouseBg.current], {
-        filter: `blur(${ HouseBgFilter.current}px)`,
-        duration: 1,
-        delay: 0.01,
-      });
-    } else {
-      HouseBgFilter.current=0
-    }
-  }
+  //     if(HouseBgFilter.current>=5) HouseBgFilter.current = 5
+  //     if(HouseBgFilter.current<=0) HouseBgFilter.current=0
+  //     gsap.to([HouseBg.current], {
+  //       filter: `blur(${ HouseBgFilter.current}px)`,
+  //       duration: 1,
+  //       delay: 0.01,
+  //     });
+  //   } else {
+  //     HouseBgFilter.current=0
+  //   }
+  // }
 
-  const conntStyleTableLocation = ()=>{
+  // const conntStyleTableLocation = ()=>{
     
-    if(styleRoomScale.current !== 1) {
-      TableTop.current = -800;
-      TableBottom.current = 600;
-      return
-    }
+  //   if(styleRoomScale.current !== 1) {
+  //     TableTop.current = -800;
+  //     TableBottom.current = 600;
+  //     return
+  //   }
 
-    var afterScrollTop = document.body.scrollTop;
-    var delta = afterScrollTop - beforeScrollTop.current;
+  //   var afterScrollTop = document.body.scrollTop;
+  //   var delta = afterScrollTop - beforeScrollTop.current;
 
-    TableBottom.current -=delta
-    TableTop.current +=delta*1.3
-    styleTableScale.current -=delta*.003
-    if(TableBottom.current>=600) TableBottom.current = 600
-    if(TableBottom.current<=0) TableBottom.current= 0
-    if(TableTop.current>=0) TableTop.current = 0
-    if(TableTop.current<=-800) TableTop.current= -800
-    if(styleTableScale.current<=1) styleTableScale.current = 1;
-    if(styleTableScale.current >=2) styleTableScale.current = 2;
-    gsap.to([TableBottomRef1.current], {
-      transform: `translate3d(0px,${TableBottom.current}px,0px)`,
-      duration: 1,
-      delay: 0.01,
-    });
-    gsap.to([TableBottomRef2.current], {
-      transform: `translate3d(0px,${TableBottom.current}px,0px)`,
-      duration: 1,
-      delay: 0.01,
-    });
-    gsap.to([TableTopRef.current], {
-      transform: `translate3d(0px,${TableTop.current}px,0px)`,
-      duration: 1,
-      delay: 0.005,
-    });
-    gsap.to([styleTable.current], {
-      transform: `scale(${styleTableScale.current}, ${styleTableScale.current})`,
-      duration: 1,
-      delay: 0.005,
-    });
-  }
+  //   TableBottom.current -=delta
+  //   TableTop.current +=delta*1.3
+  //   styleTableScale.current -=delta*.003
+  //   if(TableBottom.current>=600) TableBottom.current = 600
+  //   if(TableBottom.current<=0) TableBottom.current= 0
+  //   if(TableTop.current>=0) TableTop.current = 0
+  //   if(TableTop.current<=-800) TableTop.current= -800
+  //   if(styleTableScale.current<=1) styleTableScale.current = 1;
+  //   if(styleTableScale.current >=2) styleTableScale.current = 2;
+  //   gsap.to([TableBottomRef1.current], {
+  //     transform: `translate3d(0px,${TableBottom.current}px,0px)`,
+  //     duration: 1,
+  //     delay: 0.01,
+  //   });
+  //   gsap.to([TableBottomRef2.current], {
+  //     transform: `translate3d(0px,${TableBottom.current}px,0px)`,
+  //     duration: 1,
+  //     delay: 0.01,
+  //   });
+  //   gsap.to([TableTopRef.current], {
+  //     transform: `translate3d(0px,${TableTop.current}px,0px)`,
+  //     duration: 1,
+  //     delay: 0.005,
+  //   });
+  //   gsap.to([styleTable.current], {
+  //     transform: `scale(${styleTableScale.current}, ${styleTableScale.current})`,
+  //     duration: 1,
+  //     delay: 0.005,
+  //   });
+  // }
 
 
   const [emailAddress, setEmail] = useState('');
@@ -210,83 +210,16 @@ function NewView(){
 	}
   return(
     <div>
-      <div id="banner" ref={scrollContainer} className="index_scrollContainer">
-        <div className="index_content">
-          <div className="index_sky">
-            <div ref={skyBox} className="style_skyBg">
-              <div className="banner"  onMouseMove={handleMouseMove}>
-                {/* <div className="banner_text"  style={picStyle}>
-                  <div className="banner_text_box">
-                    <img src={require('../../images/newBanner_text.webp').default} alt=""/> 
-                  </div>
-                </div> */}
-               <div style={{
-                 width: '100%',
-                 height: '98vh',
-                 overflow: 'hidden'
-               }} onClick={()=>{
-                mainVideo.current.play();
-               }}>
-               <video ref={mainVideo} width="100%"  preload="auto" loop muted playsInline>
+      {/* <div id="banner" ref={scrollContainer} className="index_scrollContainer">
+        
+      </div> */}
+      <div>
+      <video ref={mainVideo} width="100%"  preload="auto" loop muted playsInline autoPlay>
                   <source src={require('../../images/newBanner.mp4').default} type="video/mp4" />
                 </video>
-               </div>
-              </div>
-              <div className="talk_video">
-                  {/* <div className="talk_video_box">
-                    <div className="left_box">
-                      <img src={require('../../images/left_text.png').default} alt="" width='100%'/> 
-                    </div>
-                    <div className="right_box">
-                      <div className="video_box">
-                        <img src={require('../../images/right_video.png').default} alt="" width='100%'/>
-                        <div className="video">
-                          <div className="videoCon">
-                            <video width="100%"  preload="auto" autoPlay loop muted playsInline>
-                              <source src="https://cdn.dummypuggy.io/dummypuggy%20video.mp4" type="video/mp4" />
-                            </video>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div> */}
-              </div>
-            </div>
-          </div>
-          <div className="index_house">
-            <div className="style_roomContainer">
-              <div ref={styleRoomBg} className="style_roomBg" style={{transform: `scale(${styleRoomScale.current}, ${styleRoomScale.current})`}}>
-                <div className="style_houseBg" ref={HouseBg}>
-                  <div className="doorBg"></div>
-                  <div ref={Door} className="door" style={{left: `${doorLeft.current}%`}}></div>
-                  <div className="wall"></div>
-                </div>
-                <div ref={styleTable} className="style_tableGroup" style={{transform: `scale(${styleTableScale.current}, ${styleTableScale.current})`}}>
-                  
-                  <div ref={TableBottomRef2} className="style_table_bottom" style={{transform: `translate3d(0px,${TableBottom.current}px,0px)`}}>
-                    <div className="style_table"></div>
-                  </div>
-                  <div ref={TableTopRef} className="style_table_top" style={{transform: `translate3d(0px,${TableTop.current}px,0px)`}}>
-                    <div className="style_monitor">
-                      <div className="text">
-                        <p>In the year 2048, our digital life worth more than our physical life. AI becomes smarter than human. Everything goes digital. </p>
-                        <p>"Dummy Puggy" is the digital species created in the metaverse. They are extremely special. </p>
-                        <p>Their poopoos have a spice that is super rare and priceless. Go collect the poopoos that will make you rich!</p>
-                        <p>The puggies also have superpowers. They can teleport anywhere in the metaverse. When they come back, they will always bring you surprises!</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div ref={TableBottomRef1} className="style_table_bottom" style={{transform: `translate3d(0px,${TableBottom.current}px,0px)`}}>
-                    <div className="style_computer"></div>
-                    <div className="style_dog"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
       <div id="gameplay" className="gamePlay block max-1400">
+
         <div className="newtitle">
           <img src={require('../../images/gameplay_title.png').default} alt="" />
         </div>

@@ -123,11 +123,11 @@ function App() {
                   Home
                 </a>
               </li>
-              <li className="item flex align-center">
+              {/* <li className="item flex align-center">
                 <a href="/#about">
                 about
                 </a>
-              </li>
+              </li> */}
               <li className="item flex align-center">
                 <a href="/#gameplay" onClick={()=>{ScrollBlock('gameplay')}}>
                 gameplay
@@ -322,11 +322,11 @@ function App() {
                   Home
                 </a>
               </li>
-              <li className="item flex align-center">
+              {/* <li className="item flex align-center">
                 <a href="/#about">
                 about
                 </a>
-              </li>
+              </li> */}
               <li className="item flex align-center">
                 <a href="/#gameplay">
                 gameplay
