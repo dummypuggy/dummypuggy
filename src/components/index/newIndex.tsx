@@ -5,7 +5,7 @@ import './newIndex.css'
 import { Container } from 'react-bootstrap';
 // import { isMobile } from '../../libs/userAgent';
 import PlayGame from '../playGame';
-import { url } from 'inspector';
+// import { url } from 'inspector';
 
 
 // const useMove = () => {
