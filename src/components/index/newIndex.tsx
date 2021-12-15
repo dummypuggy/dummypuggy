@@ -5,6 +5,7 @@ import './newIndex.css'
 import { Container } from 'react-bootstrap';
 // import { isMobile } from '../../libs/userAgent';
 import PlayGame from '../playGame';
+import { url } from 'inspector';
 
 
 // const useMove = () => {
@@ -214,9 +215,37 @@ function NewView(){
         
       </div> */}
       <div>
-      <video ref={mainVideo} width="100%"  preload="auto" loop muted playsInline autoPlay>
+      <div style={{
+        height: '100vh',
+        overflow: 'hidden',
+        position: 'relative',
+      }}>
+      <video ref={mainVideo} width="100%"  preload="auto" loop muted playsInline autoPlay style={{
+        overflow: 'hidden',
+        position: 'absolute',
+        right: '0',
+        left: '0',
+        bottom: '0',
+      }}>
                   <source src={require('../../images/newBanner.mp4').default} type="video/mp4" />
                 </video>
+                <img src={require('../../images/newBanner_text.png').default} alt="" style={{
+        overflow: 'hidden',
+        position: 'absolute',
+        right: '0',
+        left: '0',
+        bottom: '0',
+      }}/>
+                <div style={{
+        overflow: 'hidden',
+        position: 'absolute',
+        left: '0',
+        right: '0',
+        top: '0',
+        bottom: '0',
+      }}
+                ></div>
+      </div>
       </div>
       <div id="gameplay" className="gamePlay block max-1400">
 

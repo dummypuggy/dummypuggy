@@ -4,7 +4,7 @@
 
 .play_game_item{
   display: flex;
-  margin-top: -8vw;
+  margin-top: 1vw;
 }
 .play_game_item:first-child{
   margin-top: 0;
