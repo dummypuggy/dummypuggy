@@ -235,6 +235,7 @@ function NewView(){
         right: '0',
         left: '0',
         bottom: '0',
+        width: '100%',
       }}/>
                 <div style={{
         overflow: 'hidden',
