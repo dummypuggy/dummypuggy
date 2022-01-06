@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components'
 import DummyPuggy from '../../libs/dummypuggy';
+import 'animate.css';
 
 import { toast } from 'react-toastify';
 
@@ -167,7 +168,7 @@ const MintPart = ():JSX.Element=>{
                 <Camp>
 
                     {
-                        login === 'unconnect' || isWhitelist === 'yes' ? (<img src={require('../../images/ask.png').default} alt="?" style={{
+                        login === 'unconnect' || isWhitelist === 'yes' ? (<img className='animate__animated animate__slow animate__pulse animate__infinite' src={require('../../images/ask.png').default} alt="?" style={{
                             position: 'absolute',
                             top: '10vw',
                             left: '3vw',
@@ -208,7 +209,7 @@ const MintPart = ():JSX.Element=>{
                                         setLogin('logedin');
                                     } catch (error) {
                                         console.error(error)
-                                        toast('something went wrong')
+                                        toast('Mint failed. Please try again.')
                                     }
                                     setloginLoading(false);
                                 }} disabled={loginLoading}>{loginLoading? 'waiting...' : `Login(${DummyPuggy.instance.accountAdress.substr(0,4)}***${DummyPuggy.instance.accountAdress.substr(38,4)})`}</Button>)
@@ -260,10 +261,10 @@ const MintPart = ():JSX.Element=>{
                                             const d = await puggyNFTContractWithSigner.privateMint(mintCount,_data?.random
                                              , _data?.sign, options);
                                              console.log(d)
-                                             toast('铸造成功,等待区块确认,请稍后在钱包查看')
+                                             toast('Well done! Please wait for the confirmation and check your wallet later.')
                                         } catch (error) {
                                             console.error(error)
-                                            toast('something went wrong')
+                                            toast('Mint failed. Please try again.')
                                         }
                                         setmintLoading(false)
                                     }} disabled={mintLoading}>{mintLoading ? '......' : 'Mint'}</ButtonMint>
