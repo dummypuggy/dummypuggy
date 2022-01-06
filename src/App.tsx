@@ -9,7 +9,7 @@ import {
   NavLink 
 } from 'react-router-dom';
 // import Footer from './components/footer/footer';
-// import './App.css';
+import './App.css';
 // import IndexComp from './components/index';
 // import Faq from './components/Faq';
 // import EmailForm from './components/email';
