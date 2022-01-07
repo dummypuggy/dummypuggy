@@ -22,6 +22,24 @@ import PlayGame from '../playGame';
 // 	}
 // }
 
+import Modal from 'react-modal';
+
+Modal.setAppElement('#root');
+
+const customStyles = {
+  content: {
+    top: '50%',
+    left: '50%',
+    right: 'auto',
+    bottom: 'auto',
+    marginRight: '-50%',
+    transform: 'translate(-50%, -50%)',
+    width: '80vw',
+    height: '45vw',
+    zIndex: 999999,
+  },
+};
+
 
 function NewView(){
   const mainVideo = useRef<any>()
@@ -209,8 +227,58 @@ function NewView(){
 	const handlEmail = (e:any)=>{
 		setEmail(e.target.value)
 	}
+
+
+  const modalVideo = useRef<any>()
+
+  const [modalIsOpen, setIsOpen] = React.useState(false);
+
+  function openModal() {
+    
+    setIsOpen(true);
+  }
+
+  function afterOpenModal() {
+    // references are now sync'd and can be accessed.
+    // subtitle.style.color = '#f00';
+    modalVideo.current.play();
+    console.log('after open');
+  }
+
+  function closeModal() {
+    modalVideo.current.pause();
+    setIsOpen(false);
+  }
+
+
   return(
     <div>
+      <Modal
+        isOpen={modalIsOpen}
+        onAfterOpen={afterOpenModal}
+        onRequestClose={closeModal}
+        style={customStyles}
+        contentLabel="Example Modal"
+      >
+        <img src={require('../../images/close.png').default} style={{
+          width: '40px',
+          height: '40px',
+          position: 'absolute',
+          right: '0',
+          top: '0',
+          zIndex: 99999,
+          cursor: 'pointer',
+        }} alt=""  onClick={closeModal}/>
+        <video ref={modalVideo} width="100%"  preload="auto" loop muted playsInline autoPlay style={{
+        overflow: 'hidden',
+        position: 'absolute',
+        right: '0',
+        left: '0',
+        bottom: '0',
+      }}>
+                  <source src={require('../../images/right_video.mp4').default} type="video/mp4" />
+                </video>
+      </Modal>
       {/* <div id="banner" ref={scrollContainer} className="index_scrollContainer">
         
       </div> */}
@@ -238,6 +306,17 @@ function NewView(){
         bottom: '0',
         width: '100%',
       }}/>
+      <img src={require('../../images/play.png').default} alt="" style={{
+        position: 'absolute',
+        top: '50%',
+        left: '50%',
+        right: 'auto',
+        bottom: 'auto',
+        marginRight: '-50%',
+        transform: 'translate(-50%, -50%)',
+        width: '132px',
+        height: '84px',
+      }}/>
                 <div style={{
         overflow: 'hidden',
         position: 'absolute',
@@ -245,8 +324,9 @@ function NewView(){
         right: '0',
         top: '0',
         bottom: '0',
+        cursor: 'pointer',
       }}
-                ></div>
+      onClick={openModal} ></div>
       </div>
       
       </div>
@@ -433,12 +513,12 @@ special.
       {/* dummyplanet end */}
       {/* nft start */}
       <div id="nft-part">
-      <div className="newtitle">
+      {/* <div className="newtitle">
           <img src={require('../../images/nft_title.png').default} alt="" />
-        </div>
+        </div> */}
 
       <div className="nft_list max-1400">
-      <div className="nft_item">
+      {/* <div className="nft_item">
             <div className="left_box">
               <div className="img_box">
               <img src={require('../../images/puggys.png').default} alt="" style={{
@@ -456,7 +536,7 @@ special.
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
           <div className="nft_item">
             <div className="left_box">
               <div className="img_box">

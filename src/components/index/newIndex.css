@@ -376,9 +376,11 @@
 }
 
 .nft_item:nth-child(odd) .right_box{
+  order: 1;
+}
+.nft_item:nth-child(even) .right_box{
   order: -1;
 }
-
 @media screen and (max-width: 420px){
   .banner video{
     width: 100%;
@@ -427,4 +429,8 @@
 
 .hte .text_box h1.name {
   font-size: 20px;
+}
+
+.ReactModal__Overlay {
+  z-index: 99999;
 }
