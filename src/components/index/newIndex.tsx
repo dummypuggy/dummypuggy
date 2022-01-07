@@ -270,7 +270,7 @@ function NewView(){
           zIndex: 99999,
           cursor: 'pointer',
         }} alt=""  onClick={closeModal}/>
-        <video ref={modalVideo} width="100%"  preload="auto" loop muted playsInline autoPlay style={{
+        <video ref={modalVideo} width="100%"  preload="auto" controls style={{
         overflow: 'hidden',
         position: 'absolute',
         right: '0',
