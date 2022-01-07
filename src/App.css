@@ -163,6 +163,10 @@
   .phone_hide{
     display: none;
   }
+  .newtitle img{
+    height: auto;
+    max-width: 100%;
+  }
 }
 
 .loading {

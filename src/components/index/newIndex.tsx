@@ -217,6 +217,7 @@ function NewView(){
       <div>
       <div style={{
         height: '100vh',
+        maxHeight: '56vw',
         overflow: 'hidden',
         position: 'relative',
       }}>
@@ -247,13 +248,158 @@ function NewView(){
       }}
                 ></div>
       </div>
+      
       </div>
+
+      <div>
+      <img src={require('../../images/the2nd.jpg').default} width={'100%'} alt="" />
+      </div>
+
+      <div style={{
+        paddingTop: '4vw',
+      }}>
+        <div className="newtitle m_d5">
+          <img src={require('../../images/gp_title.png').default} alt="" />
+        </div>
+        <div className="nft_list max-960">
+      <div className="nft_item">
+            <div className="left_box">
+              <div className="img_box">
+              <img src={require('../../images/thedummy.png').default} alt="" style={{
+                  width: '100%'
+                }}/>
+              </div>
+            </div>
+            <div className="right_box">
+              <div className="text_box  text_center ">
+                <div className="text_des" style={{
+                  color: '#fff',
+                }}>
+                “”Dummy Puggy“ is the 
+Digital Species created 
+in the Metaverse. 
+they are extremely 
+special.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="nft_item">
+            <div className="left_box">
+              <div className="img_box">
+                <img src={require('../../images/gp2.png').default} alt="" style={{
+                  width: '100%'
+                }}/>
+              </div>
+            </div>
+            <div className="right_box">
+              <div className="text_box  text_center ">
+                <div className="text_des" style={{
+                  color: '#fff',
+                }}>
+                99 Legendary one of one Puggies
+900 Ultral Puggies
+9000 unique Puggies
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+
+      </div>
+
+
       <div id="gameplay" className="gamePlay block max-1400">
 
         <div className="newtitle">
           <img src={require('../../images/gameplay_title.png').default} alt="" />
         </div>
         <PlayGame/>
+      </div>
+
+
+      
+<div className='hte' style={{
+  maxWidth: '1400px',
+  margin: '0 auto',
+}}>
+
+<div className="newtitle m_d5" style={{
+        paddingTop: '5vw',
+      }}>
+          <img src={require('../../images/hte.png').default} alt="" />
+        </div>
+
+<ul className="core teamUl m_t4">
+            <li>
+              <div className="img_box">
+                <img src={require('../../images/how1.png').default} alt="" width="100%"/>
+              </div>
+              <div className="text_box">
+                <h1 className='name'>Feed  Puggies to Get PooPoos</h1>
+              </div>
+            </li>
+            <li>
+              <div className="img_box">
+                <img src={require('../../images/how2.png').default} alt="" width="100%"/>
+              </div>
+              <div className="text_box">
+                <h1 className="name">
+                Merge PooPoos to Get More Rewards
+                </h1>
+              </div>
+            </li>
+            <li>
+              <div className="img_box">
+                <img src={require('../../images/how3.png').default} alt="" width="100%"/>
+              </div>
+              <div className="text_box">
+                <h1 className="name">
+                Merge Top Level PooPoos to Win  Ultral Puggy
+                </h1>
+              </div>
+            </li>
+          </ul>
+
+
+          <ul className="core teamUl m_t4">
+            <li>
+              <div className="img_box">
+                <img src={require('../../images/how4.png').default} alt="" width="100%"/>
+              </div>
+              <div className="text_box">
+                <h1 className='name'>Let Your Puggy Teleport to Get New Puggies and Surprises</h1>
+              </div>
+            </li>
+            <li>
+              <div className="img_box">
+                <img src={require('../../images/how5.png').default} alt="" width="100%"/>
+              </div>
+              <div className="text_box">
+                <h1 className="name">
+                Drop one PooPoo into the wormhole to be the Jackpot winner
+                </h1>
+              </div>
+            </li>
+            <li>
+              <div className="img_box">
+                <img src={require('../../images/how6.png').default} alt="" width="100%"/>
+              </div>
+              <div className="text_box">
+                <h1 className="name">
+                Win the Top Lists to Get Reward of DUMMY 
+                </h1>
+              </div>
+            </li>
+          </ul>
+</div>
+
+ 
+
+
+
+      <div>
+
       </div>
       {/* dummyplanet start */}
       <div id="dummyplanet" >
@@ -263,8 +409,25 @@ function NewView(){
         <h3 className="planet-titletext">
         Meet New Dummies(Puggy Owners), Chat & Date
         </h3>
-        <div className="planet-content">
-          <img src={require('../../images/dummyplanet.png').default} alt="" />
+        <div className="planet-content"  style={{
+                padding: '80px 5vw',
+              }}>
+          {/* <img src={require('../../images/dummyplanet.png').default} alt="" /> */}
+
+              <div style={{
+                overflow: 'hidden',
+                width: '90vw',
+                margin: '0 auto',
+                height: '50vw',
+                borderRadius: '16px',
+              }}>
+
+<video ref={mainVideo} width="100%"  preload="auto" loop muted playsInline autoPlay>
+                  <source src={require('../../images/planet.mp4').default} type="video/mp4" />
+                </video>
+              </div>
+
+          
         </div>
       </div>
       {/* dummyplanet end */}

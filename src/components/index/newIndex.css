@@ -30,6 +30,11 @@
   margin: 0 auto;
 }
 
+.max-960{
+  max-width: 960px;
+  margin: 0 auto;
+}
+
 .banner{
   position: relative;
   /* background: url(../../images/newBanner_bg.png) no-repeat center; */
@@ -286,6 +291,7 @@
 }
 .newtitle img{
   height: 10vh;
+  max-width: 100%;
 }
 
 
@@ -416,4 +422,9 @@
     height: 100px;
     bottom: 5%;
   }
+}
+
+
+.hte .text_box h1.name {
+  font-size: 20px;
 }
