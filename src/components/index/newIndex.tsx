@@ -37,6 +37,7 @@ const customStyles = {
     width: '80vw',
     height: '45vw',
     zIndex: 999999,
+    backgroundColor: '#000',
   },
 };
 
