@@ -176,6 +176,9 @@ TimeStamp: ${ts}`
           timeout: 5000,
         });
         // config.headers.Authorization =  token;
+      }
+
+      setInteceptors(){
         this.apiInstance.interceptors.request.use( (config)=> {
           const _token = this.getToken();
           if(_token){
@@ -229,8 +232,10 @@ TimeStamp: ${ts}`
         });
         console.log('authRst.data.data', authRst?.data?.data?.token)
         localStorage.setItem(TOKENKEY, authRst?.data?.data?.token)
+        this.token = authRst?.data?.data?.token;
         const fiveDaysLater = Date.now()+(1000*60*60*24*5);
         localStorage.setItem(TOKENEXPIREKEY, fiveDaysLater.toString())
+        this.setInteceptors();
         return authRst?.data?.data;
       }
 
