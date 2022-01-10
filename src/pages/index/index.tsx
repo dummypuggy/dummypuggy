@@ -31,6 +31,8 @@ function Index() {
   React.useEffect(() => {
     setNavModelClassNames('nav-model')
     setNavBtnClassNames('iconUl')
+
+    let isShowed = false;
     
     const ImgArr:any = document.getElementById('contentBox')?.getElementsByTagName('img');
     const VideoArr:any = document.getElementsByTagName('video')
@@ -69,32 +71,21 @@ function Index() {
         }
       })
     }
-    Promise.all(promiseAll).then((img)=>{
-      gsap.to([loadaing.current],{
-        opacity: 0,
-        duration: 1,
-        delay: .5,
-        ease:"none",
-      })
-      document.body.classList.remove('modal-open');
-    }).catch(()=>{
-      gsap.to([loadaing.current],{
-        opacity: 0,
-        duration: 1,
-        delay: .5,
-        ease:"none",
-      })
-      document.body.classList.remove('modal-open');
-    })
-    setTimeout(() => {
-      gsap.to([loadaing.current],{
-        opacity: 0,
-        duration: 1,
-        delay: .5,
-        ease:"none",
-      })
-      document.body.classList.remove('modal-open');
-    }, 20000);
+
+    const showPage = ()=>{
+      if(!isShowed){
+        gsap.to([loadaing.current],{
+          opacity: 0,
+          duration: 1,
+          delay: .5,
+          ease:"none",
+        })
+        document.body.classList.remove('modal-open');
+        isShowed = true;
+      }
+    }
+    Promise.all(promiseAll).then(showPage).catch(showPage)
+    setTimeout(showPage, 10000);
     // 保证页面加载
     // setTimeout(()=>{
     //   gsap.to([loadaing.current],{
