@@ -20,6 +20,10 @@ class DummyPuggy {
     token: string | null = '';
     contracts = contracts;
 
+    getToken():string|null{
+      return this.token;
+    }
+
     async connect(){
         try {
             // @ts-ignore
@@ -173,9 +177,12 @@ TimeStamp: ${ts}`
         });
         // config.headers.Authorization =  token;
         this.apiInstance.interceptors.request.use( (config)=> {
+          const _token = this.getToken();
+          if(_token){
             config.headers = {
               Authorization: `Bearer ${this.token}`,
             };
+          }
             return config;
         });
         this.apiInstance.interceptors.response.use(function (response) {
