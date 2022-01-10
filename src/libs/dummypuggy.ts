@@ -175,6 +175,7 @@ TimeStamp: ${ts}`
           baseURL: baseUrl,
           timeout: 5000,
         });
+        this.setInteceptors();
         // config.headers.Authorization =  token;
       }
 
@@ -188,11 +189,16 @@ TimeStamp: ${ts}`
           }
             return config;
         });
-        this.apiInstance.interceptors.response.use(function (response) {
+        this.apiInstance.interceptors.response.use(async (response)=>{
           // Any status code that lie within the range of 2xx cause this function to trigger
           // Do something with response data
           console.log('response',response);
           if(response.data.code !== 200){
+            console.log(response.data.error.msg_id === 10003);
+            if(response.data.error.msg_id === 10003){
+              localStorage.removeItem(TOKENKEY)
+              this.LoginByMetamask();
+            }
             return Promise.reject(new Error(`[${response.data.error.msg_id}] ${response.data.error.msg}`));
           }
           return response;
