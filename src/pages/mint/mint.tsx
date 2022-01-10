@@ -202,7 +202,7 @@ const MintPart = ():JSX.Element=>{
                                 (<Button style={{
                                     fontSize: '0.3vw',
                                 }} onClick={async ()=>{
-                                    DummyPuggy.instance.initSdk('http://35.153.208.207:8090');
+                                    DummyPuggy.instance.initSdk('https://game.dummypuggy.io/');
                                     try {
                                         setloginLoading(true)
                                         await DummyPuggy.instance.LoginByMetamask();

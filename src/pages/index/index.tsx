@@ -77,7 +77,24 @@ function Index() {
         ease:"none",
       })
       document.body.classList.remove('modal-open');
+    }).catch(()=>{
+      gsap.to([loadaing.current],{
+        opacity: 0,
+        duration: 1,
+        delay: .5,
+        ease:"none",
+      })
+      document.body.classList.remove('modal-open');
     })
+    setTimeout(() => {
+      gsap.to([loadaing.current],{
+        opacity: 0,
+        duration: 1,
+        delay: .5,
+        ease:"none",
+      })
+      document.body.classList.remove('modal-open');
+    }, 20000);
     // 保证页面加载
     // setTimeout(()=>{
     //   gsap.to([loadaing.current],{
