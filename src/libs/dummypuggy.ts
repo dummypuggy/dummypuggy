@@ -68,19 +68,32 @@ class DummyPuggy {
   }
 
   async getBalance() {
-      const balance = await this.provider?.getBalance(this.accountAdress);
-      const balanceEth = ethers.utils.formatEther(balance ?? 0);
-      const ppc = await this.ppcContract().balanceOf(this.accountAdress);
-      const ppcEth = ethers.utils.formatEther(ppc ?? 0);
-      const dummy = await this.DummyContract().balanceOf(this.accountAdress);
-      const dummyEth = ethers.utils.formatEther(dummy ?? 0);
-      console.log(balanceEth, ppcEth, dummyEth);
-      return {
-        bnb: balanceEth,
-        ppc: ppcEth,
-        dummy: dummyEth,
+    const balance = await this.provider?.getBalance(this.accountAdress);
+    const balanceEth = ethers.utils.formatEther(balance ?? 0);
+    const ppc = await this.ppcContract().balanceOf(this.accountAdress);
+    const ppcEth = ethers.utils.formatEther(ppc ?? 0);
+    const dummy = await this.DummyContract().balanceOf(this.accountAdress);
+    const dummyEth = ethers.utils.formatEther(dummy ?? 0);
+    const ppcName = await this.ppcContract().name();
+    const ppcSymbol = await this.ppcContract().symbol();
+
+    const dummyName = await this.DummyContract().name();
+    const dummySymbol = await this.DummyContract().symbol();
+    console.log(balanceEth, ppcEth, dummyEth);
+    return {
+      bnb: balanceEth,
+      ppc: ppcEth,
+      dummy: dummyEth,
+      ppcInfo: {
+        ppcName,
+        ppcSymbol
+      },
+      dummyInfo: {
+        dummyName,
+        dummySymbol
       }
-  }
+    }
+}
 
     async getChainId():Promise<number> {
         //@ts-ignore

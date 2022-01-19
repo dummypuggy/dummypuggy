@@ -1,4 +1,5 @@
 import puggyNftAbi from './puggyNftAbi'
+import marketAbi from './marketAbi'
 
 const bep20Abi = [
     {
@@ -20,22 +21,28 @@ const bep20Abi = [
         stateMutability: "view",
         type: "function",
     },
+    {"inputs":[],"name":"name","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"},
+    {"inputs":[],"name":"symbol","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"},
 ]
 
 const contracts = {
     dev: {
         PPC: {
             abi: bep20Abi,
-            address: '0x7135EccD9427Ff3feCb91bEe1bf226CC0E48204E',
+            address: '0x1d319572eaB4bb71BD1dFBAB797bbE9623Ba834C',
         },
         Dummy: {
             abi: bep20Abi,
-            address: '0x957E7Ec818D2F8226B4DCEc21A336b0E7290b872',
+            address: '0x3972C923A0b6D9f3A85E5c37F3ADe2Fd778D75F4',
         },
         PuggyNFT: {
             abi: puggyNftAbi,
-            address: '0xAc78FFc3085b6Ae787936A6A8bf3296B280e5D06',
+            address: '0x0f762896B14f67A0B1087eC446d4c43d8f728573',
         },
+        market: {
+          abi: marketAbi,
+          address: '0xBB15953d6DBC4da5ECd840613E4751b20d495AbC',
+        }
     },
 }
 

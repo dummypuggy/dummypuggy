@@ -126,18 +126,18 @@ function Index() {
           <div className="flex align-center">
             <Link to="/"><h1 className="logo">DummyPuggy</h1></Link> 
             <div className="spec"></div>
-            <ul className='navList pc'>
+            {/* <ul className='navList pc'>
               <li className="item flex align-center">
                 <a href="/#banner" onClick={()=>{ScrollBlock('banner')}}>
                   Home
                 </a>
-              </li>
+              </li> */}
               {/* <li className="item flex align-center">
                 <a href="/#about">
                 about
                 </a>
               </li> */}
-              <li className="item flex align-center">
+              {/* <li className="item flex align-center">
                 <a href="/#gameplay" onClick={()=>{ScrollBlock('gameplay')}}>
                 gameplay
                 </a>
@@ -171,13 +171,13 @@ function Index() {
                 <NavLink  to="/faq" activeClassName="active">Faq</NavLink >
               </li>
 
-            </ul>
-            <div className="navBtn icon">
+            </ul> */}
+            {/* <div className="navBtn icon">
               <ul className={navBtn} onClick={changeNavStatu}>
                   <li></li>
                   <li></li>
                   <li></li>
-              </ul>
+              </ul> */}
 
             </div>
           </div>
@@ -370,7 +370,7 @@ function Index() {
           </div>
         </div>
       </div>
-      </div>
+      {/* </div> */}
     </>
   );
 }

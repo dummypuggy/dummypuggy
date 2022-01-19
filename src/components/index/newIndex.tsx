@@ -225,9 +225,9 @@ function NewView(){
 		 })
 		e.preventDefault();
 	}
-	const handlEmail = (e:any)=>{
-		setEmail(e.target.value)
-	}
+	// const handlEmail = (e:any)=>{
+	// 	setEmail(e.target.value)
+	// }
 
 
   const modalVideo = useRef<any>()
@@ -236,7 +236,7 @@ function NewView(){
 
   function openModal() {
     
-    setIsOpen(true);
+    // setIsOpen(true);
   }
 
   function afterOpenModal() {
@@ -286,7 +286,7 @@ function NewView(){
       <div>
       <div style={{
         height: '100vh',
-        maxHeight: '56vw',
+        // maxHeight: '56vw',
         overflow: 'hidden',
         position: 'relative',
       }}>
@@ -307,7 +307,7 @@ function NewView(){
         bottom: '0',
         width: '100%',
       }}/>
-      <img src={require('../../images/play.png').default} alt="" style={{
+      {/* <img src={require('../../images/play.png').default} alt="" style={{
         position: 'absolute',
         top: '50%',
         left: '50%',
@@ -317,7 +317,7 @@ function NewView(){
         transform: 'translate(-50%, -50%)',
         width: '132px',
         height: '84px',
-      }}/>
+      }}/> */}
                 <div style={{
         overflow: 'hidden',
         position: 'absolute',
@@ -332,11 +332,11 @@ function NewView(){
       
       </div>
 
-      <div>
+      {/* <div>
       <img src={require('../../images/the2nd.jpg').default} width={'100%'} alt="" />
-      </div>
+      </div> */}
 
-      <div style={{
+      {/* <div style={{
         paddingTop: '4vw',
       }}>
         <div className="newtitle m_d5">
@@ -387,20 +387,20 @@ special.
           </div>
           </div>
 
-      </div>
+      </div> */}
 
 
-      <div id="gameplay" className="gamePlay block max-1400">
+      {/* <div id="gameplay" className="gamePlay block max-1400">
 
         <div className="newtitle">
           <img src={require('../../images/gameplay_title.png').default} alt="" />
         </div>
         <PlayGame/>
-      </div>
+      </div> */}
 
 
       
-<div className='hte' style={{
+{/* <div className='hte' style={{
   maxWidth: '1400px',
   margin: '0 auto',
 }}>
@@ -481,9 +481,9 @@ special.
 
       <div>
 
-      </div>
+      </div> */}
       {/* dummyplanet start */}
-      <div id="dummyplanet" >
+      {/* <div id="dummyplanet" >
         <div className="newtitle m_d5">
           <img src={require('../../images/planet_title.png').default} alt="" />
         </div>
@@ -492,10 +492,10 @@ special.
         </h3>
         <div className="planet-content"  style={{
                 padding: '80px 5vw',
-              }}>
+              }}> */}
           {/* <img src={require('../../images/dummyplanet.png').default} alt="" /> */}
 
-              <div style={{
+              {/* <div style={{
                 overflow: 'hidden',
                 width: '90vw',
                 margin: '0 auto',
@@ -506,19 +506,19 @@ special.
 <video ref={mainVideo} width="100%"  preload="auto" loop muted playsInline autoPlay>
                   <source src={require('../../images/planet.mp4').default} type="video/mp4" />
                 </video>
-              </div>
+              </div> */}
 
           
-        </div>
-      </div>
+        {/* </div> */}
+      {/* </div> */}
       {/* dummyplanet end */}
       {/* nft start */}
-      <div id="nft-part">
+      {/* <div id="nft-part"> */}
       {/* <div className="newtitle">
           <img src={require('../../images/nft_title.png').default} alt="" />
         </div> */}
 
-      <div className="nft_list max-1400">
+      {/* <div className="nft_list max-1400"> */}
       {/* <div className="nft_item">
             <div className="left_box">
               <div className="img_box">
@@ -538,7 +538,7 @@ special.
               </div>
             </div>
           </div> */}
-          <div className="nft_item">
+          {/* <div className="nft_item">
             <div className="left_box">
               <div className="img_box">
                 <img src={require('../../images/dummys.png').default} alt="" style={{
@@ -577,8 +577,8 @@ special.
             </div>
           </div>
         </div>
-      </div>
-      <div id='roadmap' className="roadmap" >
+      </div> */}
+      {/* <div id='roadmap' className="roadmap" >
         <Container>
             <div className="newtitle m_d5">
               <img src={require('../../images/roadmap_title.png').default} alt="" />
@@ -640,8 +640,8 @@ special.
               </div> 
             </div>
         </Container>
-      </div>
-      <div className="team" id="team">
+      </div> */}
+      {/* <div className="team" id="team">
         <Container>
           <div className="newtitle m_d5">
             <img src={require('../../images/team_title.png').default} alt="" />
@@ -712,8 +712,8 @@ special.
             </li>
           </ul>
         </Container>
-      </div>
-      <div className="wait">
+      </div> */}
+      {/* <div className="wait">
         <Container>
           <div className="wait_con">
             <h1 className="title">Waitlist</h1>
@@ -726,7 +726,7 @@ special.
             </form>
           </div>
         </Container>
-      </div>
+      </div> */}
       {/* <div className="join">
         <Container>
           <div className="join_box">
