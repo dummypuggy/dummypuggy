@@ -1,43 +1,44 @@
-/* eslint-disable no-loop-func */
-/* eslint-disable @typescript-eslint/no-unused-vars */
-import React, {useState, useRef} from 'react';
-import { 
-  Switch,
-  Route,
-  Link,
-  useLocation,
-  NavLink 
-} from 'react-router-dom';
-// import Footer from './components/footer/footer';
+import React from 'react';
+// import logo from './logo.svg';
+import { Routes, Route } from "react-router-dom";
+import CssBaseline from '@mui/material/CssBaseline';
+
+
 import './App.css';
-// import IndexComp from './components/index';
-// import Faq from './components/Faq';
-// import EmailForm from './components/email';
-// import NewView from './components/index/newIndex';
-// import gsap from 'gsap';
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 
-import Index from './pages/index'
-import Mint from './pages/mint/mint'
-
-function App() {
-  
+import Page1 from './pages/page1/Page1';
+import Box from '@mui/material/Box/Box';
+import Header from './components/header/header';
+import Planet from './pages/planet/Planet';
 
 
+
+const App = ():JSX.Element=> {
   return (
-    <div className='App'>
-      <Switch>
-        <Route path="/mint">
-          <Mint/>
-        </Route>
-        <Route path="/">
-          <Index/>
-        </Route>
-      </Switch>
-      <ToastContainer
-      hideProgressBar={true}/>
-    </div>
+    <>
+      <CssBaseline/>
+      <Box className="App" sx={{
+        position: 'relative',
+      }}>
+        
+      {/* <header className="App-header">
+        <nav>
+          <Link to={'/'}>Page1</Link>
+          <span> | </span>
+          <Link to={'/counter'}>Counter</Link>
+        </nav>
+      </header> */}
+      <Header/>
+      <Box>
+        <Routes>
+          <Route path="/planet" element={<Planet />} />
+          <Route path="/" element={<Page1 />} />
+        </Routes>
+      </Box>
+      
+    </Box>
+    </>
   );
 }
+
 export default App;
