@@ -74,6 +74,7 @@ const Header = ():JSX.Element=>{
                         backgroundSize: 'contain',
                         textIndent: '-9999px',
                     }} href="https://twitter.com/DummyPuggyNFT"  target="_blank" rel="noreferrer">twitter</a>
+                    <SizedBox width="20px"/>
                     {/* <SizedBox width="24px"/>
                     <a style={{
                         width: '34px',

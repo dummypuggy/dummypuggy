@@ -9,13 +9,15 @@ const BG = ():JSX.Element=>{
 
     return (
         <>
-            <Box sx={
+            <Box>
+                <Box sx={
                 {
                     position: 'relative',
                     // width: '100vw',
                     // left: 0,
                     // right: 0,
-                    height: '56.12vw',
+                    // height: '56.12vw',
+                    height: '100vh',
                     maxHeight: '100vh',
                     overflow: 'hidden',
                 }
@@ -28,15 +30,31 @@ const BG = ():JSX.Element=>{
                 }}>
 
                 </Box>
-                <video width="100%"  preload="auto" loop muted playsInline autoPlay style={{
-                    overflow: 'hidden',
+                <video  preload="auto" loop muted playsInline autoPlay style={{
+                    height: '100%',
+                    width: '177.77777778vh',
+                    minWidth: '100%',
+                    minHeight: '56.25vw', 
+//                     overflow: 'hidden',
                     position: 'absolute',
-                    right: '0',
-                    left: '0',
-                    bottom: '0',
+                    // position: absolute;
+    left: '50%', /* % of surrounding element */
+    top: '50%',
+    transform: 'translate(-50%, -50%)',
+                    // left: 'calc(calc(100%-177.77777778vh)/2)',
+//                     right: '0',
+//                     left: '50vw',
+//                     transform: 'translateX(-50vw)',
+//                     minWidth: '100%',
+//   minHeight: '100%',
+//   boxSizing: 'border-box',
                 }}>
                   <source src={bgVideo} type="video/mp4" />
                 </video>
+                <Box sx={{
+                    inset: 0,
+                    position: 'absolute',
+                }}></Box>
                 <a style={{
                     display: 'block',
                     width: '76vw',
@@ -50,6 +68,7 @@ const BG = ():JSX.Element=>{
                     backgroundSize: 'contain',
                     textIndent: '-9999px',
                 }} href="https://discord.gg/89USG2sytF"  target="_blank" rel="noreferrer">join discord</a>
+            </Box>
             </Box>
         </>
     );

@@ -152,7 +152,7 @@ const Planet = ():JSX.Element=>{
                 backgroundSize: '100vw 56.25vw',
                 minHeight: '100vh',
                 
-                paddingTop: '90px',
+                // paddingTop: '90px',
             }}>
                 <Box sx={{
                     maxWidth: 1440,
@@ -164,9 +164,11 @@ const Planet = ():JSX.Element=>{
                         position:'absolute',
                         display: 'flex',
                         flexDirection: 'column',
-                        top: '50vh',
+                        top: '90px',
                         left: '10px',
-                        transform: 'translateY(-220px)'
+                        bottom: '0',
+                        // transform: 'translateY(-220px)',
+                        justifyContent: 'center',
                     }}>
                         <TapBtn isActive={idx === 0} onClick={()=>{
                             setIdx(0)
@@ -188,6 +190,12 @@ const Planet = ():JSX.Element=>{
 
                     <Box sx={{
                         padding: '80px 410px 20px 100px',
+                        height: '100vh',
+                        paddingTop: '90px',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        justifyContent: 'center',
+                        overflow: 'auto',
                     }}>
                         <Tap0Content index={idx} />
                         <Tap1Content index={idx} />
