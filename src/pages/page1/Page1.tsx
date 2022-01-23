@@ -66,8 +66,17 @@ const BG = ():JSX.Element=>{
                     cursor: 'pointer',
                     background: `url(${joinDiscordImage}) bottom no-repeat`,
                     backgroundSize: 'contain',
-                    textIndent: '-9999px',
-                }} href="https://discord.gg/89USG2sytF"  target="_blank" rel="noreferrer">join discord</a>
+                    // textIndent: '-9999px',
+                }} href="https://discord.gg/89USG2sytF"  target="_blank" rel="noreferrer">
+                <Box sx={{
+                    position: 'absolute',
+                    left: '12vw',
+                    bottom: '2.8vw',
+                    color: '#fff',
+                    fontSize: '0.2vw',
+                    fontFamily: 'MERegular',
+                }}>Whitelist is ongoing...</Box>
+                </a>
             </Box>
             </Box>
         </>

@@ -49,7 +49,7 @@ const Header = ():JSX.Element=>{
                 zIndex: 1,
             }}>
                 <Box sx={{
-                    maxWidth: '1440px',
+                    maxWidth: '92vw',
                     margin: '0 auto',
                     display: 'flex',
                 }}>

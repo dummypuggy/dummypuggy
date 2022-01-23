@@ -1,6 +1,7 @@
 import Box from "@mui/material/Box/Box";
 import { Theme } from "@mui/material/styles";
 import { SxProps } from "@mui/system/styleFunctionSx/styleFunctionSx";
+import React, { useRef } from "react";
 import { useState } from "react";
 import { SizedBox, Text, } from "../../components/base";
 
@@ -34,22 +35,27 @@ const TapBtn = (props: TapBtnProps):JSX.Element=>{
 type tapState = 0 | 1 | 2 | 3
 
 const textStyle: SxProps<Theme> | undefined = {
-    color: '#fff',
+    color: 'rgba(255, 255, 255, 0.8)',
     fontSize: '18px',
-    fontFamily: 'MELight',
+    fontFamily: 'MERegular',
 };
 
 type ContentProps = {
-    index: tapState,
+    ref?: React.Ref<unknown>,
 }
 
 const Tap0Content = (props: ContentProps):JSX.Element=>{
-    const {index} = props;
-    if(index !== 0){
-        return <div/>
-    }
+    const {ref} = props;
+    // if(index !== 0){
+    //     return <div/>
+    // }
     return (
-        <Box sx={{
+        <Box ref={ref} sx={{display: 'flex',
+        height: 'calc(100vh - 90px)',
+        flexDirection: 'column',
+        justifyContent: 'center',}}>
+
+<Box sx={{
         }}>
             <h1><Text sx={{
                 color: '#fff',
@@ -70,15 +76,22 @@ physical life. Al becomes smarter than human. Everything goes digital.
             The puggies also have superpowers. They can teleport anywh here in the metaverse. When they come back, they will always bring you surprises!
             </Box>
         </Box>
+
+        </Box>
+        
     )
 }
 
 const Tap1Content = (props: ContentProps):JSX.Element=>{
-    const {index} = props;
-    if(index !== 1){
-        return <div/>
-    }
+    const {ref} = props;
+    // if(index !== 1){
+    //     return <div/>
+    // }
     return (
+        <Box ref={ref} sx={{display: 'flex',
+        height: '100vh',
+        flexDirection: 'column',
+        justifyContent: 'center',}}>
         <Box sx={{
         }}>
             <h1><Text sx={{
@@ -92,15 +105,20 @@ const Tap1Content = (props: ContentProps):JSX.Element=>{
             <Box sx={{height: 50}}/>
             <img src={idx1Image} style={{maxWidth: '100%'}} alt="team"/>
         </Box>
+        </Box>
     )
 }
 
 const Tap2Content = (props: ContentProps):JSX.Element=>{
-    const {index} = props;
-    if(index !== 2){
-        return <div/>
-    }
+    const {ref} = props;
+    // if(index !== 2){
+    //     return <div/>
+    // }
     return (
+        <Box ref={ref} sx={{display: 'flex',
+        height: '100vh',
+        flexDirection: 'column',
+        justifyContent: 'center',}}>
         <Box sx={{
         }}>
             <h1><Text sx={{
@@ -116,16 +134,24 @@ const Tap2Content = (props: ContentProps):JSX.Element=>{
             </Box>
             <Box sx={{height: 50}}/>
             <img src={idx2Image} style={{maxWidth: '100%'}} alt="POWER BY COMMUNITY"/>
-        </Box>
+        </Box></Box>
     )
 }
 
 const Tap3Content = (props: ContentProps):JSX.Element=>{
-    const {index} = props;
-    if(index !== 3){
-        return <div/>
-    }
+    const {ref} = props;
+    
+
+    // myRef = React.createRef()
+
+    // if(index !== 3){
+    //     return <div/>
+    // }
     return (
+        <Box ref={ref} sx={{display: 'flex',
+        height: '100vh',
+        flexDirection: 'column',
+        justifyContent: 'center',}}>
         <Box sx={{
         }}>
             <h1><Text sx={{
@@ -138,12 +164,29 @@ const Tap3Content = (props: ContentProps):JSX.Element=>{
             <SizedBox width="25px"/>
             <a href="https://twitter.com/DummyPuggyNFT" target="_blank" rel="noreferrer"> <img src={planetTwitter} width={286} alt="twitter" /></a>
         </Box>
+        </Box>
     )
 }
 
 const Planet = ():JSX.Element=>{
     
     const [idx, setIdx] = useState<tapState>(0)
+
+
+    const scrollOuter = useRef<HTMLDivElement>(null);
+
+    // useEffect(() => {
+    //     // Update the document title using the browser API
+    //     // document.title = `You clicked ${count} times`;
+        
+        
+    //     // connectWallet().then((_r)=>console.log(_r))
+        
+    //     return function() {
+    //       console.log('un mounted')
+    //     }
+    //   });
+
 
     return (
         <>
@@ -155,7 +198,7 @@ const Planet = ():JSX.Element=>{
                 // paddingTop: '90px',
             }}>
                 <Box sx={{
-                    maxWidth: 1440,
+                    maxWidth: '92vw',
                     position: 'relative',
                     margin: '0 auto',
                 }}>
@@ -172,35 +215,49 @@ const Planet = ():JSX.Element=>{
                     }}>
                         <TapBtn isActive={idx === 0} onClick={()=>{
                             setIdx(0)
+                            // cap1.current?.scrollIntoView()
+                            scrollOuter.current?.scrollTo(0, 0)
                         }}/>
                         <SizedBox height={'30px'}/>
                         <TapBtn isActive={idx === 1} onClick={()=>{
                             setIdx(1)
+                            scrollOuter.current?.scrollTo(0, scrollOuter.current?.offsetHeight)
                         }}/>
                         <SizedBox height={'30px'}/>
                         <TapBtn isActive={idx === 2} onClick={()=>{
                             setIdx(2)
+                            scrollOuter.current?.scrollTo(0, scrollOuter.current?.offsetHeight * 2)
                         }}/>
                         <SizedBox height={'30px'}/>
                         <TapBtn isActive={idx === 3} onClick={()=>{
                             setIdx(3)
+                            scrollOuter.current?.scrollTo(0, scrollOuter.current?.offsetHeight * 3)
                         }}/>
                     </Box>
 
 
-                    <Box sx={{
-                        padding: '80px 410px 20px 100px',
-                        height: '100vh',
+                    <Box ref={scrollOuter} sx={{
+                        padding: '90px 36vw 20px 100px',
                         paddingTop: '90px',
-                        display: 'flex',
-                        flexDirection: 'column',
-                        justifyContent: 'center',
-                        overflow: 'auto',
+                        height: '100vh',
+                        overflow: 'scroll',
+                    }} onScroll={()=>{
+                        const _top = scrollOuter?.current?.scrollTop ?? 0;
+                        const _h = scrollOuter?.current?.offsetHeight ?? 0;
+                        if(_top < _h){
+                            setIdx(0)
+                        } else if(_top >= _h * .6 && _top < _h * 1.6){
+                            setIdx(1)
+                        } else if(_top >= _h * 1.6 && _top < _h * 2.6){
+                            setIdx(2)
+                        } else {
+                            setIdx(3)
+                        }
                     }}>
-                        <Tap0Content index={idx} />
-                        <Tap1Content index={idx} />
-                        <Tap2Content index={idx} />
-                        <Tap3Content index={idx} />
+                        <Tap0Content />
+                        <Tap1Content />
+                        <Tap2Content />
+                        <Tap3Content />
                     </Box>
                     
                 </Box>
