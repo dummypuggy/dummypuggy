@@ -51,7 +51,7 @@ const Tap0Content = (props: ContentProps):JSX.Element=>{
     // }
     return (
         <Box ref={ref} sx={{display: 'flex',
-        height: 'calc(100vh - 90px)',
+        minHeight: 'calc(100vh - 90px)',
         flexDirection: 'column',
         justifyContent: 'center',}}>
 
@@ -89,7 +89,7 @@ const Tap1Content = (props: ContentProps):JSX.Element=>{
     // }
     return (
         <Box ref={ref} sx={{display: 'flex',
-        height: '100vh',
+        minHeight: '100vh',
         flexDirection: 'column',
         justifyContent: 'center',}}>
         <Box sx={{
@@ -116,7 +116,7 @@ const Tap2Content = (props: ContentProps):JSX.Element=>{
     // }
     return (
         <Box ref={ref} sx={{display: 'flex',
-        height: '100vh',
+        minHeight: '100vh',
         flexDirection: 'column',
         justifyContent: 'center',}}>
         <Box sx={{
@@ -149,7 +149,7 @@ const Tap3Content = (props: ContentProps):JSX.Element=>{
     // }
     return (
         <Box ref={ref} sx={{display: 'flex',
-        height: '100vh',
+        minHeight: '100vh',
         flexDirection: 'column',
         justifyContent: 'center',}}>
         <Box sx={{
