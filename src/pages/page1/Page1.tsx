@@ -73,7 +73,7 @@ const BG = ():JSX.Element=>{
                     left: '12vw',
                     bottom: '2.8vw',
                     color: '#fff',
-                    fontSize: '0.2vw',
+                    fontSize: '18px',
                     fontFamily: 'MERegular',
                 }}>Whitelist is ongoing...</Box>
                 </a>
