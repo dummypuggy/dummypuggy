@@ -25,7 +25,7 @@ const BG = ():JSX.Element=>{
                 <Box sx={{
                     inset: 0,
                     position: 'absolute',
-                    background: `url(${bgImage}) bottom no-repeat`,
+                    background: `url(${bgImage}) center no-repeat`,
                     backgroundSize: 'cover',
                 }}>
 
