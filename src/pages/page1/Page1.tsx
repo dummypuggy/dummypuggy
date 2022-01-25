@@ -1,9 +1,13 @@
 import Box from "@mui/material/Box/Box";
+import { useTheme } from '@mui/material/styles';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 import bgImage from '../../images/bg.png'
 import bgVideo from '../../images/bg.mp4'
 import joinDiscordImage from '../../images/joindiscord.png'
-
+import mobileBgImage from '../../images/mobile-bg.png'
+import puggyMobile from '../../images/puggymobile.png'
+import joinDiscordMobile from '../../images/joindiscordmobile.png'
 
 const BG = ():JSX.Element=>{
 
@@ -83,11 +87,64 @@ const BG = ():JSX.Element=>{
     );
 }
 
-const Page1 = ():JSX.Element=>{
-
+const MobileBG = ():JSX.Element=>{
     return (
         <>
-            <BG/>
+            <Box sx={
+                {
+                    position: 'relative',
+                    height: '100vh',
+                    overflow: 'hidden',
+                }
+            }>
+                <Box sx={
+                    {
+                        position: 'absolute',
+                        width: '100vw',
+                        height: '100vh',
+                        background: `url(${mobileBgImage}) top no-repeat`,
+                        backgroundSize: 'cover',
+                    }
+                }/>
+                
+                <Box sx={
+                    {
+                        position: 'absolute',
+                        width: '100vw',
+                        height: '100vh',
+                        background: `url(${puggyMobile}) center no-repeat`,
+                        backgroundSize: 'contain',
+                    }
+                }/>
+
+                <a style={{
+                    display: 'block',
+                    width: '96vw',
+                    height: '41vw',
+                    position: 'absolute',
+                    left: '2vw',
+                    right: '2vw',
+                    bottom: 0,
+                    cursor: 'pointer',
+                    background: `url(${joinDiscordMobile}) bottom no-repeat`,
+                    backgroundSize: 'contain',
+                    textIndent: '-9999px',
+                }} href="https://discord.gg/89USG2sytF"  target="_blank" rel="noreferrer">
+                Whitelist is ongoing...
+                </a>
+                
+            </Box>
+        </>
+    )
+}
+
+const Page1 = ():JSX.Element=>{
+    const theme = useTheme();
+    const matches = useMediaQuery(theme.breakpoints.up('sm'));
+    return (
+        <>
+            
+            {!matches? <MobileBG/>: <BG/>}
         </>
     );
 }

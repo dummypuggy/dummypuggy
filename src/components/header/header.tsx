@@ -1,10 +1,19 @@
 import Box from "@mui/material/Box/Box";
 import { useLocation, useNavigate } from "react-router-dom";
+import { useTheme } from '@mui/material/styles';
+import useMediaQuery from '@mui/material/useMediaQuery';
+
 import { Expanded, SizedBox, Text } from "../base";
 
 import discordIcon from '../../images/discord.png'
 import twitterIcon from '../../images/twitter.png'
-// import insIcon from '../../images/ins.png'
+import mobileBgImage from '../../images/mobile-bg.png'
+
+import mobileCloseImage from '../../images/mobile-close.png'
+import mobileMoreImage from '../../images/mobile-more.png'
+import { useState } from "react";
+
+import insIcon from '../../images/ins.png'
 
 export type NavItemProps = {
     to: string,
@@ -35,13 +44,157 @@ const NavItem = (props: NavItemProps):JSX.Element=>{
         </>
     )
 }
+export type MobileNavProps = {}
 
+type MoreOrCloseType = 'close' | 'more'
 
-const Header = ():JSX.Element=>{
+export type MoreOrCloseProps = {
+    state: MoreOrCloseType,
+    onStateChange?: (_state: MoreOrCloseType)=>void,
+}
+
+const MoreOrClose = (props: MoreOrCloseProps):JSX.Element=>{
+    const { state, onStateChange } = props;
+    
+    return (
+        <>
+            <Box sx={{
+                background: `url(${state === 'close' ? mobileMoreImage : mobileCloseImage}) center no-repeat`,
+                backgroundSize: 'contain',
+                width: '44px',
+                height: '44px',
+                marginTop: '5px',
+            }} onClick={()=>{
+                state === 'close' ? onStateChange && onStateChange('more') : onStateChange && onStateChange('close')
+            }}/>
+            
+        </>
+    )
+}
+
+const MobileNav = (props: MobileNavProps):JSX.Element=>{
+    const [_state, set_state] = useState<MoreOrCloseType>('close');
 
     return (
         <>
             <Box sx={{
+                position: 'absolute',
+                width: '100vw',
+                height: '54px',
+                zIndex: 9999,
+            }}>
+                <Box sx={{
+                    position: 'absolute',
+                    width: '100vw',
+                    height: '54px',
+                    filter: 'blur(15px)',
+                    background: `url(${mobileBgImage}) top no-repeat`,
+                    backgroundSize: 'cover',
+                }}>
+                </Box>
+                <Box sx={{
+                    position: 'absolute',
+                    width: '100vw',
+                    height: '54px',
+                    backgroundColor: 'rgba(0,0,0,.1)',
+                    display: 'flex',
+                }}>
+                    <h1 className="logo mobile">DummyPuggy</h1>
+                    <Expanded/>
+                    <MoreOrClose state={_state} onStateChange={(_s)=>{
+                        console.log(_s)
+                        set_state(_s)
+                    }}/>
+                    <SizedBox width="22px"/>
+                </Box>
+                
+            </Box>
+            {
+                _state === 'more'? <Box sx={{
+                    zIndex: 10,
+                    background: `rgba(0,0,0,.8)`,
+                    position: 'fixed',
+                    inset: 0,
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'center',
+                }}>
+
+                    <a style={{
+                        height:71,
+                        display: 'flex',
+                        justifyContent: 'start',
+                    }} href="https://discord.gg/89USG2sytF"  target="_blank" rel="noreferrer">
+                        <SizedBox width="30px"/>
+                        <Box sx={{
+                            width: '34px',
+                            height: '71px',
+                            background: `url(${discordIcon}) center no-repeat`,
+                            backgroundSize: 'contain',
+                            textIndent: '-9999px',
+                        }} >discord</Box>
+                        <SizedBox width="15px"/>
+                        <Text style={{
+                            color: '#fff',
+                            lineHeight: '71px',
+                            textTransform: 'uppercase',
+                            }}>Discord</Text>
+                    </a>
+                    <a style={{
+                        height:71,
+                        display: 'flex',
+                        justifyContent: 'start',
+                    }} href="https://twitter.com/DummyPuggyNFT"  target="_blank" rel="noreferrer">
+                        <SizedBox width="30px"/>
+                        <Box sx={{
+                            width: '34px',
+                            height: '71px',
+                            background: `url(${twitterIcon}) center no-repeat`,
+                            backgroundSize: 'contain',
+                            textIndent: '-9999px',
+                        }} >discord</Box>
+                        <SizedBox width="15px"/>
+                        <Text style={{
+                            color: '#fff',
+                            lineHeight: '71px',
+                            textTransform: 'uppercase',
+                        }}>Twitter</Text>
+                    </a>
+                    <a style={{
+                        height:71,
+                        display: 'flex',
+                        justifyContent: 'start',
+                    }} href="https://www.instagram.com/dummypuggy/"  target="_blank" rel="noreferrer">
+                        <SizedBox width="30px"/>
+                        <Box sx={{
+                            width: '34px',
+                            height: '71px',
+                            background: `url(${insIcon}) center no-repeat`,
+                            backgroundSize: 'contain',
+                            textIndent: '-9999px',
+                        }} >discord</Box>
+                        <SizedBox width="15px"/>
+                        <Text style={{
+                            color: '#fff',
+                            lineHeight: '71px',
+                            textTransform: 'uppercase',
+                        }}>instagram</Text>
+                    </a>
+
+                </Box>:<Box/>
+            }
+        </>
+    )
+}
+
+
+const Header = ():JSX.Element=>{
+    const theme = useTheme();
+    const matches = useMediaQuery(theme.breakpoints.up('sm'));
+
+    return (
+        <>
+        {!matches? <MobileNav/>: <Box sx={{
                 position: 'absolute',
                 height: '90px',
                 width: '100vw',
@@ -84,7 +237,8 @@ const Header = ():JSX.Element=>{
                         textIndent: '-9999px',
                     }} href="https://www.instagram.com/dummypuggy/"  target="_blank" rel="noreferrer">ins</a> */}
                 </Box>
-            </Box>
+            </Box>}
+            
         </>
     );
 }

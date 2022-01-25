@@ -23,6 +23,10 @@ code {
   background-size: contain;
 }
 
+.logo.mobile{
+  width: 120px;
+  height: 54px;
+}
 
 ::-webkit-scrollbar {
   /* width: 16px;

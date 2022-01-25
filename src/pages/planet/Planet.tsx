@@ -3,6 +3,7 @@ import { Theme } from "@mui/material/styles";
 import { SxProps } from "@mui/system/styleFunctionSx/styleFunctionSx";
 import React, { useRef } from "react";
 import { useState } from "react";
+
 import { SizedBox, Text, } from "../../components/base";
 
 import bg2Image from '../../images/bg2.png'
