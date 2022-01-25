@@ -124,6 +124,7 @@ const MobileNav = (props: MobileNavProps):JSX.Element=>{
                         height:71,
                         display: 'flex',
                         justifyContent: 'start',
+                        textDecoration: 'none',
                     }} href="https://discord.gg/89USG2sytF"  target="_blank" rel="noreferrer">
                         <SizedBox width="30px"/>
                         <Box sx={{
@@ -144,6 +145,7 @@ const MobileNav = (props: MobileNavProps):JSX.Element=>{
                         height:71,
                         display: 'flex',
                         justifyContent: 'start',
+                        textDecoration: 'none',
                     }} href="https://twitter.com/DummyPuggyNFT"  target="_blank" rel="noreferrer">
                         <SizedBox width="30px"/>
                         <Box sx={{
@@ -164,6 +166,7 @@ const MobileNav = (props: MobileNavProps):JSX.Element=>{
                         height:71,
                         display: 'flex',
                         justifyContent: 'start',
+                        textDecoration: 'none',
                     }} href="https://www.instagram.com/dummypuggy/"  target="_blank" rel="noreferrer">
                         <SizedBox width="30px"/>
                         <Box sx={{
