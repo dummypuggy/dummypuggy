@@ -353,13 +353,13 @@ const Modal04 = (props: ModalProps):JSX.Element=>{
                         display: 'inline-block'
                     }}>Dummy Planet</Box>
                     <Box sx={{height:'20px'}}/>
-                    <ModalP sx={{width: '32vw'}}>
+                    <ModalP sx={{width: '50vw'}}>
                     Dummy Planet is an open social metaverse. 
                     </ModalP>
-                    <ModalP sx={{width: '32vw'}}>
+                    <ModalP sx={{width: '50vw'}}>
                     On this planet, Dummy NFTs is your digital identity, and Puggies are your guides in the world. We can interact with other dummies and communicate by voice. We can have our own decorated houses and invite others to visit our homes. We can have real neighbors. We can not only communicate within the game but also become friends outside the game. Apart from houses, we can run or visit commercial buildings. 
                     </ModalP>
-                    <ModalP sx={{width: '32vw'}}>
+                    <ModalP sx={{width: '50vw'}}>
                     Currently, we are communicating with some DJs. And we will run Puggy Club after Dummy Planet goes online. This is a club where everyone can bring their Puggies with them. We can listen to music, dance, and give rewards here. Of course, we are also preparing to build graffiti walls, trend shops, etc.                    </ModalP>
                 </Box>
             </Modal>
