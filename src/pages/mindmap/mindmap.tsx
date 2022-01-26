@@ -125,7 +125,7 @@ const Modal = styled(Box)({
 
 const ModalP = styled(Box)({
     color: 'rgba(255, 255, 255, 0.8)',
-    fontSize: '18px',
+    fontSize: '16px',
     fontFamily: 'MERegular',
     marginBottom: '30px',
     // fontFamily: 'Monument Extended',
@@ -507,12 +507,14 @@ const MindMap = ():JSX.Element=>{
                     <Box sx={{
                         fontSize: '24px',
                         color: '#fff',
+                        fontFamily: 'MERegular',
                     }}>
                     ”Dummy Puggy“ is the Digital Species created in the Metaverse. 
                     </Box>
                     <Box sx={{
                         fontSize: '24px',
                         color: '#fff',
+                        fontFamily: 'MERegular',
                     }}>
                     they are extremely special.
                     </Box>
