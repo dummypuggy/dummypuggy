@@ -62,13 +62,13 @@ const TikCard = (props: TikCardProps):JSX.Element=>{
                 borderRadius: '15px',
                 background: `#8F3648 url(${bgs[id ?? '01'] as string}) right bottom no-repeat`,
                 backgroundSize: 'contain',
-                padding: id === '03' ? '1.56vw 5vw 1.56vw 1.56vw' : '1.56vw 8vw 1.56vw 1.56vw',
+                padding: id === '03' ? '1.56vw 0vw 1.56vw 1.56vw' : '1.56vw 8vw 1.56vw 1.56vw',
                 opacity: hoverState? 1: 0.5,
                 cursor: 'pointer',
                 
             }} onMouseEnter={()=>sethoverState(true)} onMouseLeave={()=>sethoverState(false)} onClick={()=>onClicked && onClicked(id ?? '01')}>
                 <Box sx={{
-                    fontSize: '60px',
+                    fontSize: '3.125vw',
                     fontFamily: 'Monument Extended',
                     color:hoverState ? '#93F825' : '#FA94AA' ,
                     fontVariationSettings: `'wght' 675`,
@@ -79,7 +79,7 @@ const TikCard = (props: TikCardProps):JSX.Element=>{
                 </Box>
 
                 <Box sx={{
-                    fontSize: '30px',
+                    fontSize: '1.5625vw',
                     fontFamily: 'MEUltrabold',
                     color: '#fff',
                 }}>
@@ -355,13 +355,13 @@ const Modal04 = (props: ModalProps):JSX.Element=>{
                         display: 'inline-block'
                     }}>Dummy Planet</Box>
                     <Box sx={{height:'20px'}}/>
-                    <ModalP sx={{width: '50vw'}}>
+                    <ModalP sx={{width: '38vw'}}>
                     Dummy Planet is an open social metaverse. 
                     </ModalP>
-                    <ModalP sx={{width: '50vw'}}>
+                    <ModalP sx={{width: '38vw'}}>
                     On this planet, Dummy NFTs is your digital identity, and Puggies are your guides in the world. We can interact with other dummies and communicate by voice. We can have our own decorated houses and invite others to visit our homes. We can have real neighbors. We can not only communicate within the game but also become friends outside the game. Apart from houses, we can run or visit commercial buildings. 
                     </ModalP>
-                    <ModalP sx={{width: '50vw'}}>
+                    <ModalP sx={{width: '38vw'}}>
                     Currently, we are communicating with some DJs. And we will run Puggy Club after Dummy Planet goes online. This is a club where everyone can bring their Puggies with them. We can listen to music, dance, and give rewards here. Of course, we are also preparing to build graffiti walls, trend shops, etc.                    </ModalP>
                 </Box>
             </Modal>

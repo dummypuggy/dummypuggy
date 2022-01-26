@@ -37,8 +37,9 @@ type tapState = 0 | 1 | 2 | 3
 
 const textStyle: SxProps<Theme> | undefined = {
     color: 'rgba(255, 255, 255, 0.8)',
-    fontSize: '18px',
+    fontSize: '16px',
     fontFamily: 'MERegular',
+    marginBottom: '20px',
 };
 
 type ContentProps = {
@@ -64,17 +65,16 @@ const Tap0Content = (props: ContentProps):JSX.Element=>{
             }}>ALL FOR POOPOO</Text></h1>
 
             <Box sx={textStyle}>
-                In the year 2048, our digital life worth more than our
-physical life. Al becomes smarter than human. Everything goes digital.
+            In the year 2048, our digital lives worth more than our physical lives. AI becomes smarter than human. Everything goes digital.
             </Box>
             <Box sx={textStyle}>
-            'Dummy Puggy" is the digital species created in the metaverse e, They are extremely special.
+            "Dummy Puggy" is a digital species created in the metaverse. They are extremely special.
             </Box>
             <Box sx={textStyle}>
-            Their poopoos have a spice that is super rare and priceless.Go collect the poopoos that will make you rich!
+            Their poopoos contain a spice that is super rare and priceless. Collecting poopoos can make a fortune!
             </Box>
             <Box sx={textStyle}>
-            The puggies also have superpowers. They can teleport anywh here in the metaverse. When they come back, they will always bring you surprises!
+            The puggies also have superpowers. They can teleport anywhere in the metaverse. When they come back. They will always bring you surprises!
             </Box>
         </Box>
 
@@ -125,14 +125,17 @@ const Tap2Content = (props: ContentProps):JSX.Element=>{
             <h1><Text sx={{
                 color: '#fff',
                 fontSize: '60px',
+                textTransform: 'uppercase',
             }}>POWER BY COMMUNITY</Text></h1>
 
             <Box sx={textStyle}>
             Puggy team dedicates to build a global community with all dummies together, which is Dummy Planet! 
             </Box>
             <Box sx={textStyle}>
-            Dummy Planet integrates comic, art, game, and social elements into it. At present, the team is working on artist co-branding, online & offline activities, and games. News will be continuously updated on Discord and Twitter.
+            Dummy Planet integrates comic, art, game, and social elements into it. At present, the team is working on artist co-branding, online & offline activities, and games. 
             </Box>
+            <Box sx={textStyle}>
+            News will be continuously updated on Discord and Twitter.            </Box>
             <Box sx={{height: 50}}/>
             <img src={idx2Image} style={{maxWidth: '100%'}} alt="POWER BY COMMUNITY"/>
         </Box></Box>
@@ -158,7 +161,8 @@ const Tap3Content = (props: ContentProps):JSX.Element=>{
             <h1><Text sx={{
                 color: '#fff',
                 fontSize: '60px',
-            }}>ON CRAZY SCI-FI ADVENTURE</Text></h1>
+                textTransform: 'uppercase',
+            }}>Join crazy planet adventures</Text></h1>
 
             <Box sx={{height: 50}}/>
             <a href="https://discord.gg/89USG2sytF" target="_blank" rel="noreferrer"> <img src={planetDiscord} width={286} alt="discord" /></a>
