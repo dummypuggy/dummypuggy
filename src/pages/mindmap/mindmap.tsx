@@ -14,7 +14,8 @@ import i05bg from '../../images/05bg.png'
 import modal01 from '../../images/modal01.png'
 import modal02 from '../../images/modal02.png'
 import modal03 from '../../images/modal03.png'
-import modal04 from '../../images/modal04.png'
+import modal04img from '../../images/modal04.png'
+import modal04 from '../../images/modal04.mp4'
 import modal05 from '../../images/modal05.png'
 import modal06 from '../../images/modal06.png'
 import close from '../../images/close.png'
@@ -146,8 +147,7 @@ const Modal01 = (props: ModalProps):JSX.Element=>{
     return (
         <>
             <Modal style={{
-                backgroundImage: `url(${modal01})`,
-                backgroundSize: 'contain',
+               
                 display: showId === '01' ? 'block' : 'none',
             }}>
                 <img src={close} alt="close" style={{
@@ -159,11 +159,11 @@ const Modal01 = (props: ModalProps):JSX.Element=>{
                     cursor: 'pointer',
                 }} onClick={onClosed}/>
                 <Box sx={{
-                    maxWidth: '92vw',
-                    margin: '0 auto',
-                    paddingTop: '30px',
-                    // display: 'flex',
+                    width: '100vw',
+                    paddingLeft: '4vw',
+                    display: 'flex',
                 }}>
+                    <Expanded>
                     <Box sx={{
                         fontSize: '60px',
                         fontFamily: 'Monument Extended',
@@ -190,6 +190,10 @@ const Modal01 = (props: ModalProps):JSX.Element=>{
                     <ModalP sx={{width: '38vw'}}>
                     At the meantime, Dummy NFTs are already in production. Some of Dummy NFTs will be airdropped to Ultra puggy holders when Dummy NFTs go on sale (The expected to be released in March). Users who hold Legendary Puggies will be given priority to experience and receive Land NFT airdrops when Planet goes online.
                     </ModalP>
+                    </Expanded>
+                    <Box>
+                        <img src={modal01} alt="" height={'auto'} width={'100%'} />
+                    </Box>
                 </Box>
             </Modal>
         </>
@@ -201,8 +205,6 @@ const Modal02 = (props: ModalProps):JSX.Element=>{
     return (
         <>
             <Modal style={{
-                backgroundImage: `url(${modal02})`,
-                backgroundSize: 'contain',
                 display: showId === '02' ? 'block' : 'none',
             }}>
                 <img src={close} alt="close" style={{
@@ -214,11 +216,11 @@ const Modal02 = (props: ModalProps):JSX.Element=>{
                     cursor: 'pointer',
                 }} onClick={onClosed}/>
                 <Box sx={{
-                    maxWidth: '92vw',
-                    margin: '0 auto',
-                    paddingTop: '30px',
-                    // display: 'flex',
+                     width: '100vw',
+                     paddingLeft: '4vw',
+                     display: 'flex',
                 }}>
+                    <Expanded>
                     <Box sx={{
                         fontSize: '60px',
                         fontFamily: 'Monument Extended',
@@ -248,6 +250,10 @@ const Modal02 = (props: ModalProps):JSX.Element=>{
                     <ModalP sx={{width: '56vw'}}>
                     As probability cannot be used to control the rarity, we will introduce a liquid token called PPC (Poo Poo Coin) to Dummy Planet. The rarer the accessory, the higher the PPC price. Besides, the quantity of each accessory is limited.
                     </ModalP>
+                    </Expanded>
+                    <Box>
+                        <img src={modal02} alt="" height={'auto'} width={'100%'} />
+                    </Box>
                 </Box>
             </Modal>
         </>
@@ -259,8 +265,6 @@ const Modal03 = (props: ModalProps):JSX.Element=>{
     return (
         <>
             <Modal style={{
-                backgroundImage: `url(${modal03})`,
-                backgroundSize: 'contain',
                 display: showId === '03' ? 'block' : 'none',
             }}>
                 <img src={close} alt="close" style={{
@@ -272,11 +276,11 @@ const Modal03 = (props: ModalProps):JSX.Element=>{
                     cursor: 'pointer',
                 }} onClick={onClosed}/>
                 <Box sx={{
-                    maxWidth: '92vw',
-                    margin: '0 auto',
-                    paddingTop: '30px',
-                    // display: 'flex',
+                    width: '100vw',
+                    paddingLeft: '4vw',
+                    display: 'flex',
                 }}>
+                    <Expanded>
                     <Box sx={{
                         fontSize: '60px',
                         fontFamily: 'Monument Extended',
@@ -295,7 +299,7 @@ const Modal03 = (props: ModalProps):JSX.Element=>{
                         fontWeight: 675,
                         fontStyle: 'normal',
                         display: 'inline-block'
-                    }}>GameFi & $ PPC</Box>
+                    }}>GameFi & $PPC</Box>
                     <Box sx={{height:'20px'}}/>
                     <ModalP sx={{width: '60vw'}}>
                     The sale of Dummy NFTs and accessories is the first application scenario of PPC, and there are many other PPC application scenarios in Dummy Planet.
@@ -306,6 +310,10 @@ const Modal03 = (props: ModalProps):JSX.Element=>{
                     <ModalP sx={{width: '60vw'}}>
                     A demo of the GameFi version was released before. Although the game has been made, we are not very satisfied with the version. Therefore we start again and work with the community to make a new GameFi version that belongs to each of us.                    
                     </ModalP>
+                    </Expanded>
+                    <Box>
+                        <img src={modal03} alt="" height={'auto'} width={'100%'}/>
+                    </Box>
                 </Box>
             </Modal>
         </>
@@ -317,8 +325,8 @@ const Modal04 = (props: ModalProps):JSX.Element=>{
     return (
         <>
             <Modal style={{
-                backgroundImage: `url(${modal04})`,
-                backgroundSize: 'contain',
+                // backgroundImage: `url(${modal04})`,
+                // backgroundSize: 'contain',
                 display: showId === '04' ? 'block' : 'none',
             }}>
                 <img src={close} alt="close" style={{
@@ -330,11 +338,11 @@ const Modal04 = (props: ModalProps):JSX.Element=>{
                     cursor: 'pointer',
                 }} onClick={onClosed}/>
                 <Box sx={{
-                    maxWidth: '92vw',
-                    margin: '0 auto',
-                    paddingTop: '30px',
-                    // display: 'flex',
+                    width: '100vw',
+                    paddingLeft: '4vw',
+                    display: 'flex',
                 }}>
+                    <Expanded>
                     <Box sx={{
                         fontSize: '60px',
                         fontFamily: 'Monument Extended',
@@ -362,7 +370,38 @@ const Modal04 = (props: ModalProps):JSX.Element=>{
                     On this planet, Dummy NFTs is your digital identity, and Puggies are your guides in the world. We can interact with other dummies and communicate by voice. We can have our own decorated houses and invite others to visit our homes. We can have real neighbors. We can not only communicate within the game but also become friends outside the game. Apart from houses, we can run or visit commercial buildings. 
                     </ModalP>
                     <ModalP sx={{width: '38vw'}}>
-                    Currently, we are communicating with some DJs. And we will run Puggy Club after Dummy Planet goes online. This is a club where everyone can bring their Puggies with them. We can listen to music, dance, and give rewards here. Of course, we are also preparing to build graffiti walls, trend shops, etc.                    </ModalP>
+                    Currently, we are communicating with some DJs. And we will run Puggy Club after Dummy Planet goes online. This is a club where everyone can bring their Puggies with them. We can listen to music, dance, and give rewards here. Of course, we are also preparing to build graffiti walls, trend shops, etc.
+                    </ModalP>
+                    </Expanded>
+                    <Box sx={{
+                        width: '50vw',
+                        background: `url(${modal04img}) top right no-repeat`,
+                        backgroundSize: '50vw auto'
+                    }}>
+                        <Box sx={{
+                            position: 'absolute',
+                            width: '39.2vw',
+                            height: '22.2vw',
+                            right: '6.1vw',
+                            top: '3.3vw',
+                            borderRadius: '3vw',
+                            overflow: 'hidden',
+                        }}>
+                            <video  preload="auto" loop muted playsInline autoPlay style={{
+                                height: '100%',
+                                width: '100%',
+                            }}>
+                                <source src={modal04} type="video/mp4" />
+                            </video>
+                        </Box>
+                    {/* <video  preload="auto" loop muted playsInline autoPlay style={{
+                        height: '100%',
+                        width: '100%',
+                    }}>
+                    <source src={modal04} type="video/mp4" />
+                    </video> */}
+                    </Box>
+                    
                 </Box>
             </Modal>
         </>
@@ -374,8 +413,6 @@ const Modal05 = (props: ModalProps):JSX.Element=>{
     return (
         <>
             <Modal style={{
-                backgroundImage: `url(${modal05})`,
-                backgroundSize: 'cover',
                 display: showId === '05' ? 'block' : 'none',
             }}>
                 <img src={close} alt="close" style={{
@@ -387,11 +424,14 @@ const Modal05 = (props: ModalProps):JSX.Element=>{
                     cursor: 'pointer',
                 }} onClick={onClosed}/>
                 <Box sx={{
-                    maxWidth: '92vw',
-                    margin: '0 auto',
-                    paddingTop: '30px',
-                    // display: 'flex',
+                    width: '100vw',
+                    paddingLeft: '4vw',
+                    // margin: '0 auto',
+                    
+                    // paddingTop: '30px',
+                    display: 'flex',
                 }}>
+                    <Expanded>
                     <Box sx={{
                         fontSize: '60px',
                         fontFamily: 'Monument Extended',
@@ -412,12 +452,16 @@ const Modal05 = (props: ModalProps):JSX.Element=>{
                         display: 'inline-block'
                     }}>Dummy Culture</Box>
                     <Box sx={{height:'20px'}}/>
-                    <ModalP sx={{width: '36vw'}}>
+                    <ModalP >
                     Dummy planet is not just a virtual world, and it is also connected to our real world.
                     </ModalP>
-                    <ModalP sx={{width: '36vw'}}>
+                    <ModalP >
                     Dummy culture will become a community-driven cultural trend. It will cooperate with trendy brands, regularly release Dummy peripheral products, and open offline clubs. The value generated by Dummy culture will be shared with ecological participants including NFT holders, token holders, etc.                    
                     </ModalP>
+                    </Expanded>
+                    <Box>
+                        <img src={modal05} alt="" height={'auto'}/>
+                    </Box>
                 </Box>
             </Modal>
         </>
@@ -429,8 +473,6 @@ const Modal06 = (props: ModalProps):JSX.Element=>{
     return (
         <>
             <Modal style={{
-                backgroundImage: `url(${modal06})`,
-                backgroundSize: 'contain',
                 display: showId === '06' ? 'block' : 'none',
             }}>
                 <img src={close} alt="close" style={{
@@ -442,11 +484,11 @@ const Modal06 = (props: ModalProps):JSX.Element=>{
                     cursor: 'pointer',
                 }} onClick={onClosed}/>
                 <Box sx={{
-                    maxWidth: '92vw',
-                    margin: '0 auto',
-                    paddingTop: '30px',
-                    // display: 'flex',
+                     width: '100vw',
+                     paddingLeft: '4vw',
+                     display: 'flex',
                 }}>
+                    <Expanded>
                     <Box sx={{
                         fontSize: '60px',
                         fontFamily: 'Monument Extended',
@@ -479,6 +521,10 @@ const Modal06 = (props: ModalProps):JSX.Element=>{
                     <ModalP sx={{width: '38vw'}}>
                     The project party will airdrop governance tokens named DUMMY to NFT holders at the right time to exercise voting rights.
                     </ModalP>
+                    </Expanded>
+                    <Box>
+                        <img src={modal06} height={'auto'} alt="" width={'100%'} />
+                    </Box>
                 </Box>
             </Modal>
         </>
