@@ -10,6 +10,7 @@ import Page1 from './pages/page1/Page1';
 import Box from '@mui/material/Box/Box';
 import Header from './components/header/header';
 import Planet from './pages/planet/Planet';
+import MindMap from './pages/mindmap/mindmap';
 
 
 
@@ -31,6 +32,7 @@ const App = ():JSX.Element=> {
       <Header/>
       <Box>
         <Routes>
+          <Route path="/mindmap" element={<MindMap />} />
           <Route path="/planet" element={<Planet />} />
           <Route path="/" element={<Page1 />} />
         </Routes>
