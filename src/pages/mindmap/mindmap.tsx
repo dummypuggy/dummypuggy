@@ -19,6 +19,7 @@ import modal04 from '../../images/modal04.mp4'
 import modal05 from '../../images/modal05.png'
 import modal06 from '../../images/modal06.png'
 import close from '../../images/close.png'
+import { height } from "@mui/system";
 
 
 const emptyImage = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=';
@@ -376,7 +377,8 @@ const Modal04 = (props: ModalProps):JSX.Element=>{
                     <Box sx={{
                         width: '50vw',
                         background: `url(${modal04img}) top right no-repeat`,
-                        backgroundSize: '50vw auto'
+                        backgroundSize: '50vw auto',
+                        height: '27vw',
                     }}>
                         <Box sx={{
                             position: 'absolute',
