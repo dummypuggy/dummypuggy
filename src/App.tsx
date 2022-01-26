@@ -32,7 +32,7 @@ const App = ():JSX.Element=> {
       <Header/>
       <Box>
         <Routes>
-          <Route path="/mindmap" element={<MindMap />} />
+          <Route path="/roadmap" element={<MindMap />} />
           <Route path="/planet" element={<Planet />} />
           <Route path="/" element={<Page1 />} />
         </Routes>

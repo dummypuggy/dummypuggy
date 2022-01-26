@@ -124,9 +124,14 @@ const Modal = styled(Box)({
 });
 
 const ModalP = styled(Box)({
-    fontSize: '16px',
-    color: 'rgba(255,255,255,.8)',
+    color: 'rgba(255, 255, 255, 0.8)',
+    fontSize: '18px',
+    fontFamily: 'MERegular',
     marginBottom: '30px',
+    // fontFamily: 'Monument Extended',
+    //                 fontVariationSettings: `'wght' 350`,
+    //                 fontWeight: 350,
+    //                 fontStyle: 'normal',
 });
 
 type ModalProps = {
@@ -498,7 +503,7 @@ const MindMap = ():JSX.Element=>{
                     margin: '0 auto',
                     // display: 'flex',
                 }}>
-                    <h2 style={{margin: 0}}><Text style={{textTransform: 'uppercase', fontSize: '60px', color: '#fff', letterSpacing: '5px'}}>mindmap</Text></h2>
+                    <h2 style={{margin: 0}}><Text style={{textTransform: 'uppercase', fontSize: '60px', color: '#fff', letterSpacing: '5px'}}>roadmap</Text></h2>
                     <Box sx={{
                         fontSize: '24px',
                         color: '#fff',

@@ -215,7 +215,7 @@ const Header = ():JSX.Element=>{
                     <SizedBox width="72px"/>
                     <NavItem to={'/planet'} title="Planet"/>
                     <SizedBox width="72px"/>
-                    <NavItem to={'/mindmap'} title="Mindmap"/>
+                    <NavItem to={'/roadmap'} title="Roadmap"/>
                     <SizedBox width="72px"/>
                     <a style={{
                         width: '34px',
