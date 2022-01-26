@@ -65,6 +65,7 @@ const TikCard = (props: TikCardProps):JSX.Element=>{
                 padding: id === '03' ? '1.56vw 5vw 1.56vw 1.56vw' : '1.56vw 8vw 1.56vw 1.56vw',
                 opacity: hoverState? 1: 0.5,
                 cursor: 'pointer',
+                
             }} onMouseEnter={()=>sethoverState(true)} onMouseLeave={()=>sethoverState(false)} onClick={()=>onClicked && onClicked(id ?? '01')}>
                 <Box sx={{
                     fontSize: '60px',
@@ -120,6 +121,7 @@ const Modal = styled(Box)({
     right: 0,
     bottom: 0,
     zIndex: 10,
+    overflow:'auto',
     background: `#8f3648 url(${emptyImage}) right bottom no-repeat`,
 });
 
