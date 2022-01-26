@@ -75,10 +75,12 @@ const BG = ():JSX.Element=>{
                 <Box sx={{
                     position: 'absolute',
                     left: '12vw',
-                    bottom: '2.8vw',
+                    bottom: '0',
                     color: '#fff',
                     fontSize: '18px',
                     fontFamily: 'MERegular',
+                    height: '6vw',
+                    lineHeight: '5.2vw',
                 }}>Whitelist is ongoing...</Box>
                 </a>
             </Box>
