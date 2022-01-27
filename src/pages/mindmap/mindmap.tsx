@@ -413,7 +413,7 @@ const Modal04 = (props: ModalProps):JSX.Element=>{
                             width: '39.2vw',
                             height: '22.2vw',
                             right: '6.1vw',
-                            top: 'calc(3.3vw + 20px)',
+                            top: 'calc(3.3vw + 50px)',
                             borderRadius: '3vw',
                             overflow: 'hidden',
                         }}>
@@ -497,7 +497,7 @@ const Modal05 = (props: ModalProps):JSX.Element=>{
                     </ModalP>
                     </Expanded>
                     <Box>
-                        <img style={{marginTop: '-22px'}} src={modal05} alt="" height={'auto'}/>
+                        <img style={{marginTop: '-52px'}} src={modal05} alt="" height={'auto'}/>
                     </Box>
                 </Box>
             </Modal>
