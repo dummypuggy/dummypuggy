@@ -117,12 +117,13 @@ const TikCard = (props: TikCardProps):JSX.Element=>{
 
 const Modal = styled(Box)({
     position: "fixed",
-    top: '386px',
+    top: '248px',
     left: 0,
     right: 0,
     bottom: 0,
     zIndex: 10,
     overflow:'auto',
+    paddingTop: '20px',
     background: `#8f3648 url(${emptyImage}) right bottom no-repeat`,
 });
 
@@ -146,16 +147,23 @@ const Modal01 = (props: ModalProps):JSX.Element=>{
     const {showId, onClosed} = props;
     return (
         <>
-            <Modal style={{
+            <Box sx={{
+                position: 'fixed',
+                inset: 0,
+                zIndex: 9,
+                backgroundColor: '#00000008',
+                display: showId === '01' ? 'block' : 'none',
+            }} onClick={onClosed}></Box>
+            <Modal className="slideInUp" style={{
                
                 display: showId === '01' ? 'block' : 'none',
             }}>
                 <img src={close} alt="close" style={{
                     width: 34,
                     height: 34,
-                    position: 'absolute',
+                    position: 'fixed',
                     right: '20px',
-                    top: '20px',
+                    top: '268px',
                     cursor: 'pointer',
                 }} onClick={onClosed}/>
                 <Box sx={{
@@ -204,15 +212,22 @@ const Modal02 = (props: ModalProps):JSX.Element=>{
     const {showId, onClosed} = props;
     return (
         <>
-            <Modal style={{
+            <Box sx={{
+                position: 'fixed',
+                inset: 0,
+                zIndex: 9,
+                backgroundColor: '#00000008',
+                display: showId === '02' ? 'block' : 'none',
+            }} onClick={onClosed}></Box>
+            <Modal className="slideInUp" style={{
                 display: showId === '02' ? 'block' : 'none',
             }}>
                 <img src={close} alt="close" style={{
                     width: 34,
                     height: 34,
-                    position: 'absolute',
+                    position: 'fixed',
                     right: '20px',
-                    top: '20px',
+                    top: '268px',
                     cursor: 'pointer',
                 }} onClick={onClosed}/>
                 <Box sx={{
@@ -264,15 +279,22 @@ const Modal03 = (props: ModalProps):JSX.Element=>{
     const {showId, onClosed} = props;
     return (
         <>
-            <Modal style={{
+            <Box sx={{
+                position: 'fixed',
+                inset: 0,
+                zIndex: 9,
+                backgroundColor: '#00000008',
+                display: showId === '03' ? 'block' : 'none',
+            }} onClick={onClosed}></Box>
+            <Modal className="slideInUp" style={{
                 display: showId === '03' ? 'block' : 'none',
             }}>
                 <img src={close} alt="close" style={{
                     width: 34,
                     height: 34,
-                    position: 'absolute',
+                    position: 'fixed',
                     right: '20px',
-                    top: '20px',
+                    top: '268px',
                     cursor: 'pointer',
                 }} onClick={onClosed}/>
                 <Box sx={{
@@ -324,7 +346,14 @@ const Modal04 = (props: ModalProps):JSX.Element=>{
     const {showId, onClosed} = props;
     return (
         <>
-            <Modal style={{
+            <Box sx={{
+                position: 'fixed',
+                inset: 0,
+                zIndex: 9,
+                backgroundColor: '#00000008',
+                display: showId === '04' ? 'block' : 'none',
+            }} onClick={onClosed}></Box>
+            <Modal className="slideInUp" style={{
                 // backgroundImage: `url(${modal04})`,
                 // backgroundSize: 'contain',
                 display: showId === '04' ? 'block' : 'none',
@@ -332,9 +361,9 @@ const Modal04 = (props: ModalProps):JSX.Element=>{
                 <img src={close} alt="close" style={{
                     width: 34,
                     height: 34,
-                    position: 'absolute',
+                    position: 'fixed',
                     right: '20px',
-                    top: '20px',
+                    top: '268px',
                     cursor: 'pointer',
                 }} onClick={onClosed}/>
                 <Box sx={{
@@ -384,7 +413,7 @@ const Modal04 = (props: ModalProps):JSX.Element=>{
                             width: '39.2vw',
                             height: '22.2vw',
                             right: '6.1vw',
-                            top: '3.3vw',
+                            top: 'calc(3.3vw + 20px)',
                             borderRadius: '3vw',
                             overflow: 'hidden',
                         }}>
@@ -413,15 +442,22 @@ const Modal05 = (props: ModalProps):JSX.Element=>{
     const {showId, onClosed} = props;
     return (
         <>
-            <Modal style={{
+            <Box sx={{
+                position: 'fixed',
+                inset: 0,
+                zIndex: 9,
+                backgroundColor: '#00000008',
+                display: showId === '05' ? 'block' : 'none',
+            }} onClick={onClosed}></Box>
+            <Modal className="slideInUp" style={{
                 display: showId === '05' ? 'block' : 'none',
             }}>
                 <img src={close} alt="close" style={{
                     width: 34,
                     height: 34,
-                    position: 'absolute',
+                    position: 'fixed',
                     right: '20px',
-                    top: '20px',
+                    top: '268px',
                     cursor: 'pointer',
                 }} onClick={onClosed}/>
                 <Box sx={{
@@ -461,7 +497,7 @@ const Modal05 = (props: ModalProps):JSX.Element=>{
                     </ModalP>
                     </Expanded>
                     <Box>
-                        <img src={modal05} alt="" height={'auto'}/>
+                        <img style={{marginTop: '-22px'}} src={modal05} alt="" height={'auto'}/>
                     </Box>
                 </Box>
             </Modal>
@@ -473,15 +509,22 @@ const Modal06 = (props: ModalProps):JSX.Element=>{
     const {showId, onClosed} = props;
     return (
         <>
-            <Modal style={{
+            <Box sx={{
+                position: 'fixed',
+                inset: 0,
+                zIndex: 9,
+                backgroundColor: '#00000008',
+                display: showId === '06' ? 'block' : 'none',
+            }} onClick={onClosed}></Box>
+            <Modal className="slideInUp" style={{
                 display: showId === '06' ? 'block' : 'none',
             }}>
                 <img src={close} alt="close" style={{
                     width: 34,
                     height: 34,
-                    position: 'absolute',
+                    position: 'fixed',
                     right: '20px',
-                    top: '20px',
+                    top: '268px',
                     cursor: 'pointer',
                 }} onClick={onClosed}/>
                 <Box sx={{

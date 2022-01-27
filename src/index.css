@@ -32,6 +32,22 @@ code {
   height: 54px;
 }
 
+@keyframes slideInUp {
+  from {
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slideInUp {
+  animation-duration: 0.2s;
+  animation-name: slideInUp;
+}
+
 ::-webkit-scrollbar {
   /* width: 16px;
   height: 16px; */
