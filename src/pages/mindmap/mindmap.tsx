@@ -123,7 +123,7 @@ const Modal = styled(Box)({
     bottom: 0,
     zIndex: 10,
     overflow:'auto',
-    paddingTop: '20px',
+    paddingTop: '50px',
     background: `#8f3648 url(${emptyImage}) right bottom no-repeat`,
 });
 
