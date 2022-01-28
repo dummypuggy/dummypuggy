@@ -13,7 +13,7 @@ import mobileCloseImage from '../../images/mobile-close.png'
 import mobileMoreImage from '../../images/mobile-more.png'
 import { useState } from "react";
 
-import insIcon from '../../images/ins.png'
+// import insIcon from '../../images/ins.png'
 
 export type NavItemProps = {
     to: string,

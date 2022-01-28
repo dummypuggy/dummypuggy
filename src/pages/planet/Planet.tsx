@@ -22,7 +22,7 @@ import planetM03 from '../../images/planetm03.png';
 
 import pmd from '../../images/pmd.png';
 import pmt from '../../images/pmt.png';
-import pmi from '../../images/pmi.png';
+// import pmi from '../../images/pmi.png';
 
 import mobilebg from '../../images/mobilebg.png'
 
@@ -323,7 +323,7 @@ const TabMenuItem = (props: TabMenuItemProps):JSX.Element=>{
                 }}>{id}</Box>
                 <Box sx={{
                     fontSize: '8px',
-                    fontFamily: 'MELight',
+                    fontFamily: 'MERegular',
                     color: '#fff',
                     lineHeight: '14px'
                 }}>{titles[id]}</Box>
