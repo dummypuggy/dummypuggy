@@ -469,11 +469,11 @@ const TapContent04 = (props: tebContentProps):JSX.Element=>{
                             <img src={pmt} alt="twitter" style={{maxWidth: '100%'}} />
                         </a>
                     </ContentP>
-                    <ContentP>
+                    {/* <ContentP>
                         <a href="https://www.instagram.com/dummypuggy/" target="_blank" rel="noreferrer">
                             <img src={pmi} alt="instagram" style={{maxWidth: '100%'}} />
                         </a>
-                    </ContentP>
+                    </ContentP> */}
                 </Box>
             </Box>
         </>
@@ -489,7 +489,9 @@ const PlanetMobile = ():JSX.Element=>{
                 background: `url(${mobilebg}) top center no-repeat`,
                 backgroundSize:'cover',
             }}>
-                <Box>
+                <Box sx={{
+                    paddingBottom: '30vw',
+                }}>
                     <TapContent01 currentId={currentId}/>
                     <TapContent02 currentId={currentId}/>
                     <TapContent03 currentId={currentId}/>
@@ -499,6 +501,10 @@ const PlanetMobile = ():JSX.Element=>{
                     display: 'flex',
                     flexDirection: 'row',
                     padding: '22px',
+                    position: 'fixed',
+                    bottom: 0,
+                    left: 0,
+                    right: 0,
                 }}>
                     <TabMenuItem id={'01'} currentId={currentId} onActive={(_id)=>setcurrentId(_id)}/>
                     <Expanded/>

@@ -212,7 +212,7 @@ const MobileNav = (props: MobileNavProps):JSX.Element=>{
                             textTransform: 'uppercase',
                         }}>Twitter</Text>
                     </a>
-                    <a style={{
+                    {/* <a style={{
                         height:71,
                         display: 'flex',
                         justifyContent: 'start',
@@ -232,7 +232,7 @@ const MobileNav = (props: MobileNavProps):JSX.Element=>{
                             lineHeight: '71px',
                             textTransform: 'uppercase',
                         }}>instagram</Text>
-                    </a>
+                    </a> */}
 
                 </Box>:<Box/>
             }
