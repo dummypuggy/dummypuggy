@@ -724,7 +724,7 @@ const TikCardModile = (props: TikCardMobileProps):JSX.Element=>{
 
 const MobileModal = styled(Box)({
     position: "fixed",
-    top: '208px',
+    top: '118px',
     left: 0,
     right: 0,
     bottom: 0,
@@ -732,6 +732,7 @@ const MobileModal = styled(Box)({
     overflow:'auto',
     paddingTop: '0px',
     backgroundColor: '#8F364888',
+    overflowX: 'hidden',
 });
 
 const MobileModalP = styled(Box)({
@@ -770,7 +771,7 @@ const MobileModal01 = (props: MobileModalProps):JSX.Element=>{
                     height: 20,
                     position: 'fixed',
                     right: '20px',
-                    top: '228px',
+                    top: '128px',
                     cursor: 'pointer',
                 }} onClick={onClosed}/>
                 <Box sx={{
@@ -780,22 +781,13 @@ const MobileModal01 = (props: MobileModalProps):JSX.Element=>{
                     
                     <Box sx={{
                         fontSize: '32px',
-                        fontFamily: 'Monument Extended',
+                        fontFamily: 'MEUltrabold',
                         color: '#93F825',
-                        fontVariationSettings: `'wght' 675`,
-                        fontWeight: 675,
-                        fontStyle: 'normal',
-                        display: 'inline-block',
-                        width: '100vw',
                     }}>01</Box>
                     <Box sx={{
                         fontSize: '16px',
-                        fontFamily: 'Monument Extended',
+                        fontFamily: 'MEUltrabold',
                         color: '#fff',
-                        fontVariationSettings: `'wght' 675`,
-                        fontWeight: 675,
-                        fontStyle: 'normal',
-                        display: 'inline-block'
                     }}>Genesis Puggy NFT</Box>
                     <Box sx={{height:'20px'}}/>
                     <MobileModalP>
@@ -836,7 +828,7 @@ const MobileModal02 = (props: MobileModalProps):JSX.Element=>{
                     height: 20,
                     position: 'fixed',
                     right: '20px',
-                    top: '228px',
+                    top: '128px',
                     cursor: 'pointer',
                 }} onClick={onClosed}/>
                 <Box sx={{
@@ -846,22 +838,13 @@ const MobileModal02 = (props: MobileModalProps):JSX.Element=>{
                     
                     <Box sx={{
                         fontSize: '32px',
-                        fontFamily: 'Monument Extended',
+                        fontFamily: 'MEUltrabold',
                         color: '#93F825',
-                        fontVariationSettings: `'wght' 675`,
-                        fontWeight: 675,
-                        fontStyle: 'normal',
-                        display: 'inline-block',
-                        width: '100vw',
                     }}>02</Box>
                     <Box sx={{
                         fontSize: '16px',
-                        fontFamily: 'Monument Extended',
+                        fontFamily: 'MEUltrabold',
                         color: '#fff',
-                        fontVariationSettings: `'wght' 675`,
-                        fontWeight: 675,
-                        fontStyle: 'normal',
-                        display: 'inline-block'
                     }}>Dummy NFT</Box>
                     <Box sx={{height:'20px'}}/>
                     <MobileModalP>
@@ -903,7 +886,7 @@ const MobileModal03 = (props: MobileModalProps):JSX.Element=>{
                     height: 20,
                     position: 'fixed',
                     right: '20px',
-                    top: '228px',
+                    top: '128px',
                     cursor: 'pointer',
                 }} onClick={onClosed}/>
                 <Box sx={{
@@ -913,22 +896,13 @@ const MobileModal03 = (props: MobileModalProps):JSX.Element=>{
                     
                     <Box sx={{
                         fontSize: '32px',
-                        fontFamily: 'Monument Extended',
+                        fontFamily: 'MEUltrabold',
                         color: '#93F825',
-                        fontVariationSettings: `'wght' 675`,
-                        fontWeight: 675,
-                        fontStyle: 'normal',
-                        display: 'inline-block',
-                        width: '100vw',
                     }}>03</Box>
                     <Box sx={{
                         fontSize: '16px',
-                        fontFamily: 'Monument Extended',
+                        fontFamily: 'MEUltrabold',
                         color: '#fff',
-                        fontVariationSettings: `'wght' 675`,
-                        fontWeight: 675,
-                        fontStyle: 'normal',
-                        display: 'inline-block'
                     }}>GameFi & $PPC</Box>
                     <Box sx={{height:'20px'}}/>
                     <MobileModalP>
@@ -969,7 +943,7 @@ const MobileModal04 = (props: MobileModalProps):JSX.Element=>{
                     height: 20,
                     position: 'fixed',
                     right: '20px',
-                    top: '228px',
+                    top: '128px',
                     cursor: 'pointer',
                 }} onClick={onClosed}/>
                 <Box sx={{
@@ -979,22 +953,13 @@ const MobileModal04 = (props: MobileModalProps):JSX.Element=>{
                     
                     <Box sx={{
                         fontSize: '32px',
-                        fontFamily: 'Monument Extended',
+                        fontFamily: 'MEUltrabold',
                         color: '#93F825',
-                        fontVariationSettings: `'wght' 675`,
-                        fontWeight: 675,
-                        fontStyle: 'normal',
-                        display: 'inline-block',
-                        width: '100vw',
                     }}>04</Box>
                     <Box sx={{
                         fontSize: '16px',
-                        fontFamily: 'Monument Extended',
+                        fontFamily: 'MEUltrabold',
                         color: '#fff',
-                        fontVariationSettings: `'wght' 675`,
-                        fontWeight: 675,
-                        fontStyle: 'normal',
-                        display: 'inline-block'
                     }}>Dummy Planet</Box>
                     <Box sx={{height:'20px'}}/>
                     <MobileModalP>
@@ -1033,7 +998,7 @@ const MobileModal05 = (props: MobileModalProps):JSX.Element=>{
                     height: 20,
                     position: 'fixed',
                     right: '20px',
-                    top: '228px',
+                    top: '128px',
                     cursor: 'pointer',
                 }} onClick={onClosed}/>
                 <Box sx={{
@@ -1043,22 +1008,13 @@ const MobileModal05 = (props: MobileModalProps):JSX.Element=>{
                     
                     <Box sx={{
                         fontSize: '32px',
-                        fontFamily: 'Monument Extended',
+                        fontFamily: 'MEUltrabold',
                         color: '#93F825',
-                        fontVariationSettings: `'wght' 675`,
-                        fontWeight: 675,
-                        fontStyle: 'normal',
-                        display: 'inline-block',
-                        width: '100vw',
                     }}>05</Box>
                     <Box sx={{
                         fontSize: '16px',
-                        fontFamily: 'Monument Extended',
                         color: '#fff',
-                        fontVariationSettings: `'wght' 675`,
-                        fontWeight: 675,
-                        fontStyle: 'normal',
-                        display: 'inline-block'
+                        fontFamily: 'MEUltrabold',
                     }}>Dummy Culture</Box>
                     <Box sx={{height:'20px'}}/>
                     <MobileModalP>
@@ -1096,7 +1052,7 @@ const MobileModal06 = (props: MobileModalProps):JSX.Element=>{
                     height: 20,
                     position: 'fixed',
                     right: '20px',
-                    top: '228px',
+                    top: '128px',
                     cursor: 'pointer',
                 }} onClick={onClosed}/>
                 <Box sx={{
@@ -1106,22 +1062,14 @@ const MobileModal06 = (props: MobileModalProps):JSX.Element=>{
                     
                     <Box sx={{
                         fontSize: '32px',
-                        fontFamily: 'Monument Extended',
+                        fontFamily: 'MEUltrabold',
                         color: '#93F825',
-                        fontVariationSettings: `'wght' 675`,
-                        fontWeight: 675,
-                        fontStyle: 'normal',
-                        display: 'inline-block',
                         width: '100vw',
                     }}>06</Box>
                     <Box sx={{
                         fontSize: '16px',
-                        fontFamily: 'Monument Extended',
+                        fontFamily: 'MEUltrabold',
                         color: '#fff',
-                        fontVariationSettings: `'wght' 675`,
-                        fontWeight: 675,
-                        fontStyle: 'normal',
-                        display: 'inline-block'
                     }}>DAO & $DUMMY</Box>
                     <Box sx={{height:'20px'}}/>
                     <MobileModalP>
@@ -1162,6 +1110,7 @@ const MindMapMobile = ():JSX.Element=>{
                 padding: '76px 22px 22px 22px',
                 background: `url(${mobilebg}) top center no-repeat`,
                 backgroundSize:'cover',
+                minHeight: '100vh'
             }}>
                 <Box sx={{
                     fontFamily: 'MEUltrabold',
@@ -1170,7 +1119,9 @@ const MindMapMobile = ():JSX.Element=>{
                     marginBottom: '20px',
                     textTransform: 'uppercase',
                 }}>RoadMap</Box>
-                <ContentP>
+                <ContentP sx={{
+                    display: !currentId ? 'block' : 'none',
+                }}>
                 ”Dummy Puggy“ is the Digital Species created in the Metaverse. 
                 </ContentP>
                 <Box
