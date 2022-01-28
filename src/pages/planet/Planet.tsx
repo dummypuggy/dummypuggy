@@ -325,7 +325,8 @@ const TabMenuItem = (props: TabMenuItemProps):JSX.Element=>{
                     fontSize: '8px',
                     fontFamily: 'MERegular',
                     color: '#fff',
-                    lineHeight: '14px'
+                    lineHeight: '14px',
+                    wordWrap: 'break-word',
                 }}>{titles[id]}</Box>
             </Box>
         </>
@@ -490,7 +491,7 @@ const PlanetMobile = ():JSX.Element=>{
                 backgroundSize:'cover',
             }}>
                 <Box sx={{
-                    paddingBottom: '30vw',
+                    paddingBottom: '36vw',
                 }}>
                     <TapContent01 currentId={currentId}/>
                     <TapContent02 currentId={currentId}/>
@@ -502,6 +503,7 @@ const PlanetMobile = ():JSX.Element=>{
                     flexDirection: 'row',
                     padding: '22px',
                     position: 'fixed',
+                    backgroundColor: '#2A122C',
                     bottom: 0,
                     left: 0,
                     right: 0,
