@@ -119,7 +119,57 @@ const MobileNav = (props: MobileNavProps):JSX.Element=>{
                     flexDirection: 'column',
                     justifyContent: 'center',
                 }}>
+                    <a style={{
+                        height:71,
+                        display: 'flex',
+                        justifyContent: 'start',
+                        textDecoration: 'none',
+                    }} href="/">
+                        <SizedBox width="30px"/>
+                        <Text style={{
+                            color: '#fff',
+                            lineHeight: '71px',
+                            textTransform: 'uppercase',
+                        }}>Home</Text>
+                    </a>
 
+                    <a style={{
+                        height:71,
+                        display: 'flex',
+                        justifyContent: 'start',
+                        textDecoration: 'none',
+                    }} href="/planet">
+                        <SizedBox width="30px"/>
+                        <Text style={{
+                            color: '#fff',
+                            lineHeight: '71px',
+                            textTransform: 'uppercase',
+                        }}>Planet</Text>
+                    </a>
+
+                    <a style={{
+                        height:71,
+                        display: 'flex',
+                        justifyContent: 'start',
+                        textDecoration: 'none',
+                    }} href="/roadmap">
+                        <SizedBox width="30px"/>
+                        <Text style={{
+                            color: '#fff',
+                            lineHeight: '71px',
+                            textTransform: 'uppercase',
+                        }}>Roadmap</Text>
+                    </a>
+                    <Box sx={{
+                            height: '71px',
+                            margin: '0 30px',
+                            backgroundSize: 'contain',
+                        }} >
+                            <Box sx={{
+                                height: '36px',
+                                borderBottom: 'solid 1px rgba(255,255,255,.3)'
+                            }}></Box>
+                        </Box>
                     <a style={{
                         height:71,
                         display: 'flex',

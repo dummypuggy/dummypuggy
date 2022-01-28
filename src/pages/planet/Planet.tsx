@@ -1,16 +1,28 @@
 import Box from "@mui/material/Box/Box";
 import { Theme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery/useMediaQuery";
+import { useTheme } from '@mui/material/styles';
 import { SxProps } from "@mui/system/styleFunctionSx/styleFunctionSx";
+import styled from "@mui/styles/styled";
 import React, { useRef } from "react";
 import { useState } from "react";
 
-import { SizedBox, Text, } from "../../components/base";
+import { Expanded, SizedBox, Text, } from "../../components/base";
 
 import bg2Image from '../../images/bg2.png'
 import idx1Image from '../../images/idx1.png'
 import idx2Image from '../../images/idx2.png'
 import planetDiscord from '../../images/planetdiscord.png'
 import planetTwitter from '../../images/planettwitter.png'
+
+
+import planetM01 from '../../images/planetm01.png';
+import planetM02 from '../../images/planetm02.png';
+import planetM03 from '../../images/planetm03.png';
+
+import pmd from '../../images/pmd.png';
+import pmt from '../../images/pmt.png';
+import pmi from '../../images/pmi.png';
 
 export type TapBtnProps = {
     isActive: boolean,
@@ -173,7 +185,9 @@ const Tap3Content = (props: ContentProps):JSX.Element=>{
     )
 }
 
-const Planet = ():JSX.Element=>{
+
+
+const PlanetPc = ():JSX.Element=>{
     
     const [idx, setIdx] = useState<tapState>(0)
 
@@ -269,6 +283,239 @@ const Planet = ():JSX.Element=>{
                 
 
             </Box>
+        </>
+    );
+}
+
+type idType = '01' | '02' | '03' | '04'
+
+type TabMenuItemProps = {
+    currentId?: idType,
+    id: idType,
+    onActive?: (id: idType)=>void,
+}
+
+const TabMenuItem = (props: TabMenuItemProps):JSX.Element=>{
+    const {currentId, id, onActive} = props;
+    const actived: boolean = currentId === id;
+    const titles = {
+        '01': 'All For Poopoo',
+        '02': 'Team',
+        '03': 'Power By community',
+        '04': 'Join crazy planet adventures',  
+    }
+    return (
+        <>
+            <Box sx={{
+                width: '20vw',
+                height: '24vw',
+                backgroundColor: `rgba(143,54,72,${actived? .67: .33 })`,
+                borderRadius: '8px',
+                padding: '8px',
+                cursor: 'pointer'
+            }} onClick={()=>onActive && onActive(id)}>
+                <Box sx={{
+                    fontSize: '12px',
+                    fontFamily: 'MEUltrabold',
+                    color:actived ? '#93F825' : '#FA94AA' ,
+                }}>{id}</Box>
+                <Box sx={{
+                    fontSize: '8px',
+                    fontFamily: 'MELight',
+                    color: '#fff',
+                    lineHeight: '14px'
+                }}>{titles[id]}</Box>
+            </Box>
+        </>
+    );
+}
+
+type tebContentProps = {
+    currentId?: idType,
+}
+
+const ContentP = styled(Box)({
+    color: 'rgba(255, 255, 255, 0.8)',
+    fontSize: '16px',
+    fontFamily: 'MERegular',
+    marginBottom: '14px',
+});
+
+const TapContent01 = (props: tebContentProps):JSX.Element=>{
+    const {currentId} = props;
+    return (
+        <>
+            <Box sx={{
+                display: currentId === '01' ? 'block' : 'none',
+            }}>
+                <Box sx={{
+                    padding: '22px'
+                }}>
+                    <Box sx={{
+                        fontFamily: 'MEUltrabold',
+                        color: '#fff' ,
+                        fontSize: '28px',
+                        marginBottom: '20px',
+                        textTransform: 'uppercase',
+                    }}>All For Poopoo</Box>
+                    <ContentP>
+                    In the year 2048, our digital lives worth more than our physical lives. AI becomes smarter than human. Everything goes digital.
+                    </ContentP>
+                    <ContentP>
+                    "Dummy Puggy" is a digital species created in the metaverse. They are extremely special.
+                    </ContentP>
+                    <ContentP>
+                    Their poopoos contain a spice that is super rare and priceless. Collecting poopoos can make a fortune!
+                    </ContentP>
+                    <ContentP>
+                    The puggies also have superpowers. They can teleport anywhere in the metaverse. When they come back. They will always bring you surprises!
+                    </ContentP>
+                    
+                </Box>
+                <img src={planetM01} alt="planet 01" style={{maxWidth: '100%'}} />
+            </Box>
+        </>
+    );
+}
+
+const TapContent02 = (props: tebContentProps):JSX.Element=>{
+    const {currentId} = props;
+    return (
+        <>
+            <Box sx={{
+                display: currentId === '02' ? 'block' : 'none',
+            }}>
+                <Box sx={{
+                    padding: '22px'
+                }}>
+                    <Box sx={{
+                        fontFamily: 'MEUltrabold',
+                        color: '#fff' ,
+                        fontSize: '28px',
+                        marginBottom: '20px',
+                        textTransform: 'uppercase',
+                    }}>Team</Box>
+                    <ContentP>
+                    The Dummy Puggy team consists of 5 puggies. They live in a big kennel together in LA. Each contributes to their areas and hypes about the Dummy Puggy project
+                    </ContentP>
+                    <img src={planetM02} alt="planet 01" style={{maxWidth: '100%'}} />
+                </Box>
+                
+            </Box>
+        </>
+    );
+}
+
+const TapContent03 = (props: tebContentProps):JSX.Element=>{
+    const {currentId} = props;
+    return (
+        <>
+            <Box sx={{
+                display: currentId === '03' ? 'block' : 'none',
+            }}>
+                <Box sx={{
+                    padding: '22px'
+                }}>
+                    <Box sx={{
+                        fontFamily: 'MEUltrabold',
+                        color: '#fff' ,
+                        fontSize: '28px',
+                        marginBottom: '20px',
+                        textTransform: 'uppercase',
+                    }}>Power By community</Box>
+                    <ContentP>
+                    Puggy team dedicates to build a global community with all dummies together, which is Dummy Planet! 
+                    </ContentP>
+                    <ContentP>
+                    Dummy Planet integrates comic, art, game, and social elements into it. At present, the team is working on artist co-branding, online & offline activities, and games. 
+                    </ContentP>
+                    <ContentP>
+                    News will be continuously updated on Discord and Twitter.
+                    </ContentP>
+                    
+                </Box>
+                <img src={planetM03} alt="planet 01" style={{maxWidth: '100%'}} />
+            </Box>
+        </>
+    );
+}
+
+const TapContent04 = (props: tebContentProps):JSX.Element=>{
+    const {currentId} = props;
+    return (
+        <>
+            <Box sx={{
+                display: currentId === '04' ? 'block' : 'none',
+            }}>
+                <Box sx={{
+                    padding: '22px'
+                }}>
+                    <Box sx={{
+                        fontFamily: 'MEUltrabold',
+                        color: '#fff' ,
+                        fontSize: '28px',
+                        marginBottom: '20px',
+                        textTransform: 'uppercase',
+                    }}>Join crazy planet adventures</Box>
+                    <ContentP>
+                        <a href="https://discord.gg/89USG2sytF" target="_blank" rel="noreferrer">
+                            <img src={pmd} alt="discord" style={{maxWidth: '100%'}} />
+                        </a>
+                    </ContentP>
+                    <ContentP>
+                        <a href="https://twitter.com/DummyPuggyNFT" target="_blank" rel="noreferrer">
+                            <img src={pmt} alt="twitter" style={{maxWidth: '100%'}} />
+                        </a>
+                    </ContentP>
+                    <ContentP>
+                        <a href="https://www.instagram.com/dummypuggy/" target="_blank" rel="noreferrer">
+                            <img src={pmi} alt="instagram" style={{maxWidth: '100%'}} />
+                        </a>
+                    </ContentP>
+                </Box>
+            </Box>
+        </>
+    );
+}
+
+const PlanetMobile = ():JSX.Element=>{
+    const [currentId, setcurrentId] = useState<idType>('01');
+    return (
+        <>
+            <Box sx={{
+                paddingTop: '54px',
+            }}>
+                <Box>
+                    <TapContent01 currentId={currentId}/>
+                    <TapContent02 currentId={currentId}/>
+                    <TapContent03 currentId={currentId}/>
+                    <TapContent04 currentId={currentId}/>
+                </Box>
+                <Box sx={{
+                    display: 'flex',
+                    flexDirection: 'row',
+                    padding: '22px',
+                }}>
+                    <TabMenuItem id={'01'} currentId={currentId} onActive={(_id)=>setcurrentId(_id)}/>
+                    <Expanded/>
+                    <TabMenuItem id={'02'} currentId={currentId} onActive={(_id)=>setcurrentId(_id)}/>
+                    <Expanded/>
+                    <TabMenuItem id={'03'} currentId={currentId} onActive={(_id)=>setcurrentId(_id)}/>
+                    <Expanded/>
+                    <TabMenuItem id={'04'} currentId={currentId} onActive={(_id)=>setcurrentId(_id)}/>
+                </Box>
+            </Box>
+        </>
+    );
+}
+
+const Planet = ():JSX.Element=>{
+    const theme = useTheme();
+    const matches = useMediaQuery(theme.breakpoints.up('sm'));
+    return (
+        <>
+            
+            {!matches? <PlanetMobile/>: <PlanetPc/>}
         </>
     );
 }

@@ -42,9 +42,9 @@ const BG = ():JSX.Element=>{
 //                     overflow: 'hidden',
                     position: 'absolute',
                     // position: absolute;
-    left: '50%', /* % of surrounding element */
-    top: '50%',
-    transform: 'translate(-50%, -50%)',
+                    left: '50%', /* % of surrounding element */
+                    top: '50%',
+                    transform: 'translate(-50%, -50%)',
                     // left: 'calc(calc(100%-177.77777778vh)/2)',
 //                     right: '0',
 //                     left: '50vw',
