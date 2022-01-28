@@ -24,6 +24,8 @@ import pmd from '../../images/pmd.png';
 import pmt from '../../images/pmt.png';
 import pmi from '../../images/pmi.png';
 
+import mobilebg from '../../images/mobilebg.png'
+
 export type TapBtnProps = {
     isActive: boolean,
     onClick?: React.MouseEventHandler<HTMLDivElement> | undefined,
@@ -484,6 +486,8 @@ const PlanetMobile = ():JSX.Element=>{
         <>
             <Box sx={{
                 paddingTop: '54px',
+                background: `url(${mobilebg}) top center no-repeat`,
+                backgroundSize:'cover',
             }}>
                 <Box>
                     <TapContent01 currentId={currentId}/>

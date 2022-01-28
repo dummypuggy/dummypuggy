@@ -1,7 +1,7 @@
-import { Box } from "@mui/material";
+import { Box, useMediaQuery } from "@mui/material";
 import styled from "@mui/styles/styled/styled";
 import { useState } from "react";
-
+import { useTheme } from '@mui/material/styles';
 import { Expanded, SizedBox, Text } from "../../components/base";
 
 
@@ -20,6 +20,22 @@ import modal05 from '../../images/modal05.png'
 import modal06 from '../../images/modal06.png'
 import close from '../../images/close.png'
 
+
+import rmc01 from '../../images/rmc01.png'
+import rmc02 from '../../images/rmc02.png'
+import rmc03 from '../../images/rmc03.png'
+import rmc04 from '../../images/rmc04.png'
+import rmc05 from '../../images/rmc05.png'
+import rmc06 from '../../images/rmc06.png'
+
+import rmcm01 from '../../images/rmcm01.png'
+import rmcm02 from '../../images/rmcm02.png'
+import rmcm03 from '../../images/rmcm03.png'
+import rmcm04 from '../../images/rmcm04.png'
+import rmcm05 from '../../images/rmcm05.png'
+import rmcm06 from '../../images/rmcm06.png'
+
+import mobilebg from '../../images/mobilebg.png'
 
 const emptyImage = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=';
 
@@ -576,7 +592,7 @@ const Modal06 = (props: ModalProps):JSX.Element=>{
 }
 
 
-const MindMap = ():JSX.Element=>{
+const MindMapPc = ():JSX.Element=>{
     const [currentId, setCurrentId] = useState<Id>(undefined);
     return (
         <>
@@ -667,6 +683,522 @@ const MindMap = ():JSX.Element=>{
                     </Box>
                 </Box>
             </Box>
+        </>
+    );
+}
+
+const ContentP = styled(Box)({
+    color: 'rgba(255, 255, 255, 0.8)',
+    fontSize: '16px',
+    fontFamily: 'MERegular',
+    marginBottom: '10px',
+});
+
+type TikCardMobileProps = {
+    id: Id,
+    onClicked?: (id: Id)=>void,
+}
+
+const TikCardModile = (props: TikCardMobileProps):JSX.Element=>{
+    const {id, onClicked,} = props;
+    const bgs = {
+        '01': rmc01,
+        '02': rmc02,
+        '03': rmc03,
+        '04': rmc04,
+        '05': rmc05,
+        '06': rmc06,
+    }
+
+    return (
+        <>
+            <Box onClick={()=>onClicked && onClicked(id)}>
+                <img src={bgs[id || '01']} style={{
+                    maxWidth: '100%',
+                    height: 'auto',
+                }} alt="" />
+            </Box>
+        </>
+    );
+}
+
+const MobileModal = styled(Box)({
+    position: "fixed",
+    top: '208px',
+    left: 0,
+    right: 0,
+    bottom: 0,
+    zIndex: 10,
+    overflow:'auto',
+    paddingTop: '0px',
+    backgroundColor: '#8F364888',
+});
+
+const MobileModalP = styled(Box)({
+    color: 'rgba(255, 255, 255, 0.8)',
+    fontSize: '12px',
+    fontFamily: 'MERegular',
+    marginBottom: '30px',
+    // fontFamily: 'Monument Extended',
+    //                 fontVariationSettings: `'wght' 350`,
+    //                 fontWeight: 350,
+    //                 fontStyle: 'normal',
+});
+
+type MobileModalProps = {
+    showId: Id,
+    onClosed?: React.MouseEventHandler<HTMLImageElement>
+}
+
+const MobileModal01 = (props: MobileModalProps):JSX.Element=>{
+    const {showId, onClosed} = props;
+    return (
+        <>
+            <Box sx={{
+                position: 'fixed',
+                inset: 0,
+                zIndex: 9,
+                backgroundColor: '#00000008',
+                display: showId === '01' ? 'block' : 'none',
+            }} onClick={onClosed}></Box>
+            <MobileModal className="slideInUp" style={{
+               
+                display: showId === '01' ? 'block' : 'none',
+            }}>
+                <img src={close} alt="close" style={{
+                    width: 20,
+                    height: 20,
+                    position: 'fixed',
+                    right: '20px',
+                    top: '228px',
+                    cursor: 'pointer',
+                }} onClick={onClosed}/>
+                <Box sx={{
+                    width: '100vw',
+                    padding: '4vw',
+                }}>
+                    
+                    <Box sx={{
+                        fontSize: '32px',
+                        fontFamily: 'Monument Extended',
+                        color: '#93F825',
+                        fontVariationSettings: `'wght' 675`,
+                        fontWeight: 675,
+                        fontStyle: 'normal',
+                        display: 'inline-block',
+                        width: '100vw',
+                    }}>01</Box>
+                    <Box sx={{
+                        fontSize: '16px',
+                        fontFamily: 'Monument Extended',
+                        color: '#fff',
+                        fontVariationSettings: `'wght' 675`,
+                        fontWeight: 675,
+                        fontStyle: 'normal',
+                        display: 'inline-block'
+                    }}>Genesis Puggy NFT</Box>
+                    <Box sx={{height:'20px'}}/>
+                    <MobileModalP>
+                    Dummy Puggy is the Digital Species created in the Metaverse. Puggies are extremely special, they only have 9,999. They are currently being divided into 3 levels: Unique puggy (9,000), Ultra puggy (900), and Legendary puggy (99).
+                    </MobileModalP>
+                    <MobileModalP>
+                    Unique Puggies have been generated programmatically from 280 attributes across 10 categories; Ultra Puggies adds more 9 special backgrounds on this basis. Legendary puggies are one-of-one. All of them are hand-painted by the artist, including graffiti artists, visual artists, music creators, gamers, and animators. Please join Discord to check out detailed launch information.
+                    </MobileModalP>
+                    <MobileModalP>
+                    At the meantime, Dummy NFTs are already in production. Some of Dummy NFTs will be airdropped to Ultra puggy holders when Dummy NFTs go on sale (The expected to be released in March). Users who hold Legendary Puggies will be given priority to experience and receive Land NFT airdrops when Planet goes online.                    </MobileModalP>
+                    <Box>
+                        <img src={rmcm01} alt="" height={'auto'} width={'100%'} />
+                    </Box>
+                </Box>
+            </MobileModal>
+        </>
+    )
+}
+
+const MobileModal02 = (props: MobileModalProps):JSX.Element=>{
+    const {showId, onClosed} = props;
+    // console.log(showId)
+    return (
+        <>
+            <Box sx={{
+                position: 'fixed',
+                inset: 0,
+                zIndex: 9,
+                backgroundColor: '#00000008',
+                display: showId === '02' ? 'block' : 'none',
+            }} onClick={onClosed}></Box>
+            <MobileModal className="slideInUp" style={{
+               
+                display: showId === '02' ? 'block' : 'none',
+            }}>
+                <img src={close} alt="close" style={{
+                    width: 20,
+                    height: 20,
+                    position: 'fixed',
+                    right: '20px',
+                    top: '228px',
+                    cursor: 'pointer',
+                }} onClick={onClosed}/>
+                <Box sx={{
+                    width: '100vw',
+                    padding: '4vw',
+                }}>
+                    
+                    <Box sx={{
+                        fontSize: '32px',
+                        fontFamily: 'Monument Extended',
+                        color: '#93F825',
+                        fontVariationSettings: `'wght' 675`,
+                        fontWeight: 675,
+                        fontStyle: 'normal',
+                        display: 'inline-block',
+                        width: '100vw',
+                    }}>02</Box>
+                    <Box sx={{
+                        fontSize: '16px',
+                        fontFamily: 'Monument Extended',
+                        color: '#fff',
+                        fontVariationSettings: `'wght' 675`,
+                        fontWeight: 675,
+                        fontStyle: 'normal',
+                        display: 'inline-block'
+                    }}>Dummy NFT</Box>
+                    <Box sx={{height:'20px'}}/>
+                    <MobileModalP>
+                    Dummy planet is an open social metaverse. Puggies are our passports and Dummy NFTs are our digital identities.
+                    </MobileModalP>
+                    <MobileModalP>
+                    Dummy NFT is different from Puggy NFT and other NFTs that are randomly generated by machines. It will be created in the form of a body and random matching accessories. Dummy NFTs are in production and there are 14 parts and 280 accessories to choose from. The rarity of each accessory is different. 
+                    </MobileModalP>
+                    <MobileModalP>
+                    As probability cannot be used to control the rarity, we will introduce a liquid token called PPC (Poo Poo Coin) to Dummy Planet. The rarer the accessory, the higher the PPC price. Besides, the quantity of each accessory is limited.
+                    </MobileModalP>
+                    <Box>
+                        
+                    </Box>
+                </Box>
+                <img src={rmcm02} alt="" height={'auto'} width={'100%'} />
+            </MobileModal>
+        </>
+    )
+}
+
+const MobileModal03 = (props: MobileModalProps):JSX.Element=>{
+    const {showId, onClosed} = props;
+    return (
+        <>
+            <Box sx={{
+                position: 'fixed',
+                inset: 0,
+                zIndex: 9,
+                backgroundColor: '#00000008',
+                display: showId === '03' ? 'block' : 'none',
+            }} onClick={onClosed}></Box>
+            <MobileModal className="slideInUp" style={{
+               
+                display: showId === '03' ? 'block' : 'none',
+            }}>
+                <img src={close} alt="close" style={{
+                    width: 20,
+                    height: 20,
+                    position: 'fixed',
+                    right: '20px',
+                    top: '228px',
+                    cursor: 'pointer',
+                }} onClick={onClosed}/>
+                <Box sx={{
+                    width: '100vw',
+                    padding: '4vw',
+                }}>
+                    
+                    <Box sx={{
+                        fontSize: '32px',
+                        fontFamily: 'Monument Extended',
+                        color: '#93F825',
+                        fontVariationSettings: `'wght' 675`,
+                        fontWeight: 675,
+                        fontStyle: 'normal',
+                        display: 'inline-block',
+                        width: '100vw',
+                    }}>03</Box>
+                    <Box sx={{
+                        fontSize: '16px',
+                        fontFamily: 'Monument Extended',
+                        color: '#fff',
+                        fontVariationSettings: `'wght' 675`,
+                        fontWeight: 675,
+                        fontStyle: 'normal',
+                        display: 'inline-block'
+                    }}>GameFi & $PPC</Box>
+                    <Box sx={{height:'20px'}}/>
+                    <MobileModalP>
+                    The sale of Dummy NFTs and accessories is the first application scenario of PPC, and there are many other PPC application scenarios in Dummy Planet.
+                    </MobileModalP>
+                    <MobileModalP>
+                    Airdrops are not a good solution to the continuous demand for PPC, so we combine GameFi and Puggy. Puggy generates Poopoos, and Poopoos are exchanged for PPC (Poopoos Coin). The rarity of a puggy corresponds to an in-game attribute. For GameFi, we will discuss with the community to add more interesting elements, so that in addition to generating PPC, it can also bring joy to everyone.
+                    </MobileModalP>
+                    <MobileModalP>
+                    A demo of the GameFi version was released before. Although the game has been made, we are not very satisfied with the version. Therefore we start again and work with the community to make a new GameFi version that belongs to each of us.
+                    </MobileModalP>
+                    <Box>
+                        <img src={rmcm03} alt="" height={'auto'} width={'100%'} />
+                    </Box>
+                </Box>
+            </MobileModal>
+        </>
+    )
+}
+
+const MobileModal04 = (props: MobileModalProps):JSX.Element=>{
+    const {showId, onClosed} = props;
+    return (
+        <>
+            <Box sx={{
+                position: 'fixed',
+                inset: 0,
+                zIndex: 9,
+                backgroundColor: '#00000008',
+                display: showId === '04' ? 'block' : 'none',
+            }} onClick={onClosed}></Box>
+            <MobileModal className="slideInUp" style={{
+               
+                display: showId === '04' ? 'block' : 'none',
+            }}>
+                <img src={close} alt="close" style={{
+                    width: 20,
+                    height: 20,
+                    position: 'fixed',
+                    right: '20px',
+                    top: '228px',
+                    cursor: 'pointer',
+                }} onClick={onClosed}/>
+                <Box sx={{
+                    width: '100vw',
+                    padding: '4vw',
+                }}>
+                    
+                    <Box sx={{
+                        fontSize: '32px',
+                        fontFamily: 'Monument Extended',
+                        color: '#93F825',
+                        fontVariationSettings: `'wght' 675`,
+                        fontWeight: 675,
+                        fontStyle: 'normal',
+                        display: 'inline-block',
+                        width: '100vw',
+                    }}>04</Box>
+                    <Box sx={{
+                        fontSize: '16px',
+                        fontFamily: 'Monument Extended',
+                        color: '#fff',
+                        fontVariationSettings: `'wght' 675`,
+                        fontWeight: 675,
+                        fontStyle: 'normal',
+                        display: 'inline-block'
+                    }}>Dummy Planet</Box>
+                    <Box sx={{height:'20px'}}/>
+                    <MobileModalP>
+                    Dummy Planet is an open social metaverse. 
+                    </MobileModalP>
+                    <MobileModalP>
+                    On this planet, Dummy NFTs is your digital identity, and Puggies are your guides in the world. We can interact with other dummies and communicate by voice. We can have our own decorated houses and invite others to visit our homes. We can have real neighbors. We can not only communicate within the game but also become friends outside the game. Apart from houses, we can run or visit commercial buildings. 
+                    </MobileModalP>
+                    <MobileModalP>
+                    On this planet, Dummy NFTs is your digital identity, and Puggies are your guides in the world. We can interact with other dummies and communicate by voice. We can have our own decorated houses and invite others to visit our homes. We can have real neighbors. We can not only communicate within the game but also become friends outside the game. Apart from houses, we can run or visit commercial buildings. 
+                    </MobileModalP>
+                </Box>
+                <img src={rmcm04} alt="" height={'auto'} width={'100%'} />
+            </MobileModal>
+        </>
+    )
+}
+
+const MobileModal05 = (props: MobileModalProps):JSX.Element=>{
+    const {showId, onClosed} = props;
+    return (
+        <>
+            <Box sx={{
+                position: 'fixed',
+                inset: 0,
+                zIndex: 9,
+                backgroundColor: '#00000008',
+                display: showId === '05' ? 'block' : 'none',
+            }} onClick={onClosed}></Box>
+            <MobileModal className="slideInUp" style={{
+               
+                display: showId === '05' ? 'block' : 'none',
+            }}>
+                <img src={close} alt="close" style={{
+                    width: 20,
+                    height: 20,
+                    position: 'fixed',
+                    right: '20px',
+                    top: '228px',
+                    cursor: 'pointer',
+                }} onClick={onClosed}/>
+                <Box sx={{
+                    width: '100vw',
+                    padding: '4vw',
+                }}>
+                    
+                    <Box sx={{
+                        fontSize: '32px',
+                        fontFamily: 'Monument Extended',
+                        color: '#93F825',
+                        fontVariationSettings: `'wght' 675`,
+                        fontWeight: 675,
+                        fontStyle: 'normal',
+                        display: 'inline-block',
+                        width: '100vw',
+                    }}>05</Box>
+                    <Box sx={{
+                        fontSize: '16px',
+                        fontFamily: 'Monument Extended',
+                        color: '#fff',
+                        fontVariationSettings: `'wght' 675`,
+                        fontWeight: 675,
+                        fontStyle: 'normal',
+                        display: 'inline-block'
+                    }}>Dummy Culture</Box>
+                    <Box sx={{height:'20px'}}/>
+                    <MobileModalP>
+                    Dummy planet is not just a virtual world, and it is also connected to our real world.
+                    </MobileModalP>
+                    <MobileModalP>
+                    Dummy culture will become a community-driven cultural trend. It will cooperate with trendy brands, regularly release Dummy peripheral products, and open offline clubs. The value generated by Dummy culture will be shared with ecological participants including NFT holders, token holders, etc.
+                    </MobileModalP>
+                </Box>
+                <Box sx={{backgroundColor: 'rgb(85,36,59)'}}>
+                <img src={rmcm05} alt="" height={'auto'} width={'100%'} />
+                </Box>
+            </MobileModal>
+        </>
+    )
+}
+
+const MobileModal06 = (props: MobileModalProps):JSX.Element=>{
+    const {showId, onClosed} = props;
+    return (
+        <>
+            <Box sx={{
+                position: 'fixed',
+                inset: 0,
+                zIndex: 9,
+                backgroundColor: '#00000008',
+                display: showId === '06' ? 'block' : 'none',
+            }} onClick={onClosed}></Box>
+            <MobileModal className="slideInUp" style={{
+               
+                display: showId === '06' ? 'block' : 'none',
+            }}>
+                <img src={close} alt="close" style={{
+                    width: 20,
+                    height: 20,
+                    position: 'fixed',
+                    right: '20px',
+                    top: '228px',
+                    cursor: 'pointer',
+                }} onClick={onClosed}/>
+                <Box sx={{
+                    width: '100vw',
+                    padding: '4vw',
+                }}>
+                    
+                    <Box sx={{
+                        fontSize: '32px',
+                        fontFamily: 'Monument Extended',
+                        color: '#93F825',
+                        fontVariationSettings: `'wght' 675`,
+                        fontWeight: 675,
+                        fontStyle: 'normal',
+                        display: 'inline-block',
+                        width: '100vw',
+                    }}>06</Box>
+                    <Box sx={{
+                        fontSize: '16px',
+                        fontFamily: 'Monument Extended',
+                        color: '#fff',
+                        fontVariationSettings: `'wght' 675`,
+                        fontWeight: 675,
+                        fontStyle: 'normal',
+                        display: 'inline-block'
+                    }}>DAO & $DUMMY</Box>
+                    <Box sx={{height:'20px'}}/>
+                    <MobileModalP>
+                    Dummy Puggy is a community-driven project. The project party only acts as the initiator and promoter and Dummy DAO is the final form of Dummy Puggy Project.
+                    </MobileModalP>
+                    <MobileModalP>
+                    50% of the proceeds from the NFT sale will be put into Dummy's treasury.
+                    </MobileModalP>
+                    <MobileModalP>
+                    The value generated by Dummy culture will be shared with ecological participants.
+                    </MobileModalP>
+                    <MobileModalP>
+                    The project party will airdrop governance tokens named DUMMY to NFT holders at the right time to exercise voting rights.                    
+                    </MobileModalP>
+                </Box>
+                <img src={rmcm06} alt="" height={'auto'} width={'100%'} />
+            </MobileModal>
+        </>
+    )
+}
+// type MindMapMobileProps = {
+//     id: 
+// }
+
+const MindMapMobile = ():JSX.Element=>{
+    const [currentId, setCurrentId] = useState<Id>(undefined);
+    
+    return (
+        <>
+            <MobileModal01 showId={currentId} onClosed={()=>setCurrentId(undefined)}/>
+            <MobileModal02 showId={currentId} onClosed={()=>setCurrentId(undefined)}/>
+            <MobileModal03 showId={currentId} onClosed={()=>setCurrentId(undefined)}/>
+            <MobileModal04 showId={currentId} onClosed={()=>setCurrentId(undefined)}/>
+            <MobileModal05 showId={currentId} onClosed={()=>setCurrentId(undefined)}/>
+            <MobileModal06 showId={currentId} onClosed={()=>setCurrentId(undefined)}/>
+            {/*  */}
+            <Box sx={{
+                padding: '76px 22px 22px 22px',
+                background: `url(${mobilebg}) top center no-repeat`,
+                backgroundSize:'cover',
+            }}>
+                <Box sx={{
+                    fontFamily: 'MEUltrabold',
+                    color: '#fff' ,
+                    fontSize: '28px',
+                    marginBottom: '20px',
+                    textTransform: 'uppercase',
+                }}>RoadMap</Box>
+                <ContentP>
+                ”Dummy Puggy“ is the Digital Species created in the Metaverse. 
+                </ContentP>
+                <Box
+                sx={{
+                    gap: 2,
+                    gridTemplateColumns: 'repeat(2, 1fr)',
+                    display: !currentId ? 'grid' : 'none',
+                }}
+                >
+                    <TikCardModile id="01" onClicked={(_id)=>setCurrentId(_id)}/>
+                    <TikCardModile id="02" onClicked={(_id)=>setCurrentId(_id)}/>
+                    <TikCardModile id="03" onClicked={(_id)=>setCurrentId(_id)}/>
+                    <TikCardModile id="04" onClicked={(_id)=>setCurrentId(_id)}/>
+                    <TikCardModile id="05" onClicked={(_id)=>setCurrentId(_id)}/>
+                    <TikCardModile id="06" onClicked={(_id)=>setCurrentId(_id)}/>
+                </Box>
+            </Box>
+        </>
+    );
+}
+
+const MindMap = ():JSX.Element=>{
+    const theme = useTheme();
+    const matches = useMediaQuery(theme.breakpoints.up('sm'));
+    return (
+        <>
+            
+            {!matches? <MindMapMobile/>: <MindMapPc/>}
         </>
     );
 }
